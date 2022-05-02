@@ -27,6 +27,8 @@ const paths = {
 }
 
 gulp.task('fonts', function() {
+  console.log('----------Starting fonts-----------');
+
   return gulp.src([
       'node_modules/font-awesome/fonts/fontawesome-webfont.*'])
     .pipe(gulp.dest('dist/fonts/'))
@@ -34,6 +36,8 @@ gulp.task('fonts', function() {
 })
 
 gulp.task('scripts', () => {
+  console.log('----------Starting scripts-----------');
+
   return gulp.src([
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/velocity-animate/velocity.js',
@@ -46,6 +50,8 @@ gulp.task('scripts', () => {
 })
 
 gulp.task('styles', () => {
+  console.log('----------Starting styles-----------');
+
   return gulp.src([
       'node_modules/font-awesome/css/font-awesome.min.css',
       paths.styles
@@ -61,6 +67,8 @@ gulp.task('styles', () => {
 })
 
 gulp.task('html', () => {
+  console.log('----------Starting html-----------');
+
   const MarkdownType = new yaml.Type('tag:yaml.org,2002:md', {
     kind: 'scalar',
     construct: function (text) {
@@ -76,13 +84,21 @@ gulp.task('html', () => {
     .pipe($.size())
 })
 
-gulp.task('default', ['scripts', 'styles', 'fonts','html'], () => {
+gulp.task('watch',() => {
   if (isProd) return
+  console.log('----------Starting watch in browser-----------');
+
   browserSync.init({
     server: "./dist"
   })
-  gulp.watch(paths.scripts, ['scripts'])
-  gulp.watch(paths.styles, ['styles'])
-  gulp.watch(['template/*.html', 'data.yaml'], ['html'])
-  gulp.watch(["dist/*.html", "dist/assets/*.*"]).on('change', browserSync.reload)
-})
+  gulp.watch(paths.scripts, gulp.series('scripts'))
+  gulp.watch(paths.styles,  gulp.series('styles'))
+  gulp.watch(['template/*.html', 'data.yaml'], gulp.series('html'))
+  return gulp.watch(["dist/*.html", "dist/assets/*.*"])
+      .on('change', browserSync.reload)
+}) 
+
+
+gulp.task(
+  'default',
+  gulp.series('scripts', 'styles', 'fonts','html','watch'))
