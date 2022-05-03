@@ -56,15 +56,30 @@ honor: # 奖项荣誉
   - 
     icon: fa-trophy
     date: 2017.11
-    name: 石大 | 国家奖学金 | 1/69
+    name: 石大 | 国家奖学金 | 1/69 | GPA3.89
 
 tech: # 技能点
   -
     name: Java
     percentage: 80%
+  - 
+    name: Mysql
+    percentage: 70%
   -
     name: Git
     percentage: 60%
+  - 
+    name: Junit/Mock
+    percentage: 50%
+  - 
+    name: Tair/Redis
+    percentage: 50%
+  -
+    name: Ha3/ES
+    percentage: 50%
+  - 
+    name: ODPS
+    percentage: 50%
   -
     name: HTML/CSS
     percentage: 20%
@@ -76,59 +91,43 @@ tech: # 技能点
     percentage: 20%
 experience: # 项目经验
   -
-    section: 个人项目
+    section: 开源贡献
     project:
       -
-        name: nunjucks-extend-loader
-        date: 2017.2
+        name: DevUIHelper
+        date: 2019.10 - 2020.5
         img:
         website:
-        source_code: https://github.com/xiao555/nunjucks-extend-loader
+        source_code: https://github.com/istarwyh/DevUIHelper
         des: !!md |
-          开发了一个多页应用脚手架[Webjucks](https://github.com/xiao555/Webjucks)，开发框架的过程中，自己写了个loader，已发布在npm上。用 Node的fs模块递归创建不存在的目录，最后通过回调函数完成最后一步copy文件的动作。
+          本项目基于Node.js环境开发,利用AST对接爬取生成的json等资源文件,生成资源树提供给LSP提供的API以资源,致力于避免开发人员过度依赖文档,最终提高前端组件库的开发效率.
+          
+          本人提出了插件开发的CMS架构,并在早期带领小组实现了代码定义跳转,API悬浮提示及自动补全的功能;同时在2.0版本中协助设计了华为云DevUI团队组件的API说明规范.
+          
+          目前华为云已在内部使用,总下载量400+;项目仍在发展中,希望最终能实现"API赋能文档"的目标。
       -
         name: Resume-it
         date: 2017.2
         img:
         website:
-        source_code: https://github.com/xiao555/Resume-it
+        source_code: https://github.com/istarwyh/Resume-it
         des: !!md |
           知乎上看大家的简历，感觉模板很多，但个人信息是不变的，所以我就想搞一个数据模板分离的简历生成器，这样无论换模板还是改数据都非常方便。暂时 48 star，21 fork，有人用是最好的。
           
           最初是用webpack打包的，后来换成了Gulp，简单易用，不必上webpack，后面打算改造成页面可以直接修改的。
-      -
-        name: Blog
-        date: 2017.4-至今
-        img:
-        website:
-        source_code: https://github.com/xiao555/blog
-        des: !!md |
-          用来练手Vue的项目，基于Koa2 + Vue2 + MongoDB + Redis 搭建的 前后端分离 + RESTful API + SSR 的博客系统，并且进行了性能优化，加快首屏渲染速度。
-          
-          最近参考vue-hacknews2.0对前端部分进行了一次重构，新版本的webpack打包体积好小，实现了按需加载css，服务器部分也正准备上docker，正在写dockerfile中...
+      - 
+        name: 好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)  
+        date: 2020.6
+        source_code: https://juejin.im/post/5efaf7f1f265da22c966f445
+        des: !!md | 
+          本人写作的DevUIHelper的DevUI团队官方宣发技术文章,文章目前被阅读8500+次,获得点赞90+.
+
+
   -
-    section: 实习经历
+    section: 工作项目
     exper:
       - 
-        company: 腾讯
-        time: 2017.7.14 - 2017.9.1
-        desc: !!md |
-          在TEG研发管理部TAPD中心实习，主要做前端方面的实现需求，解决bug等工作。
-        project:
-          -
-            des: !!md |
-              技术需求上，改造过内部的一个手机号验证组件，实现了多实例，状态保存等功能，在代码层面也做了优化，减少$的使用，重复运行的代码抽离出来等等。
-          -
-            des: !!md |
-              业务需求上，在做官网轮播图需求的时候，把旧的代码封装成内部组件，并且可以绑定多个实例，实现代码的复用。
-          -
-            des: !!md |
-              在解决bug的过程中，也积累了不少经验，比如有ie下的background：rgba兼容性问题，通过google用filter解决的。
-          -
-            des: !!md |
-              在开发的过程中，我会思考怎么实现是最好的，团队的产品也教会了我认真做好每一个细节。在腾讯的人生第一次职场之旅，我觉得ok。
-      - 
-        company: WPNinja
+        company: 阿里淘特
         time: 2016.7 - 2017.5
         desc: 这是一个面向国外客户的远程开发团队，基于wordpress搭建网站，前五个月我负责前端部分的开发, 最大程度的还原设计稿，完成页面交互，后面开始负责后端PHP开发。
         project:
@@ -157,29 +156,27 @@ experience: # 项目经验
             source_code:
             des: !!md |
               这是项目前端已经能完全独立完成了，设计也有很多有趣的地方，像header，footer部分两种颜色，为了不影响其它布局也比较方便用伪元素解决。没有很难的地方，细节很多，也比较考验布局能力。
-          -
-            name: workforceprofessionals
-            date: '2016.10'
-            img: https://xiao555.netlify.com/workforceprofessionals.jpg
-            website: https://workforceprofessionals.org/
-            source_code:
-            des: !!md |
-              这个项目我负责后端，跟leader语音交流了一下后端框架的用法，研究了两三天大体了解了基于wordpress的后端的工作方式，于是用边写边学的方式完成了这个项目。我做的就是写项目有关的逻辑，数据的导入获取等等。
-              另外，首页的下面的Twitter部分是我写的，之前获取tweet的方法需要各种key麻烦还有问题，我查了好久找到一个相关的js库Twitter-Post-Fetcher，使用简单。
+      - 
+        company: 众安在线(实习)
+        time: 2020.7-2021.1
+        desc: !!md |
+          一方面实践DDD跟进需求进行Restful接口开发，一方面主要负责基于已有金融信任保证贷款、保险与资金方链路逾200亿条记录实现自动化资金对账实收,并逐步排查原因,最后产出近300万条记录汇总到ElasticSearch并支持展示告警项目的开发。
+        
+          技术栈包括SpringCloud为主的微服务框架，MaxCompute分布式数据库以及ElasticSearch等.
 
 skill: # 技能清单
       -
         des: !!md |
-          能够用 HTML + CSS 编写语义化的代码，完成较复杂的布局，熟悉Stylus、PostCss 等css预处理、后处理工具
+          掌握Java,熟悉JVM特性,曾配置ParallerGC、初始堆与方法区内存等使蛋白质建模运行流畅
       -
         des: !!md |
-          在Blog项目中熟悉了 Vue，写过Vue的双向数据绑定[Demo](https://github.com/xiao555/Two-way-Data-Bindings)， 使用了 ES6、7 的新语法，了解 Node.js, jQuery.
+         了解HDFS与MapReduce,熟练操作Linux,与团队开发过网盘[Demo](https://github.com/istarwyh/NetCloud)并在Tomcat部署;了解前端框架AngularJS和组件库DevUI;使用过Junit/Postman/多线程进行项目测试
       -
         des: !!md |
-          熟悉 Git Webpack Gulp 等开发工具
+          熟悉网络通信,实践过Socket编程; 熟练运用 SpringBoot+Mybatis;熟悉MySQL;熟悉Git版本管理
       -
         des: !!md |
-          熟悉 Koa, Express, MongoDB, Mysql 能搭建简单的后端项目，租了Digital Ocean 的VPS，腾讯云 部署网站
+          软技能:超过2年在50人的环保型社团工作与管理;持续实习及小组带队经验.善于沟通合作,执行力强
 
 
 ---

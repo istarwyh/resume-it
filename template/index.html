@@ -61,7 +61,7 @@
             </li>
             {% endif %}
             <li class="skill">
-                <dt><i class="fa fa-bookmark"></i>Tech. 主要技能点</dt>
+                <dt><em class="fa fa-bookmark"></em>Tech. 主要技能点</dt>
                 {% for item in tech %}
                 <dd>
                     <div class="skill-name">{{ item.name }}</div>
@@ -91,7 +91,7 @@
             <li class="experience">
                 <dt><em class="fa fa-bookmark"></em>Experience. 项目经验</dt>
                 {% for exp in experience %}
-                    {% if exp.section == '个人项目' %}
+                    {% if exp.section == '开源贡献' %}
                         <h2 class="exp-title">{{exp.section}}</h2>
                         <ul class="exp">
                             {% for item in exp.project %}
@@ -99,7 +99,8 @@
                                 <div class="circle"></div>
                                 <h4>{{ item.name }} {{ item.date }}
                                 {% if item.website %}
-                                <a href="{{ item.website }}" target="_blank"><em class="fa fa-link"><emi>Demo</a>
+                                <a href="{{ item.website }}" target="_blank"
+                                ><em class="fa fa-link"></em>Demo</a>
                                 {% endif %}
                                 {% if item.source_code %}
                                 <a href="{{ item.source_code }}" target="_blank"><em class="fa fa-link"></em>SourceCode</a>
