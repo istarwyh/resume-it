@@ -10,8 +10,9 @@
         <ul class="side-info">
             <li class="someRight">
                 <dt><em class="fa fa-bookmark"></em>Basic info. 基本信息</dt>
-                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }} / {{ grade }}</dd>
-                <dd><span>学校：</span>{{school}}</dd>
+                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ born }} </dd>
+                <dd><span>工作经验：</span>{{work_life}} / {{grade}}</dd>
+                <dd><span>教育背景：</span>{{education_backgroud | safe}}</dd>
                 <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
                 <dd><span>英语水平:</span> {{ english_level }}</dd>
@@ -20,35 +21,46 @@
                 <dd><span>常用ID:</span> {{ nickname }}</dd>
                 {% endif %}
                 {% if blog %}
-                <dd><span>Blog:</span> <a href="{{ blog }}" target="_blank">{{ blog }}</a></dd>
+                <dd><span>{{blog.name}}:</span> <a href="{{ blog }}" target="_blank">{{ blog.url }}</a></dd>
                 {% endif %}
                 {% if github %}
                 <dd><span>GitHub:</span> <a href="{{ github }}" target="_blank">{{ github }}</a></dd>
+                {% endif %}
+                {% if other %}
+                <dd><span>其他:</span> {{ other | safe }}</dd>
                 {% endif %}
                 {% if online %}
                 <dd><span>在线简历:</span> <a href="{{ online }}" target="_blank">{{ online }}</a></dd>
                 {% endif %}
             </li>
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Contact. 联系方式</dt>
+                <dt><em class="fa fa-bookmark"></em>Contact. 联系方式</dt>
                 {% for item in contact %}
-                    <dd><i class="fa {{ item.icon }}"></i>{{ item.name }}: <a {% if item.name == 'Email' %}href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a></dd>
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                            {{ item.name }}:
+                            <a {% if item.name == 'Email' %} href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a>
+                    </dd>
                 {% endfor %}
             </li>
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Application. 应聘岗位</dt>
+                <dt><em class="fa fa-bookmark"></em>Application. 应聘岗位</dt>
                 <dd>{{ apply_to_position }}</dd>
             </li>
             {% if honor %}
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Honor. 奖项荣誉</dt>
-                <dd>
-                    {% for item in honor %}
-                    <ul>
-                        <li>{{ item.date |safe }} {{ item.name |safe }}</li>
-                    </ul>
-                    {% endfor %}
-                </dd>
+                <dt><em class="fa fa-bookmark"></em>Honor. 奖项荣誉</dt>
+                {% for item in honor %}
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                        {{ item.date |safe }} <br>
+                        {{ item.name |safe }}
+                        <!-- <ul>
+                            <li>{{ item.date |safe }} {{ item.name |safe }}</li>
+                        </ul> -->
+                    </dd>
+                {% endfor %}
+
             </li>
             {% endif %}
             <li class="skill">
