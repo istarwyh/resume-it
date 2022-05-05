@@ -70,6 +70,8 @@ npm run public
 会提交到master分支和gh-pages分支
 浏览：`https://yourname.github.io/reponame/` 即可，print版访问：`https://yourname.github.io/reponame/print.html`。
 
+-[ ] 借助`Deploy to GitHub Pages` extension 可直接发布静态页面
+
 ## TODO
 
 1. 数据内容直接在页面上修改
@@ -78,6 +80,10 @@ npm run public
 4. 在线编辑+发布+导出
 
 ## 更新日志
+
+2022.05.05
+
+相比原项目,更改后的项目更适合社招同学.
 
 2017.6.18
   调整结构，采用 Gulp 打包，public 用 `simple-git`, 不用shell脚本了

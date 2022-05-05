@@ -1,7 +1,7 @@
 const git = require('simple-git')
 const colors = require('colors')
 const path = 'dist'
-const repo = 'https://github.com/xiao555/Resume.git'
+const repo = 'https://github.com/istarwyh/Resume.git'
 
 console.log(`Start public to your git repo[${repo}]\nPlease wait ...`.green)
 git(path)
