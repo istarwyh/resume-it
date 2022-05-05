@@ -5,14 +5,15 @@
     <div class="sidebar">
         <div class="title">
             {% include 'head.html' %}
-            <h1>{{ name }}的简历</h1>
+            <h1>{{ name }}</h1>
             <h2>{{ des }}</h2>
         </div>
         <ul class="side-info">
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Basic info. 基本信息</dt>
-                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ age }} / {{ grade }}</dd>
-                <dd><span>学校：</span>{{school}}</dd>
+                <dt><em class="fa fa-bookmark"></em>Basic info. 基本信息</dt>
+                <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ born }} </dd>
+                <dd><span>工作经验：</span>{{work_life}} / {{grade}}</dd>
+                <dd><span>教育背景：</span>{{education_backgroud | safe}}</dd>
                 <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
                 <dd><span>英语水平:</span> {{ english_level }}</dd>
@@ -21,39 +22,47 @@
                 <dd><span>常用ID:</span> {{ nickname }}</dd>
                 {% endif %}
                 {% if blog %}
-                <dd><span>Blog:</span> <a href="{{ blog }}" target="_blank">{{ blog }}</a></dd>
+                <dd><span>{{blog.name}}:</span> <a href="{{ blog }}" target="_blank">{{ blog.url }}</a></dd>
                 {% endif %}
                 {% if github %}
                 <dd><span>GitHub:</span> <a href="{{ github }}" target="_blank">{{ github }}</a></dd>
+                {% endif %}
+                {% if other %}
+                <dd><span>其他:</span> {{ other | safe }}</dd>
                 {% endif %}
                 {% if online %}
                 <dd><span>在线简历:</span> <a href="{{ online }}" target="_blank">{{ online }}</a></dd>
                 {% endif %}
             </li>
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Contact. 联系方式</dt>
+                <dt><em class="fa fa-bookmark"></em>Contact. 联系方式</dt>
                 {% for item in contact %}
-                    <dd><i class="fa {{ item.icon }}"></i>{{ item.name }}: <a {% if item.name == 'Email' %}href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a></dd>
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                            {{ item.name }}:
+                            <a {% if item.name == 'Email' %} href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a>
+                    </dd>
                 {% endfor %}
             </li>
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Application. 应聘岗位</dt>
+                <dt><em class="fa fa-bookmark"></em>Application. 应聘岗位</dt>
                 <dd>{{ apply_to_position }}</dd>
             </li>
             {% if honor %}
             <li class="someRight">
-                <dt><i class="fa fa-bookmark"></i>Honor. 奖项荣誉</dt>
-                <dd>
-                    {% for item in honor %}
-                    <ul>
-                        <li>{{ item.date |safe }} {{ item.name |safe }}</li>
-                    </ul>
-                    {% endfor %}
-                </dd>
+                <dt><em class="fa fa-bookmark"></em>Honor. 奖项荣誉</dt>
+                {% for item in honor %}
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                        {{ item.date |safe }} <br>
+                        {{ item.name |safe }}
+                    </dd>
+                {% endfor %}
+
             </li>
             {% endif %}
             <li class="skill">
-                <dt><i class="fa fa-bookmark"></i>Tech. 主要技能点</dt>
+                <dt><em class="fa fa-bookmark"></em>Tech. 主要技能点</dt>
                 {% for item in tech %}
                 <dd>
                     <div class="skill-name">{{ item.name }}</div>
@@ -73,7 +82,7 @@
     <div class="main">
         <ul class="main-info">
             <li class="skill">
-                <dt><i class="fa fa-bookmark"></i>Skill. 技能清单</dt>
+                <dt><em class="fa fa-bookmark"></em>Skill. 技能清单</dt>
                 {% for item in skill %}
                 <ul class="exp">
                   <li>{{ item.des |safe }}</li>
@@ -81,9 +90,9 @@
                 {% endfor %}
             </li>
             <li class="experience">
-                <dt><i class="fa fa-bookmark"></i>Experience. 项目经验</dt>
+                <dt><em class="fa fa-bookmark"></em>Experience. 项目经验</dt>
                 {% for exp in experience %}
-                    {% if exp.section == '个人项目' %}
+                    {% if exp.section == '开源贡献' %}
                         <h2 class="exp-title">{{exp.section}}</h2>
                         <ul class="exp">
                             {% for item in exp.project %}
@@ -91,14 +100,15 @@
                                 <div class="circle"></div>
                                 <h4>{{ item.name }} {{ item.date }}
                                 {% if item.website %}
-                                <a href="{{ item.website }}" target="_blank"><em class="fa fa-link"></em>Demo</a>
+                                <a href="{{ item.website }}" target="_blank"
+                                ><em class="fa fa-link"></em>Demo</a>
                                 {% endif %}
                                 {% if item.source_code %}
                                 <a href="{{ item.source_code }}" target="_blank"><em class="fa fa-link"></em>SourceCode</a>
                                 {% endif %}
                                 </h4>
                                 <div class="clearfix">
-                                  {% if item.img %}<img src="{{ item.img }}">{% endif %}
+                                  {% if item.img %}<img alt="item" src="{{ item.img }}">{% endif %}
                                   {{ item.des |safe }}
                                 </div>
                             </li>
@@ -117,10 +127,10 @@
                                             <div class="circle"></div>
                                             <h4>{{ sub_item.name }} {{ sub_item.date }}
                                             {% if sub_item.website %}
-                                            <a href="{{ sub_item.website }}" target="_blank"><i class="fa fa-link"></i>Demo</a>
+                                            <a href="{{ sub_item.website }}" target="_blank"><em class="fa fa-link"></em>Demo</a>
                                             {% endif %}
                                             {% if sub_item.source_code %}
-                                            <a href="{{ sub_item.source_code }}" target="_blank"><i class="fa fa-link"></i>SourceCode</a>
+                                            <a href="{{ sub_item.source_code }}" target="_blank"><em class="fa fa-link"></em>SourceCode</a>
                                             {% endif %}
                                             </h4>
                                             <div class="clearfix">

@@ -47,10 +47,6 @@ contact: # 联系方式
 honor: # 奖项荣誉
   - 
     icon: fa-star
-    date: open source
-    name: 1. 开源项目learn-with-open-source collaborator<br> 2. 为DevUI组件库、Jvm-book(JVM勘误区)都提过pull request或issue并被接收
-  - 
-    icon: fa-star
     date: 2020.10
     name: 北大 | 学习优秀奖 | GPA3.789
   - 
@@ -96,7 +92,7 @@ experience: # 项目经验
       -
         name: WritingHelper
         date: 2021.02 - present
-        img: https://camo.githubusercontent.com/3b7b56b8c73bb6fb29846f7612477699853abc07b51c25b3ef5695295aa8151c/68747470733a2f2f67697465652e636f6d2f69737461727779682f696d616765732f7261772f6d61737465722f313632303438383333335f32303231303530383233333834313837375f323334362e706e67
+        img: https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
         website:
         source_code: https://github.com/istarwyh/writingHelper
         des: !!md |
@@ -117,11 +113,15 @@ experience: # 项目经验
           目前华为云已在内部使用,总下载量400+.
 
       - 
-        name: 好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)  
-        date: 2020.06
-        source_code: https://juejin.im/post/5efaf7f1f265da22c966f445
+        name: 其他  
+        date: 
+        source_code: 
         des: !!md | 
-          本人写作的DevUIHelper的DevUI团队官方宣发技术文章,文章目前被阅读10000+次,获得点赞90+.
+          - [learn-with-open-source](https://github.com/zhuangbiaowei/learn-with-open-source.git) collaborator
+          
+          - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收
+
+          - 本人写作的[好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
 
 
   -
