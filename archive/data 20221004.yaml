@@ -1,0 +1,192 @@
+---
+update_time: '2022.08.26'
+name: 王艺辉
+# nickname: istarwyh
+meta_content: 北京大学,####,P5
+keywords: istarwyh,后端,工作,简历
+ga_id: 'UA-92595311-1'
+born: 1997
+# age: 1997
+gender: 男
+school: 北京大学
+education_backgroud: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
+bachelor1: 
+profession: 软件工程
+work_life: 一年半
+grade: P5
+english_level: CET-6(习惯读原生技术文档) 
+blog:
+  name: 掘金
+  url: http://dwz.date/bjSn
+github: https://www.github.com/istarwyh
+# website: 
+# online: https://istarwyh.github.io/Resume/
+# print: https://istarwyh.github.io/Resume/print.html
+other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
+apply_to_position: 后端/搜索开发工程师
+description: !!md |
+    I act quickly once I understand my role.
+contact: # 联系方式
+  -
+    icon: fa-envelope
+    name: Email
+    value: yihui.wang@pku.edu.cn
+  # -
+  #   icon: fa-qq
+  #   name: QQ
+  #   value: '252790182'
+  -
+    icon: fa-phone-square
+    name: Phone
+    value: '15955311246'
+  - 
+    icon: fa-weixin
+    name: WeChat
+    value: istarwyh
+
+honor: # 奖项荣誉
+  - 
+    icon: fa-star
+    date: 2020.10
+    name: 北大 | 学习优秀奖 | 15/139 ｜ GPA3.789
+  - 
+    icon: fa-trophy
+    date: 2017.11
+    name: 石大 | 国家奖学金 | 1/69 | GPA3.89
+
+tech: # 技能点
+  -
+    name: Java
+    percentage: 80%
+  - 
+    name: Mysql
+    percentage: 70%
+  -
+    name: Git
+    percentage: 60%
+  - 
+    name: Junit/Mockito
+    percentage: 70%
+  - 
+    name: Tair/Redis
+    percentage: 50%
+  -
+    name: AIOS/ES
+    percentage: 50%
+  - 
+    name: ODPS
+    percentage: 50%
+  -
+    name: HTML/CSS
+    percentage: 20%
+  -
+    name: TypeScript
+    percentage: 30%
+  -
+    name: C/C++
+    percentage: 20%
+experience: # 项目经验
+  -
+    section: 开源贡献
+    project:
+      -
+        name: WritingHelper
+        date: 2021.02 - present
+        img: https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
+        website:
+        source_code: https://github.com/istarwyh/writingHelper
+        des: !!md |
+          本人学习雅思写作时意识到市场上缺少针对雅思地道词伙写作的工具,于是自己着手开发了WritingHelper。
+          
+          项目基于Node.js环境开发,通过字典树与责任链借助LSP的API实现实现了对英语词伙的自动补全、汉语翻译以及计时、计数等功能.
+          
+          项目上线后使用人数不断增加,目前**2700**+用户使用.
+      -
+        name: DevUIHelper
+        date: 2019.10 - 2020.05
+        img:
+        website:
+        source_code: https://github.com/istarwyh/DevUIHelper
+        des: !!md |
+          本项目致力于避免开发人员过度依赖文档的开发习惯,最终提高前端组件库的开发效率.
+          
+          本人提出了插件开发的CMS架构,并在早期带领小组实现了代码定义跳转,API悬浮提示及自动补全的功能;同时在2.0版本中协助设计了华为云DevUI团队组件的API说明规范.
+          
+          目前华为云已在内部使用,二期项目被收入DevCloudFE.
+
+      - 
+        name: 其他  
+        date: 
+        source_code: 
+        des: !!md | 
+          - [learn-with-open-source](https://github.com/zhuangbiaowei/learn-with-open-source.git) collaborator
+          
+          - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收,以及给[ng-devui](https://github.com/DevCloudFE/ng-devui)提过[PR](https://github.com/DevCloudFE/ng-devui/commit/9cde6c49061fdfbeb9a071303db9558bc93c8213)被接收
+
+          - 本人写作的[好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
+
+
+  -
+    section: 工作项目
+    exper:
+      - 
+        company: \####%%事业部
+        date: 2021.06 - present
+        desc: 本人在####%%供应链技术团队主要负责Inbound相关的&&&&业务.供应链是连接供应商与最终消费者的信息链、物流链与资金链,其中&&&&是保证物流链中货物以正确的数量在正确的时间与地点上架恰好满足订单的关键.
+        project:
+          -
+            name: \&&&&智能诊断
+            date: '2022.04-2022.05'
+            img: 
+            website: 
+            source_code:
+            des: !!md |
+              为了增加供应商对平台&&&&的信任以及帮助管理人员理解、排查&&&&有关信息,需要对&&&&的算法以及单据流转逻辑友好地展示.
+
+              本人牵头与中台敲定了总体技术方案,深入了解了算法的工作原理以及对齐了较为复杂的需求,并进行了数据回流的技术选型.项目上线填补了算法黑盒的缺口,提高了业务50%以上的工作效率.
+          -
+            name: \&&&&链路重构与迭代
+            date: '2021.09-2022.04'
+            img: 
+            website: 
+            source_code:
+            des: !!md |
+              随着&&&&源头的$$$货品池越发庞大,从数据集成开始的整条链路几乎每周出现一次故障.业务梳理后重构势在必行:1. 品池削减;2. 链路优化; 3. 主动故障监控
+              
+              重建整个商家仓链路是从0开始的,选型搜索引擎Ha3,引入SARO数据源和Swift增量;**完全自己摸索**基于http封装client以及ORM的代码,并综合使用了异步,并发,切片等手段优化代码,特别地还从业务逻辑上分策略和冗余优化
+              
+              项目的进展立竿见影地减少了工单和故障,并将计算链路的重算时间缩短了**93%**.本人在该项目中充分展现了自身的潜力,最后也得到了一定奖励.
+      - 
+        company: 众安保险金融事业部(实习)
+        date: 2020.7-2021.1
+        desc: !!md |
+          众安是2013年由腾讯、阿里、平安共同发起成立的国内首家互联网保险公司,也是国内首个业务全部运行在云端的保险公司,其保险核心系统可支持每秒3.2份保单.
+        project: 
+          - 
+            name: 金融核心数据统计平台
+            date: 2020.06 - 2021.01
+            des: !!md | 
+              适逢保险核心技术平台无界山2.0上线,全链路数据需要稽核,业务模型之间需要对齐梳理.
+            
+              当时我主要负责基于已有金融信任保证贷款、保险与资金方链路,实现逾200亿条记录自动化资金对账实收,并逐步排查原因,最后产出近300万条记录汇总到ElasticSearch并支持统计与监控项目的开发。我因此获得了"最佳月度个人"奖.
+
+skill: # 技能清单
+      -
+        des: !!md |
+          掌握Java,熟悉JVM特性原理,曾配置ParallerGC、初始堆与方法区内存等使蛋白质建模运行流畅
+      -
+        des: !!md |
+          熟练运用 SpringBoot+Mybatis与中间件HSF、MetaQ,大数据工具MaxCompute、Flink等
+          
+      - des: !!md |
+          熟悉MySQL;了解Redis、Lucene
+
+      -
+        des: !!md |
+         不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及**单元测试**等
+      -
+        des: !!md |
+          有一定前端页面及工具开发经验,使用过AngularJS与React
+
+
+---
