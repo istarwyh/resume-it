@@ -1,20 +1,20 @@
 ---
-update_time: '2022.05.03'
+update_time: '2022.08.26'
 name: 王艺辉
 # nickname: istarwyh
-meta_content: 北京大学,阿里,P5
+meta_content: 北京大学,####,P5
 keywords: istarwyh,后端,工作,简历
 ga_id: 'UA-92595311-1'
 born: 1997
 # age: 1997
 gender: 男
 school: 北京大学
-education_backgroud: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
+education_background: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
 bachelor1: 
 profession: 软件工程
-work_life: 一年
+work_life: 一年半
 grade: P5
-english_level: CET-6(习惯读原生技术文档)
+english_level: CET-6(习惯读原生技术文档) 
 blog:
   name: 掘金
   url: http://dwz.date/bjSn
@@ -23,7 +23,7 @@ github: https://www.github.com/istarwyh
 # online: https://istarwyh.github.io/Resume/
 # print: https://istarwyh.github.io/Resume/print.html
 other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
-apply_to_position: 后端开发工程师
+apply_to_position: 后端/搜索开发工程师
 description: !!md |
     I act quickly once I understand my role.
 contact: # 联系方式
@@ -48,7 +48,7 @@ honor: # 奖项荣誉
   - 
     icon: fa-star
     date: 2020.10
-    name: 北大 | 学习优秀奖 | GPA3.789
+    name: 北大 | 学习优秀奖 | 15/139 ｜ GPA3.789
   - 
     icon: fa-trophy
     date: 2017.11
@@ -65,13 +65,13 @@ tech: # 技能点
     name: Git
     percentage: 60%
   - 
-    name: Junit/Mock
-    percentage: 50%
+    name: Junit/Mockito
+    percentage: 70%
   - 
     name: Tair/Redis
     percentage: 50%
   -
-    name: Ha3/ES
+    name: AIOS/ES
     percentage: 50%
   - 
     name: ODPS
@@ -100,7 +100,7 @@ experience: # 项目经验
           
           项目基于Node.js环境开发,通过字典树与责任链借助LSP的API实现实现了对英语词伙的自动补全、汉语翻译以及计时、计数等功能.
           
-          项目上线后使用人数不断增加,目前**2200**+用户使用.
+          项目上线后使用人数不断增加,目前**2700**+用户使用.
       -
         name: DevUIHelper
         date: 2019.10 - 2020.05
@@ -130,30 +130,30 @@ experience: # 项目经验
     section: 工作项目
     exper:
       - 
-        company: 阿里巴巴淘特事业部
+        company: \####%%事业部
         date: 2021.06 - present
-        desc: 本人在阿里淘特供应链技术团队主要负责Inbound相关的补货计划业务.供应链是连接供应商与最终消费者的信息链、物流链与资金链,其中补货计划是保证物流链中货物以正确的数量在正确的时间与地点上架恰好满足订单的关键.
+        desc: 本人在####%%供应链技术团队主要负责Inbound相关的&&&&业务.供应链是连接供应商与最终消费者的信息链、物流链与资金链,其中&&&&是保证物流链中货物以正确的数量在正确的时间与地点上架恰好满足订单的关键.
         project:
           -
-            name: 补货计划智能诊断
-            date: '2022.04-2022.05'
+            name: xxx归因
+            date: '2022.07-2022.08'
             img: 
             website: 
             source_code:
             des: !!md |
-              为了增加供应商对平台补货计划的信任以及帮助管理人员理解、排查补货计划有关信息,需要对补货计划的算法以及单据流转逻辑友好地展示.
+              链路归因类产品通常面临3大问题:1.链路节点技术栈不统一;2.已有数据以及在线与离线逻辑复用问题;3.归因逻辑需要快速反复试错。
 
-              本人牵头与中台敲定了总体技术方案,深入了解了算法的工作原理以及对齐了较为复杂的需求,并进行了数据回流的技术选型.项目上线填补了算法黑盒的缺口,提高了业务50%以上的工作效率.
+              本人作为Inbound域技术PM,通过在应用以及调度平台都打通串联各异构数据源(Mysql、Postgre、Flink、MaxCompute),以及对归因逻辑从大到小的责任链切分组合,顺利解决了以上问题,也为归因类产品探索了一个通用的解决方案。
           -
-            name: 补货计划链路稳定性治理
-            date: '2021.09-2022.03'
+            name: \&&&&链路重构与迭代
+            date: '2021.09-2022.04'
             img: 
             website: 
             source_code:
             des: !!md |
-              随着补货计划源头的(数量不便透露)货品池越发庞大,从数据集成开始的整条链路几乎每周出现一次故障.业务梳理后稳定性治理主要有三步:1. 品池削减;2. 链路优化; 3. 主动故障监控
-
-              本人负责了第二步中整条商家仓商家端链路的打通以及第三步中计算结果监控.重建整个商家仓链路是从0开始的,首先是数据库的选型:我选择了Ha3;之后是引入数据源、完全自己摸索完成类似于JDBC的客户端以及ORM的代码;最后书写上层业务逻辑,但需要使用各种方法优化代码以满足多对多情况下批量查询的需求.
+              随着&&&&源头的$$$货品池越发庞大,从数据集成开始的整条链路几乎每周出现一次故障.业务梳理后重构势在必行:1. 品池削减;2. 链路优化; 3. 主动故障监控
+              
+              重建整个商家仓链路是从0开始的,选型搜索引擎Ha3,引入SARO数据源和Swift增量;**完全自己摸索**基于http封装client以及ORM的代码,并综合使用了异步,并发,切片等手段优化代码,特别地还从业务逻辑上分策略和冗余优化
               
               项目的进展立竿见影地减少了工单和故障,并将计算链路的重算时间缩短了**93%**.本人在该项目中充分展现了自身的潜力,最后也得到了一定奖励.
       - 
@@ -176,11 +176,14 @@ skill: # 技能清单
           掌握Java,熟悉JVM特性原理,曾配置ParallerGC、初始堆与方法区内存等使蛋白质建模运行流畅
       -
         des: !!md |
-          熟练运用 SpringBoot+Mybatis;熟悉MySQL;了解Redis、Lucene
+          熟练运用 SpringBoot+Mybatis与中间件HSF、MetaQ,大数据工具MaxCompute、Flink等
+          
+      - des: !!md |
+          熟悉MySQL;了解Redis、Lucene
 
       -
         des: !!md |
-         不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及单元测试等
+         不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及**单元测试**等
       -
         des: !!md |
           有一定前端页面及工具开发经验,使用过AngularJS与React
