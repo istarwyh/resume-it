@@ -2,7 +2,7 @@ Resume-it
 ======
 
 一个灵活的数据模板分离的在线简历生成器。
-效果：https://xiao555.github.io/Resume/
+效果：https://istarwyh.github.io/resume-it/
 如果喜欢的话请给个star ^_^
 
 ![](./resume.png)
@@ -67,7 +67,7 @@ npm start
 ```javascript
 npm run public
 ```
-会提交到master分支和gh-pages分支
+会提交到`master`分支和`gh-pages`分支
 浏览：`https://yourname.github.io/reponame/` 即可，print版访问：`https://yourname.github.io/reponame/print.html`。
 
 -[ ] 借助`Deploy to GitHub Pages` extension 可直接发布静态页面

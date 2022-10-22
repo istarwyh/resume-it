@@ -1,15 +1,15 @@
 const git = require('simple-git')
 const colors = require('colors')
 const path = 'dist'
-const repo = 'https://github.com/istarwyh/Resume.git'
+const repo = 'https://github.com/istarwyh/resume-it.git'
 
-console.log(`Start public to your git repo[${repo}]\nPlease wait ...`.green)
+console.log(`Start public to your git repo:[${repo}]\nPlease wait ...`.green)
 git(path)
   .init()
   .add('./*')
-  .commit("public")
+  .commit("automatically publish")
   .addRemote('origin', repo)
-  .push(['-f', 'origin', 'master'], () => {
+  .push(['origin', 'master'], () => {
     console.log("Push to master success");
   })
   .checkoutLocalBranch('gh-pages', () => {

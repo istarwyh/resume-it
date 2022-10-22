@@ -85,7 +85,7 @@ gulp.task('html', () => {
 })
 
 gulp.task('watch',() => {
-  if (isProd) return
+  if (isProd) return Promise.resolve('I am in ' + isProd);
   console.log('----------Starting watch in browser-----------');
 
   browserSync.init({
