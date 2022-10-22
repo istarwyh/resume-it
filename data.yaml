@@ -2,8 +2,8 @@
 update_time: '2022.05.03'
 name: 王艺辉
 # nickname: istarwyh
-meta_content: 大三前端狗，HR姐姐们把我招到碗里去吧
-keywords: xiao555,前端,工作,简历
+meta_content: 北京大学,阿里,P5
+keywords: istarwyh,后端,工作,简历
 ga_id: 'UA-92595311-1'
 born: 1997
 # age: 1997
@@ -121,7 +121,7 @@ experience: # 项目经验
         des: !!md | 
           - [learn-with-open-source](https://github.com/zhuangbiaowei/learn-with-open-source.git) collaborator
           
-          - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收
+          - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收,以及给[ng-devui](https://github.com/DevCloudFE/ng-devui)提过[PR](https://github.com/DevCloudFE/ng-devui/commit/9cde6c49061fdfbeb9a071303db9558bc93c8213)被接收
 
           - 本人写作的[好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
 
@@ -180,7 +180,7 @@ skill: # 技能清单
 
       -
         des: !!md |
-         不断追求高质量、高效率的工程开发实践,包括代码规范、code review、git版本控制、日志治理以及单元测试等
+         不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及单元测试等
       -
         des: !!md |
           有一定前端页面及工具开发经验,使用过AngularJS与React
