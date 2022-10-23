@@ -65,15 +65,13 @@ npm run publish
 这样会将`dist` 目录下的文件都**强制**提交到`gh-pages`分支
 
 3. 使用github的Pages 功能发布GitHub Pages静态页面
+(借助`Deploy to GitHub Pages` extension 可直接发布静态页面)
 
 ## TODO
 
-1. 数据内容直接在页面上修改
-2. 多模板
-3. 命令行接口
-4. 在线编辑+发布+导出
-5. 借助`Deploy to GitHub Pages` extension 可直接发布静态页面
-
+1. 多模板
+2. 在线编辑+发布+导出
+3. 增加对于技术栈标记Tag的功能
 
 ## 更新日志
 
