@@ -1,17 +1,11 @@
-Resume-it
+resume-it
 ======
 
-一个灵活的数据模板分离的在线简历生成器。
-效果：https://istarwyh.github.io/resume-it/
-如果喜欢的话请给个star ^_^
+一个灵活的数据模板分离的在线简历生成器,效果：https://istarwyh.github.io/resume-it/
 
 ![](./resume.png)
-
-Node version v7.7.0
-
 ## 风格参考
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it?ref=badge_shield)
-
 
 [@DIYgod](http://html.love/)
 
@@ -41,7 +35,7 @@ css部分在`src/styles/stylus`, 默认用stylus写。
 
 #### 3. 其他文件
 
-注：现在改用gulp打包了，如果要添加其他文件的话需要写一下配置文件`gulpfile.js`, 暂时没有提供打包其他文件的task
+本项目使用gulp打包，如果要添加其他文件的话需要写一下配置文件`gulpfile.js`, 暂时没有提供打包其他文件的task
 
 ## Usage
 
@@ -60,17 +54,17 @@ npm start
 
 打印版: 首页最下面有个打印版链接 或者 访问 `http://localhost:3000/print.html`，直接打印即可，注意勾选背景图片
 
-### Public
+### Publish
 
-请先在`public.js` 里配好repo地址，然后：
+1. 在`publish.ts` 里配好repo地址
 
+2. 运行
 ```javascript
-npm run public
+npm run publish
 ```
-会提交到`master`分支和`gh-pages`分支
-浏览：`https://yourname.github.io/reponame/` 即可，print版访问：`https://yourname.github.io/reponame/print.html`。
+这样会将`dist` 目录下的文件都**强制**提交到`gh-pages`分支
 
--[ ] 借助`Deploy to GitHub Pages` extension 可直接发布静态页面
+3. 使用github的Pages 功能发布GitHub Pages静态页面
 
 ## TODO
 
@@ -78,6 +72,8 @@ npm run public
 2. 多模板
 3. 命令行接口
 4. 在线编辑+发布+导出
+5. 借助`Deploy to GitHub Pages` extension 可直接发布静态页面
+
 
 ## 更新日志
 
@@ -91,6 +87,5 @@ npm run public
 ## LICENSE
 
 MIT
-
 
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it?ref=badge_large)
