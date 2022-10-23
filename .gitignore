@@ -1,6 +1,7 @@
 node_modules
-npm-debug.log
 .DS_Store
+.vscode
+.idea
 dist
 package-lock.json
-.vscode/
+npm-debug.log
