@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "NODE_ENV=production gulp",
-    "public": "rimraf dist && npm run build && node public.js",
+    "public": "rimraf dist && npm run build && node publish.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -40,7 +40,7 @@
     "nib": "^1.1.2",
     "path": "^0.12.7",
     "rimraf": "^2.6.1",
-    "simple-git": "^1.73.0"
+    "simple-git": "^3.14.1"
   },
   "author": "xiao555",
   "license": "MIT"
