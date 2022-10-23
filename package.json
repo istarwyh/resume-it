@@ -6,7 +6,7 @@
   "scripts": {
     "start": "gulp",
     "build": "NODE_ENV=production gulp",
-    "public": "rimraf dist && npm run build && node publish.ts",
+    "publish": "rimraf dist && npm run build && node publish.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "browser-sync": "^2.18.7",
     "colors": "^1.1.2",
+    "console-log-colors": "^0.2.3",
     "font-awesome": "^4.7.0",
     "glob": "^7.1.1",
     "gray-matter": "^2.1.0",
