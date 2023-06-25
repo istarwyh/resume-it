@@ -8,8 +8,26 @@ const markdownItAttrs = require('markdown-it-attrs')
 const nib = require('nib')
 const $ = require('gulp-load-plugins')()
 const browserSync = require('browser-sync').create()
+const _ = require('lodash');
 
 const isProd = process.env.NODE_ENV === 'production'
+const localDataPath = 'data.yaml'
+const archivePath = `archive/${getResumeDataName()}`
+
+
+function getResumeDataName() {
+  const currentDate = new Date();
+  const formattedDate = _.chain(currentDate)
+      .thru((date) => [
+        date.getFullYear().toString(),
+        _.padStart((date.getMonth() + 1).toString(), 2, '0'),
+        _.padStart(date.getDate().toString(), 2, '0')
+      ])
+      .join('')
+      .value();
+
+  return `resume_data_${formattedDate}.yaml`;
+}
 
 const md = new MarkdownIt({
   html: true,
@@ -76,7 +94,7 @@ gulp.task('html', () => {
     },
   })
   const YAML_SCHEMA = yaml.Schema.create([ MarkdownType ])
-  const context = matter(fs.readFileSync('data.yaml', 'utf8'), {schema: YAML_SCHEMA }).data
+  const context = matter(fs.readFileSync(localDataPath, 'utf8'), {schema: YAML_SCHEMA }).data
   return gulp.src(['template/index.html', 'template/print.html'])
     .pipe($.nunjucks.compile(context))
     .pipe($.htmlmin({collapseWhitespace: true}))
@@ -84,21 +102,49 @@ gulp.task('html', () => {
     .pipe($.size())
 })
 
-gulp.task('watch',() => {
-  if (isProd) return Promise.resolve('I am in ' + isProd);
-  console.log('----------Starting watch in browser-----------');
+gulp.task('archive', () => {
+  console.log('----------Starting archive process-----------');
+  fs.readFile(localDataPath, (err, data) => {
+    if (err) throw err;
+    fs.writeFile(archivePath, data, (err) => {
+      if (err) throw err;
+      console.log(`${archivePath} was copied successfully!`);
+    });
+  });
+  return Promise.resolve();
+})
+
+gulp.task('watch', () => {
+  if (isProd) {
+    console.log('Skipping watch task in production environment');
+    return Promise.resolve();
+  }
+
+  console.log('Starting watch task in development environment');
 
   browserSync.init({
     server: "./dist"
-  })
-  gulp.watch(paths.scripts, gulp.series('scripts'))
-  gulp.watch(paths.styles,  gulp.series('styles'))
-  gulp.watch(['template/*.html', 'data.yaml'], gulp.series('html'))
-  return gulp.watch(["dist/*.html", "dist/assets/*.*"])
-      .on('change', browserSync.reload)
-}) 
+  });
+
+  const watchTargets = [
+    { path: paths.scripts, task: 'scripts' },
+    { path: paths.styles, task: 'styles' },
+    { path: ['template/*.html', localDataPath], task: 'html' },
+    { path: ["dist/*.html", "dist/assets/*.*"], task: null }
+  ];
+
+  watchTargets.forEach(target => {
+    if (target.task) {
+      gulp.watch(target.path, gulp.series(target.task));
+    } else {
+      gulp.watch(target.path).on('change', browserSync.reload);
+    }
+  });
+
+  return Promise.resolve();
+});
 
 
 gulp.task(
   'default',
-  gulp.series('scripts', 'styles', 'fonts','html','watch'))
+  gulp.series('scripts', 'styles', 'fonts','html','archive', 'watch'))

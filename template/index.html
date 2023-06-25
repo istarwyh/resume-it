@@ -116,7 +116,7 @@
                     {% else %}
                         <h2 class="exp-title">{{exp.section}}</h2>
                         <ul class="exp">
-                            {% for item in exp.exper %}
+                            {% for item in exp.expert %}
                             <li>
                                 <h4>{{ item.company }} <span>{{ item.date }}</span></h4>
                                 <p>{{ item.desc | safe}}</p>
