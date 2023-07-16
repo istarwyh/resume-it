@@ -1,5 +1,5 @@
 ---
-update_time: '2023.05.07'
+update_time: '2023.07.1'
 name: 王艺辉
 # nickname: istarwyh
 meta_content: 北京大学,淘天集团,P5
@@ -161,7 +161,7 @@ skill: # 技能清单
           熟练运用 SpringBoot+Mybatis与中间件HSF、MetaQ,大数据工具 MaxCompute、Flink等
           
       - des: !!md |
-          熟悉MySQL;了解Redis、Lucene
+          熟悉MySQL;了解Redis、Inverted Index
       - des: !!md |
           熟悉React使用,本人独立承接自己域内全栈需求
       -
