@@ -1,11 +1,9 @@
 ---
-update_time: '2023.05.07'
+update_time: '2023.07.16'
 name: 王艺辉
-# nickname: istarwyh
 meta_content: 北京大学,淘天集团,P5
 keywords: istarwyh,后端,工作,简历
 born: 1997
-# age: 1997
 gender: 男
 school: 北京大学
 education_background: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
@@ -18,14 +16,11 @@ blog:
   name: 掘金
   url: http://dwz.date/bjSn
 github: https://www.github.com/istarwyh
-# website: 
-# online: https://istarwyh.github.io/Resume/
-# print: https://istarwyh.github.io/Resume/print.html
 other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: 后端/搜索开发工程师
 description: !!md |
     I act quickly once I understand my role.
-contact: # 联系方式
+contact:
   -
     icon: fa-envelope
     name: Email
@@ -39,7 +34,7 @@ contact: # 联系方式
     name: WeChat
     value: istarwyh
 
-honor: # 奖项荣誉
+honor:
   - icon: fa-star
     date: 2023.3
     name: 阿里巴巴 | 代码英雄奖 | 8/222 | 代码质量优秀
@@ -52,7 +47,7 @@ honor: # 奖项荣誉
     date: 2017.11
     name: 石大 | 国家奖学金 | 1/69 | GPA3.89
 
-tech: # 技能点
+tech:
   -
     name: Java
     percentage: 80%
@@ -83,7 +78,7 @@ tech: # 技能点
   -
     name: C/C++
     percentage: 20%
-experience: # 项目经验
+experience:
   -
     section: 开源贡献
     project:
@@ -152,7 +147,7 @@ experience: # 项目经验
               本人作为Inbound域技术PM,通过在应用以及调度平台都打通串联各异构数据源(MySQL、PostgreSQL、Flink、MaxCompute),以及对归因逻辑从大到小的责任链切分组合,顺利解决了以上问题,也为归因类产品探索了一个通用的解决方案。
 
 
-skill: # 技能清单
+skill:
       -
         des: !!md |
           掌握Java,熟悉JVM特性原理,曾配置ParallelGC、初始堆与方法区内存等使蛋白质建模运行流畅
@@ -167,4 +162,4 @@ skill: # 技能清单
       -
         des: !!md |
          不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及**单元测试**等
----
+
