@@ -29,11 +29,14 @@
     {% block main %}{% endblock %}
   </div>
   <footer>
-    <p>Theme by <a {% if website %}href="{{ website }}" {% else %} {% if github %}href="{{ github }}" {% endif %}{%
-        endif %} target="_blank">{{ nickname }}</a>. Made with <em class="fa fa-heart throb"
-        style="color: #d43f57;"></em> by 
-        <a href="https://github.com/istarwyh/resume-it" target="_blank">Resume-it</a>.
-      最后更新于{{ update_time }} <a href="./print.html">打印版</a></p>
+    <p>
+      Knowledge is ubiquitous, much like sunshine and air.
+      <a {% if website %}href="{{ website }}" {% else %} {% if github %}href="{{ github }}" {% endif %}{%
+        endif %} target="_blank">{{ nickname }}</a>
+<!--      Made with <em class="fa fa-heart throb" style="color: #d43f57;"></em> by-->
+<!--        <a href="https://github.com/istarwyh/resume-it" target="_blank">Resume-it</a>.-->
+<!--      最后更新于{{ update_time }} <a href="./print.html">打印版</a>-->
+    </p>
   </footer>
   <script src="assets/scripts.js"></script>
 </body>
