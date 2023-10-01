@@ -15,7 +15,7 @@ try {
             console.log('Checked out to branch gh-pages');
         })
         .push(['-f', 'origin', 'gh-pages'])
-        .checkout('master', () => {
+        .checkoutLocalBranch('master', () => {
             log.green('Finished publishing, back to branch master.');
         })
         .catch((error) => {
