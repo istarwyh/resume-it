@@ -14,7 +14,7 @@
     "url": "git://github.com/istarwyh/resume-it.git"
   },
   "dependencies": {
-    "jquery": "^3.1.1",
+    "jquery": "^3.7.1",
     "lodash": "^4.17.21",
     "velocity-animate": "^1.4.3"
   },
@@ -37,13 +37,13 @@
     "gulp-stylus": "^2.6.0",
     "gulp-uglify": "^3.0.0",
     "js-yaml": "^3.8.1",
-    "markdown-it": "^8.3.0",
+    "markdown-it": "14.0.0",
     "markdown-it-attrs": "^0.8.0",
     "nib": "^1.1.2",
     "path": "^0.12.7",
     "rimraf": "^2.6.1",
     "simple-git": "^3.14.1"
   },
-  "author": "xiao555",
+  "author": "xiaohui",
   "license": "MIT"
 }

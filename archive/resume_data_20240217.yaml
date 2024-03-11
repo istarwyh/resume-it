@@ -1,5 +1,5 @@
 ---
-update_time: '2024.03.15'
+update_time: '2023.07.16'
 name: 王艺辉
 meta_content: 北京大学,淘天集团
 keywords: istarwyh,后端,工作,简历
@@ -9,15 +9,15 @@ school: 北京大学
 education_background: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
 bachelor1:
 profession: 软件工程
-work_life: 3年
+work_life: 2年半
 grade: P5
 english_level: CET-6(习惯读原生技术文档)
 blog:
-  name: 晓灰
-  url: https://xiaohui.cool/
+  name: 掘金
+  url: http://dwz.date/bjSn
 github: https://www.github.com/istarwyh
 other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
-apply_to_position: 后端/搜索/Java&React 开发工程师
+apply_to_position: 后端/搜索开发工程师
 description: !!md |
     I act quickly once I understand my role.
 contact:
