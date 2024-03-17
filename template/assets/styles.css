@@ -1,1 +1,11 @@
-
+th, td {
+display: inline-block;
+margin-right: 10px; /* 调整这个值以设置单元格之间的间隔 */
+border-right: 1px solid white; /* 设置分割线为白色 */
+}
+th {
+font-weight: bold;
+}
+table {
+border-collapse: collapse;
+}

@@ -62,7 +62,7 @@ gulp.task('scripts', () => {
       paths.scripts
     ])
     .pipe($.uglify())
-    .pipe($.concat({ path: 'scripts.js', stat: { mode: 0666} }))
+    .pipe($.concat({ path: 'scripts.js', stat: { mode: 0o666} }))
     .pipe(gulp.dest('dist/assets/'))
     .pipe($.size())
 })
@@ -79,7 +79,7 @@ gulp.task('styles', () => {
 			browsers: ['last 2 versions'],
 			cascade: false
 		}))
-    .pipe($.concat({ path: 'styles.css', stat: { mode: 0666} }))
+    .pipe($.concat({ path: 'styles.css', stat: { mode: 0o666} }))
     .pipe(gulp.dest('dist/assets/'))
     .pipe($.size())
 })

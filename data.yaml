@@ -1,25 +1,60 @@
 ---
 update_time: '2024.03.15'
 name: 王艺辉
+nickname: 晓灰
 meta_content: 北京大学,淘天集团
-keywords: istarwyh,后端,工作,简历
+keywords: xiaohui,晓灰,工作,简历
 born: 1997
 gender: 男
 school: 北京大学
-education_background: 学士<br> - 2019~2021 | 北京大学 | 15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
+education_background: '<div class="w-full overflow-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="w-full table-fixed text-sm border-t border-gray-200 dark:border-gray-800">
+        <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <th class="px-4 py-3 text-left font-bold w-[200px]">时间段</th>
+                <th class="px-4 py-3 text-left font-bold">大学</th>
+                <th class="px-4 py-3 text-left font-bold w-[100px]">GPA&emsp;&emsp;排名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2019-2021</td>
+                <td class="px-4 py-3">北京大学(全日制第二学士)</td>
+                <td class="px-4 py-3">15/139</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2015-2017 &amp; 2018-2019</td>
+                <td class="px-4 py-3">石河子大学</td>
+                <td class="px-4 py-3">1/69</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2017-2018</td>
+                <td class="px-4 py-3">重庆大学&emsp;&emsp;(交流)</td>
+                <td class="px-4 py-3">24/100</td>
+            </tr>
+        </tbody>
+    </table>
+</div>'
+
+# <b>学士,不是硕士</b><br> - 2019~2021 | <br>  北京大学(二学位,全日制) |绩点排名:15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
+
 bachelor1:
 profession: 软件工程
 work_life: 3年
 grade: P5
-english_level: CET-6(习惯读原生技术文档)
+english_level: 'CET-6, <a href="https://xiaohui.cool/program/database/how-to-choose-the-suitable-database" target="_blank">my essay</a>'
 blog:
-  name: 晓灰
-  url: https://xiaohui.cool/
-github: https://www.github.com/istarwyh
-other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
+  name: Blog
+  url: xiaohui.cool
+github: github.com/istarwyh
+online: istarwyh.github.io/resume-it
+website: 
+  online: https://istarwyh.github.io/resume-it
+  print: https://istarwyh.github.io/resume-it/print.html
+# other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: 后端/搜索/Java&React 开发工程师
 description: !!md |
-    I act quickly once I understand my role.
+  I act quickly once I understand my role.
 contact:
   -
     icon: fa-envelope
