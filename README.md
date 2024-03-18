@@ -3,7 +3,7 @@ resume-it
 
 一个灵活的数据模板分离的在线简历生成器,效果：https://istarwyh.github.io/resume-it/
 
-![](./resume.png)
+![](./resume.jpg)
 ## 风格参考
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it?ref=badge_shield)
 
