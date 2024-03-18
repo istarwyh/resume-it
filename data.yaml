@@ -35,10 +35,6 @@ education_background: '<div class="w-full overflow-auto rounded-lg border border
         </tbody>
     </table>
 </div>'
-
-# <b>学士,不是硕士</b><br> - 2019~2021 | <br>  北京大学(二学位,全日制) |绩点排名:15/139<br> - 2015~2019 | 石河子大学 | 1/69<br> -  2017~2018 | 重庆大学(交流) | 24/100
-
-bachelor1:
 profession: 软件工程
 work_life: 3年
 grade: P5
@@ -48,9 +44,6 @@ blog:
   url: xiaohui.cool
 github: github.com/istarwyh
 online: istarwyh.github.io/resume-it
-website: 
-  online: https://istarwyh.github.io/resume-it
-  print: https://istarwyh.github.io/resume-it/print.html
 # other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: 后端/搜索/Java&React 开发工程师
 description: !!md |
@@ -82,45 +75,15 @@ honor:
     date: 2017.11
     name: 石大 | 国家奖学金 | 1/69 | GPA3.89
 
-tech:
-  -
-    name: Java
-    percentage: 80%
-  -
-    name: Mysql
-    percentage: 70%
-
-  - name: Junit5
-    percentage: 70%
-
-  - name: AIOS
-    percentage: 50%
-
-  - name: MaxCompute
-    percentage: 50%
-
-  - name: BigTable
-    percentage: 50%
-
-  - name: Flink
-    percentage: 30%
-  -
-    name: LLM
-    percentage: 30%
-  -
-    name: React
-    percentage: 30%
-  -
-    name: C/C++
-    percentage: 20%
 experience:
   -
     section: 开源贡献
     project:
       -
         name: WritingHelper
-        date: 2021.02 - present
-        img: https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
+        date: 2021.02
+        img: https://camo.githubusercontent.com/e3949de9341e6a7b1014140455241560c3cb41c9e1b3a5f0e5a6c17d2a0dbeee/68747470733a2f2f67697465652e636f6d2f69737461727779682f696d616765732f7261772f6d61737465722f313632343131393534385f32303231303632303030313835363133385f31343734372e676966
+        #https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
         website:
         source_code: https://github.com/istarwyh/writingHelper
         des: !!md |
@@ -128,18 +91,16 @@ experience:
           
           项目基于Node.js环境开发,通过字典树与责任链借助LSP的API实现实现了对英语词伙的自动补全、汉语翻译以及计时、计数等功能.
           
-          项目上线后使用人数不断增加,目前**5000**+用户使用。目前打算有空使用LLM再升级一下。
+          项目上线后使用人数不断增加,目前**5500**+用户使用。目前打算有空使用LLM再升级一下。
 
       -
         name: 其他
         date:
         source_code:
-        des: !!md |
-          - [learn-with-open-source](https://github.com/zhuangbiaowei/learn-with-open-source.git) collaborator
-          
+        des: !!md |          
           - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收,以及给[ng-devui](https://github.com/DevCloudFE/ng-devui)提过[PR](https://github.com/DevCloudFE/ng-devui/commit/9cde6c49061fdfbeb9a071303db9558bc93c8213)被接收
 
-          - 本人写作的[好用到飞起!VSCode插件DevUIHelper设计开发全功略(一)](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
+          - 本人写作的[VSCode插件DevUIHelper设计开发全攻略](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
 
 
   -
@@ -147,15 +108,22 @@ experience:
     expert:
       - company: 淘天集团淘工厂
         date: 2022.10 - present
-        desc: 本人在淘工厂财务团队主要负责"钱账票一体化"业务以及升级业财一体。此中"算得准、接的快、对的清、行的稳"是财务域不变的追求。
+        desc: 本人在淘工厂用户服务&客户基础团队负责"钱账票一体化"业务、升级业财一体;后来和 mentor 从 0 建设并负责了淘工厂的售前模块，包括开通、推荐、问答、体验、数据分析的建设。
         project:
+          -
+            name: 知识库链路建设
+            img: https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png
+            website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
+            source_code:
+            des: !!md |
+              知识库是AI升级客服问答的底层能力的基础。我负责了知识库的主要链路，融合了商家、小二、算法推荐、未命中知识来源，打通了有效答案的规模化生产链路，支撑了整个淘工厂的售前售后问答。
           -
             name: 钱账票一体化
             img:
             website: https://mp.weixin.qq.com/s/vCRhU_jjh1AM7AYy9Zdr8w
             source_code:
             des: !!md |
-              本人作为账单域owner,主牵淘工厂内部"结算"、"账单"与"供应商开票"三个业务的自动化与一体化。项目涉及十多个计费业务，数据量达百亿。本人深度使用了MaxCompute、PostgreSQL、BigTable等数据库。为"接得快"，开发了**DSL**。项目上线后将原本烟囱式开发的效率缩短到一周，并在《阿里技术》上系统介绍了这个项目。
+              本人主牵淘工厂内部"结算"、"账单"与"供应商开票"三个业务的自动化与一体化。项目涉及十多个计费业务，数据量达百亿。本人深度使用了MaxCompute、PostgreSQL、BigTable等数据库。为"接得快"，开发了**DSL**。项目上线后将原本烟囱式开发的效率缩短到一周，并在《阿里技术》上系统介绍了这个项目。
           -
             name: 业财一体
             img:
@@ -166,7 +134,7 @@ experience:
       -
         company: 阿里巴巴淘特事业部
         date: 2021.06 - 2022.10
-        desc: 本人淘特供应链技术团队主要负责补货&库存计划业务。供应链是连接供应商与最终消费者的信息链、物流链与资金链,其中补货&库存计划是保证物流链中货物以正确的数量在正确的时间与地点上架恰好满足订单的关键.
+        desc: 本人淘特供应链负责补货&库存计划业务，保证货物以正确的数量在正确的时间与地点上架恰好满足订单需求。
         project:
           - name: 补货计划链路重构与迭代
             img:
@@ -175,23 +143,46 @@ experience:
             des: !!md |
               随着补货计划源头的150万货品池越发庞大,从数据集成开始的整条链路几乎每周出现一次故障,必须重构:1. 品池削减;2. 链路优化; 3. 主动故障监控
 
-              重建整个商家仓链路是从0开始的,选型搜索引擎Ha3,引入SARO数据源和Swift增量;自己**从0开始基于http实现client以及ORM**,并综合使用了异步、并发、切片等手段优化代码,特别地还从业务逻辑上分策略和冗余优化。
+              重建整个商家仓链路,选型搜索引擎HA3，结合SARO、Swift、Flink;自己**从0开始基于http实现client以及ORM**,并综合使用了异步、并发、切片等手段优化代码,特别地还从业务逻辑上分策略和冗余优化。
 
-              项目的进展立竿见影地减少了工单和故障,并将计算链路的重算时间缩短了**93%**,获得部门内表彰"让用户爽"。
+              项目立竿见影地减少了工单和故障,并将计算链路重算时间缩短了**93%**,获得部门内表彰"让用户爽"。
 
 skill:
   -
     des: !!md |
-      掌握Java,熟悉JVM特性原理,曾配置ParallelGC、初始堆与方法区内存等使蛋白质建模运行流畅
+      掌握Java,熟悉JVM特性原理。一直维护整个应用,曾配置ParallelGC、初始堆与方法区内存等使蛋白质建模运行流畅
   -
     des: !!md |
       熟练运用 SpringBoot+Mybatis与中间件HSF、MetaQ,大数据工具 MaxCompute、Flink等
 
   - des: !!md |
-      熟悉MySQL;了解Redis、Lucene
+      熟悉MySQL;了解Redis、Lucene、Hologres(PostgreSQL)、BigTable等 OLAP、TP各种数据库
   - des: !!md |
-      熟悉React使用,本人独立承接自己域内全栈需求
+      可以使用React做全栈开发,本人独立开发了自己账单域的前端框架,承接了整个淘工厂的账单
   -
     des: !!md |
       不断追求高质量、高效率的工程开发实践,包括领域建模方法(如DDD)、代码规范、code review、git版本控制、日志治理以及**单元测试**等
 
+tech:
+  -
+    name: Java/Junit5
+    percentage: 80%
+  -
+    name: Mysql/OTS
+    percentage: 70%
+
+  - name: SQL/Flink
+    percentage: 50%
+
+  - name: AIOS
+    percentage: 40%
+
+  -
+    name: LLM
+    percentage: 35%
+  -
+    name: React
+    percentage: 30%
+  -
+    name: C/Python
+    percentage: 20%
