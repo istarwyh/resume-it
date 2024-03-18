@@ -21,16 +21,16 @@
                 <dd><span>花名:</span> {{ nickname }}</dd>
                 {% endif %} -->
                 {% if blog %}
-                <dd><span>{{blog.name}}:</span> <a href="{{ blog }}" target="_blank">{{ blog.url }}</a></dd>
+                <dd><span>{{blog.name}}:</span> <a href="https://{{ blog.url }}" target="_blank">{{ blog.url }}</a></dd>
                 {% endif %}
                 {% if github %}
-                <dd><span>GitHub:</span> <a href="{{ github }}" target="_blank">{{ github }}</a></dd>
+                <dd><span>GitHub:</span> <a href="https://{{ github }}" target="_blank">{{ github }}</a></dd>
                 {% endif %}
                 {% if other %}
                 <dd><span>其他:</span> {{ other | safe }}</dd>
                 {% endif %}
                 {% if online %}
-                <dd><span>在线简历:</span> <a href="{{ online }}" target="_blank">{{ online }}</a></dd>
+                <dd><span>在线简历:</span> <a href="https://{{ online }}" target="_blank">{{ online }}</a></dd>
                 {% endif %}
             </li>
             <li class="someRight">
