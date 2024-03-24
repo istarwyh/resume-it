@@ -11,7 +11,8 @@ const browserSync = require('browser-sync').create()
 const _ = require('lodash');
 
 const isProd = process.env.NODE_ENV === 'production'
-const localDataPath = 'data.yaml'
+const chineseDataPath = 'data.yaml'
+const englighDataPath = 'data-en.yaml'
 const archivePath = `archive/${getResumeDataName()}`
 
 
@@ -94,17 +95,29 @@ gulp.task('html', () => {
     },
   })
   const YAML_SCHEMA = yaml.Schema.create([ MarkdownType ])
-  const context = matter(fs.readFileSync(localDataPath, 'utf8'), {schema: YAML_SCHEMA }).data
-  return gulp.src(['template/index.html', 'template/print.html'])
-    .pipe($.nunjucks.compile(context))
-    .pipe($.htmlmin({collapseWhitespace: true}))
+  const chData = getData(chineseDataPath)
+  const enData = getData(englighDataPath)
+  const compliedChineseHtml = gulp.src(['template/index.html', 'template/print.html'])
+    .pipe($.nunjucks.compile(chData))
+    const compliedEnglishHtml = gulp.src(['template/index-en.html','template/print-en.html'])
+    .pipe($.nunjucks.compile(enData))
+  const res = compliedChineseHtml
+    .pipe($.htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'))
     .pipe($.size())
+  return compliedEnglishHtml
+    .pipe($.htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('dist'))
+    .pipe($.size())
+
+  function getData(dataPath) {
+    return matter(fs.readFileSync(dataPath, 'utf8'), { schema: YAML_SCHEMA }).data
+  }
 })
 
 gulp.task('archive', () => {
   console.log('----------Starting archive process-----------');
-  fs.readFile(localDataPath, (err, data) => {
+  fs.readFile(chineseDataPath, (err, data) => {
     if (err) throw err;
     fs.writeFile(archivePath, data, (err) => {
       if (err) throw err;
@@ -129,7 +142,7 @@ gulp.task('watch', () => {
   const watchTargets = [
     { path: paths.scripts, task: 'scripts' },
     { path: paths.styles, task: 'styles' },
-    { path: ['template/*.html', localDataPath], task: 'html' },
+    { path: ['template/*.html', chineseDataPath,englighDataPath], task: 'html' },
     { path: ["dist/*.html", "dist/assets/*.*"], task: null }
   ];
 

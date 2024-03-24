@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% block body_class %}print{% endblock %}
+{% block main %}
+<div class="container">
+    <div class="sidebar">
+        <div class="title">
+            {% include 'head.html' %}
+            <h1>{{ name }}</h1>
+            <h2>{{ des }}</h2>
+        </div>
+        <ul class="side-info">
+            <li class="someRight">
+                <dt><em class="fa fa-bookmark"></em>Basic info. </dt>
+                <dd><span></span> {{ name }} / {{ gender }} / {{ born }} </dd>
+                <dd><span>Work Experience:</span>{{work_life}} / {{grade}}</dd>
+                <dd><span>Education background:</span>{{education_background | safe}}</dd>
+                <dd><span>Major:</span>{{profession}}</dd>
+                {% if english_level %}
+                <dd><span>English Level:</span> {{ english_level | safe}}</dd>
+                {% endif %}
+                <!-- {% if nickname %}
+                <dd><span>中文名:</span> {{ nickname }}</dd>
+                {% endif %} -->
+                {% if blog %}
+                <dd><span>{{blog.name}}:</span> <a href="https://{{ blog.url }}" target="_blank">{{ blog.url }}</a></dd>
+                {% endif %}
+                {% if github %}
+                <dd><span>GitHub:</span> <a href="https://{{ github }}" target="_blank">{{ github }}</a></dd>
+                {% endif %}
+                {% if other %}
+                <dd><span>Others:</span> {{ other | safe }}</dd>
+                {% endif %}
+                {% if online %}
+                <dd><span>Online Resume:</span> <a href="https://{{ online }}" target="_blank">{{ online }}</a></dd>
+                {% endif %}
+            </li>
+            <li class="someRight">
+                <dt><em class="fa fa-bookmark"></em>Contact.</dt>
+                {% for item in contact %}
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                            {{ item.name }}:
+                            <a {% if item.name == 'Email' %} href="mailto:{{ item.value }}"{% endif %} target="_blank">{{ item.value }}</a>
+                    </dd>
+                {% endfor %}
+            </li>
+            <li class="someRight">
+                <dt><em class="fa fa-bookmark"></em>Application.</dt>
+                <dd>{{ apply_to_position }}</dd>
+            </li>
+            {% if honor %}
+            <li class="someRight">
+                <dt><em class="fa fa-bookmark"></em>Honor.</dt>
+                {% for item in honor %}
+                    <dd>
+                        <em class="fa {{ item.icon }}"></em>
+                        {{ item.date |safe }} <br>
+                        {{ item.name |safe }}
+                    </dd>
+                {% endfor %}
+
+            </li>
+            {% endif %}
+            <li class="skill">
+                <dt><em class="fa fa-bookmark"></em>Tech.</dt>
+                {% for item in tech %}
+                <dd>
+                    <div class="skill-name">{{ item.name }}</div>
+                    <div class="skill-bar-wrap">
+                        <div class="skill-bar" style="width: {{ item.percentage }}"></div>
+                    </div>
+                </dd>
+                {% endfor %}
+            </li>
+        </ul>
+        {% if intro %}
+        <div class="note">
+            {{ intro |safe }}
+        </div>
+        {% endif %}
+    </div>
+    <div class="main">
+        <ul class="main-info">
+            <li class="skill">
+                <dt><em class="fa fa-bookmark"></em>Skill.</dt>
+                {% for item in skill %}
+                <ul class="exp">
+                  <li>{{ item.des |safe }}</li>
+                </ul>
+                {% endfor %}
+            </li>
+            <li class="experience">
+                <dt><em class="fa fa-bookmark"></em>Experience.</dt>
+                {% for exp in experience %}
+                    {% if exp.section == 'OpenSource' %}
+                        <h2 class="exp-title">{{exp.section}}</h2>
+                        <ul class="exp">
+                            {% for item in exp.project %}
+                            <li>
+                                <div class="circle"></div>
+                                <h4>{{ item.name }} {{ item.date }}
+                                {% if item.website %}
+                                <a href="{{ item.website }}" target="_blank"
+                                ><em class="fa fa-link"></em>Demo</a>
+                                {% endif %}
+                                {% if item.source_code %}
+                                <a href="{{ item.source_code }}" target="_blank"><em class="fa fa-link"></em>SourceCode</a>
+                                {% endif %}
+                                </h4>
+                                <div class="clearfix">
+                                  {% if item.img %}<img alt="item" src="{{ item.img }}">{% endif %}
+                                  {{ item.des |safe }}
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <h2 class="exp-title">{{exp.section}}</h2>
+                        <ul class="exp">
+                            {% for item in exp.expert %}
+                            <li>
+                                <h4>{{ item.company }} <span>{{ item.date }}</span></h4>
+                                <p>{{ item.desc | safe}}</p>
+                                <ul>
+                                    {% for sub_item in item.project %}
+                                        <li>
+                                            <div class="circle"></div>
+                                            <h4>{{ sub_item.name }} {{ sub_item.date }}
+                                            {% if sub_item.website %}
+                                            <a href="{{ sub_item.website }}" target="_blank"><em class="fa fa-link"></em>说明</a>
+                                            {% endif %}
+                                            {% if sub_item.source_code %}
+                                            <a href="{{ sub_item.source_code }}" target="_blank"><em class="fa fa-link"></em>SourceCode</a>
+                                            {% endif %}
+                                            </h4>
+                                            <div class="clearfix">
+                                              {% if sub_item.img %}<img alt="sub_item" src="{{ sub_item.img }}">{% endif %}
+                                              {{ sub_item.des |safe }}
+                                            </div>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                
+                {% endfor %}
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
