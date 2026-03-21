@@ -108,14 +108,13 @@ experience:
         website: https://github.com/istarwyh/mcpadvisor
         source_code: https://github.com/istarwyh/mcpadvisor
         des: !!md |
-          An MCP Server that helps users discover and install MCP tools via natural language. Solves the fragmented installation experience across the MCP ecosystem.
+          <img src="assets/images/mcpadvisor-show.jpg" alt="MCPAdvisor hackathon demo" style="float:right;width:130px;margin:0 0 4px 10px;border-radius:4px;">MCP ecosystem expanding rapidly but with fragmented installation and high discovery costs — developed MCPAdvisor to manage MCPs via natural language: automatically retrieve, evaluate, and install the most suitable MCP Servers, solving **AI Coding** toolchain fragmentation pain points.
 
           Won **2nd Place at 2025 OceanBase AI Hackathon** (Team Leader).
       -
         name: WritingHelper
         date: 2021.02
-        img: https://camo.githubusercontent.com/e3949de9341e6a7b1014140455241560c3cb41c9e1b3a5f0e5a6c17d2a0dbeee/68747470733a2f2f67697465652e636f6d2f69737461727779682f696d616765732f7261772f6d61737465722f313632343131393534385f32303231303632303030313835363133385f31343734372e676966
-        #https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
+        img:
         website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
         source_code: https://github.com/istarwyh/writingHelper
         des: !!md |
@@ -123,16 +122,6 @@ experience:
           Built on `Node.js` using a trie tree and `responsibility chain` pattern with `LSP` APIs for phrase autocompletion, Chinese translation, timing and counting.
 
           **15,000+** downloads since launch.
-
-      -
-        name: Others
-        date:
-        source_code:
-        des: !!md |
-          - The [issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396) raised for Jvm-book was accepted, and the [PR](https://github.com/DevCloudFE/ng-devui/commit/9cde6c49061fdfbeb9a071303db9558bc93c8213) raised for [ng-devui](https://github.com/DevCloudFE/ng-devui) was accepted.
-
-          - [Guide to the VSCode plug-in DevUIHelper](https://juejin.im/post/5efaf7f1f265da22c966f445) has been read **10,000+** times and received **90+** likes.
-
 
   -
     section: Work Project
@@ -145,38 +134,31 @@ experience:
           -
             name: Insurance Chaxha · General Agent System
             img:
-            website:
+            website: https://xiaohui.cool/program/llm/%E3%80%90%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%E3%80%91%E4%BB%8EClaude-Code%E5%88%B0-OneAgent%EF%BC%9A%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B
             source_code:
             des: !!md |
-              Leading the core Agent application for Alipay's Insurance Chaxha, serving **8 million MAU** — the first product in China to cover all insurance categories with AI Agent interpretation.
+              <img src="assets/images/cc.png" alt="Insurance Chaxha architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Addressing siloed Agent development and lack of reusable infrastructure — designed Agent Runtime-Executor-SessionPool three-layer general intelligent agent architecture, specifically implementing Claude Code-like general Agent Loop based on LangGraph, supporting Alipay Insurance Chaxha (**8 million MAU**) and innovative **page AIGC** real-time visual interaction.
 
-              Architected the general intelligent agent system supporting **page AIGC** (real-time personalized visual interaction) and multi-business Agent reuse. Drove **Harness Engineering** to ensure 100% AI-delivered requirements with quality guarantees.
+              Implemented **Harness Engineering** (Prompt-Test-Verify loop) to achieve **100% AI-delivered** requirements; drove full-process efficiency from design specs to frontend components via **AI Coding** workflow, establishing a replicable AI quality system. Project published as best practice in Alibaba Cloud Developer.
           -
             name: MCP Integration & Domain Agent Framework
             img:
-            website:
+            website: https://xiaohui.cool/program/llm/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9FAgent---OneAgent-+-MCPs-%E8%8C%83%E5%BC%8F
             source_code:
             des: !!md |
-              Built a rapid domain-Agent creation framework based on **OneAgent + MCPs** paradigm, significantly reducing onboarding time for new Agent scenarios. Led the design and deployment of Ant Insurance MCP Servers to enable modular Agent capability reuse.
-          -
-            name: Risk Control · Case Analysis AI Agent
-            img:
-            website:
-            source_code:
-            des: !!md |
-              Built an AI Agent system for insurance fraud case analysis (2024.06 - 2024.11). The Agent automates case information extraction, multi-dimensional risk assessment and conclusion generation, significantly improving risk review efficiency.
+              Over 100 existing HTTP/HSF services could not be directly consumed by Agents — led **MCPBridge** construction to MCP-ize them, designed Ant Insurance domain MCP Server, built cross-business reusable toolchain based on **OneAgent + MCPs** paradigm, significantly reducing new business Agent onboarding cycles.
       -
         company: Taotian Group · Tao Factory
-        date: 2022.10 - 2024.06
-        desc: Responsible for "Money-Bill-Invoice Integration" and industry-finance unification; later co-built the pre-sales module from scratch including knowledge base, Q&A, recommendation, experience and data analytics.
+        date: 2021.06 - 2024.06
+        desc: Participated in industry-finance integration and led "Money-Bill-Invoice Integration" engineering; later co-led the pre-sales AI module from scratch with mentor, covering RAG knowledge base, Q&A, recommendation and other intelligent chains.
         project:
           -
             name: Knowledge Base Pipeline
-            img: https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png
+            img:
             website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
             source_code:
             des: !!md |
-              The knowledge base is the foundation for AI-upgraded customer service Q&A. I built the main pipeline integrating merchant, operator, algorithm recommendation, and missed-hit knowledge sources, enabling scalable production of effective answers across all pre-sales and after-sales Q&A.
+              <img src="https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png" alt="Knowledge base architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Low answer hit rate and fragmented knowledge sources — built multi-source fusion RAG knowledge base pipeline (multi-path retrieval + LLM reranking + generation), integrating merchant, operator, algorithm recommendation, and missed-hit knowledge sources, establishing scalable effective answer production loop, supporting Tao Factory full-category pre-sales and after-sales intelligent Q&A.
           -
             name: Money-Bill-Invoice Integration
             img:
@@ -204,22 +186,25 @@ experience:
 skill:
   -
     des: !!md |
-      Production AI Agent experience: responsible for an **8M MAU** Agent application; proficient in RAG, Tool Use, MCP, multimodal Agent, and end-to-end intelligent system architecture.
+      **AI Agent** production experience: led **8M MAU** general intelligent agent system architecture; proficient in RAG, Tool Use, MCP, multimodal Agent; drive full-process R&D efficiency with **AI Coding**
   -
     des: !!md |
-      Master Java and JVM principles; proficient with SpringBoot+Mybatis, HSF, MetaQ, MaxCompute, Flink.
+      Master Java, familiar with JVM principles; proficient with SpringBoot + Mybatis, MetaQ, big data tools MaxCompute, Flink, etc.
   - des: !!md |
-      Familiar with MySQL; experienced with Redis, Lucene, Hologres (PostgreSQL), BigTable across OLAP and TP databases.
+      Familiar with MySQL; experienced with Redis, Lucene, Hologres (PostgreSQL), BigTable and other OLAP/TP databases
   - des: !!md |
-      Full-stack with React (built Tao Factory billing frontend independently); Python for AI engineering.
+      React + Python full-stack capability: independently developed Tao Factory billing domain frontend framework; Python for Agent engineering and data processing
   -
     des: !!md |
-      Engineering excellence: DDD, **Harness Engineering** (100% AI delivery quality assurance), TDD, Code Review, log governance.
+      **Harness Engineering** deep practice: build Prompt-Test-Verify quality loop, achieve 100% AI delivery and verification; continuously promote AI Coding integration with DDD, TDD
 
 tech:
   -
-    name: AI Agent/LLM
+    name: AI Agent
     percentage: 85%
+  -
+    name: Python
+    percentage: 80%
   -
     name: Java/Junit5
     percentage: 80%
@@ -230,8 +215,5 @@ tech:
     name: Mysql/OTS
     percentage: 70%
   -
-    name: SQL/Flink
-    percentage: 55%
-  -
-    name: React/Python
+    name: LLM/React
     percentage: 40%
