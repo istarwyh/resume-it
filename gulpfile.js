@@ -115,6 +115,14 @@ gulp.task('html', () => {
   }
 })
 
+gulp.task('images', () => {
+  console.log('----------Starting images-----------');
+
+  return gulp.src('src/assets/images/**/*')
+    .pipe(gulp.dest('dist/assets/images/'))
+    .pipe($.size())
+})
+
 gulp.task('archive', () => {
   console.log('----------Starting archive process-----------');
   fs.readFile(chineseDataPath, (err, data) => {
@@ -143,6 +151,7 @@ gulp.task('watch', () => {
     { path: paths.scripts, task: 'scripts' },
     { path: paths.styles, task: 'styles' },
     { path: ['template/*.html', chineseDataPath,englighDataPath], task: 'html' },
+    { path: 'src/assets/images/**/*', task: 'images' },
     { path: ["dist/*.html", "dist/assets/*.*"], task: null }
   ];
 
@@ -160,4 +169,4 @@ gulp.task('watch', () => {
 
 gulp.task(
   'default',
-  gulp.series('scripts', 'styles', 'fonts','html','archive', 'watch'))
+  gulp.series('scripts', 'styles', 'fonts', 'images', 'html','archive', 'watch'))

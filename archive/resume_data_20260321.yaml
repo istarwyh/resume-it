@@ -1,0 +1,239 @@
+---
+update_time: '2026.03.21'
+name: 王艺辉
+nickname: 晓灰
+meta_content: 北京大学,蚂蚁集团
+keywords: xiaohui,晓灰,Agent,简历
+born: 1997
+gender: 男
+school: 北京大学
+education_background: '<div class="w-full overflow-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="w-full table-fixed text-sm border-t border-gray-200 dark:border-gray-800">
+        <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <th class="px-4 py-3 text-left font-bold w-[200px]">时间段</th>
+                <th class="px-4 py-3 text-left font-bold">大学</th>
+                <th class="px-4 py-3 text-left font-bold w-[100px]">GPA&emsp;&emsp;排名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2019-2021</td>
+                <td class="px-4 py-3">北京大学(全日制第二学士)</td>
+                <td class="px-4 py-3">15/139</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2015-2017 &amp; 2018-2019</td>
+                <td class="px-4 py-3">石河子大学</td>
+                <td class="px-4 py-3">1/69</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2017-2018</td>
+                <td class="px-4 py-3">重庆大学&emsp;&emsp;(交流)</td>
+                <td class="px-4 py-3">24/100</td>
+            </tr>
+        </tbody>
+    </table>
+</div>'
+profession: 软件工程
+work_life: 5年
+grade: P7
+english_level: 'CET-6, <a href="https://xiaohui.cool/program/database/how-to-choose-the-suitable-database" target="_blank">my essay</a>'
+blog:
+  name: Blog
+  url: xiaohui.cool
+github: github.com/istarwyh
+online: istarwyh.github.io/resume-it
+# other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
+apply_to_position: AI Agent 开发专家 / 智能体系统架构
+description: !!md |
+  I act quickly once I understand my role.
+  
+  *某个礼拜，我的 token 花费超过了我的工资。*
+contact:
+  -
+    icon: fa-envelope
+    name: Email
+    value: yihui.wang@pku.edu.cn
+  -
+    icon: fa-phone-square
+    name: Phone
+    value: '15955311246'
+  -
+    icon: fa-weixin
+    name: WeChat
+    value: istarwyh
+
+honor:
+  -
+    icon: fa-trophy
+    date: 2025
+    name: 蚂蚁集团 | 年度优秀创作者 & 财保技术部 AI 年度之星
+  -
+    icon: fa-trophy
+    date: 2025
+    name: 首届阿里&蚂蚁 ATA | 个人 Agent 最佳实践奖
+  -
+    icon: fa-trophy
+    date: 2025
+    name: OceanBase AI 黑客松 | 二等奖 | 队长 | MCPAdvisor
+  -
+    icon: fa-trophy
+    date: 2025
+    name: 蚂蚁集团黑客松 | 三等奖 | 队长
+  -
+    icon: fa-star
+    date: 2023.3
+    name: 阿里巴巴 | 代码英雄奖 | 8/222 | 代码质量优秀
+  -
+    icon: fa-star
+    date: 2020.10
+    name: 北大 | 学习优秀奖 | 15/139 | GPA3.789
+  -
+    icon: fa-trophy
+    date: 2017.11
+    name: 石大 | 国家奖学金 | 1/69 | GPA3.89
+
+experience:
+  -
+    section: 开源贡献
+    project:
+      -
+        name: MCPAdvisor
+        date: 2025.02
+        img:
+        website: https://github.com/istarwyh/mcpadvisor
+        source_code: https://github.com/istarwyh/mcpadvisor
+        des: !!md |
+          一个帮助用户安装 MCP 的 MCP Server。通过自然语言描述需求，自动检索并安装合适的 MCP 工具，解决 MCP 生态碎片化的安装痛点。
+
+          项目获得 **2025 OceanBase AI 黑客松二等奖**（本人担任队长）。
+      -
+        name: WritingHelper
+        date: 2021.02
+        img: https://camo.githubusercontent.com/e3949de9341e6a7b1014140455241560c3cb41c9e1b3a5f0e5a6c17d2a0dbeee/68747470733a2f2f67697465652e636f6d2f69737461727779682f696d616765732f7261772f6d61737465722f313632343131393534385f32303231303632303030313835363133385f31343734372e676966
+        #https://istarwyh.gallerycdn.vsassets.io/extensions/istarwyh/writinghelper/0.1.8/1636288775600/Microsoft.VisualStudio.Services.Icons.Default
+        website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
+        source_code: https://github.com/istarwyh/writingHelper
+        des: !!md |
+          本人学习雅思写作时意识到市场上缺少针对雅思地道词伙写作的工具,于是自己着手开发了WritingHelper。
+          
+          项目基于Node.js环境开发,通过字典树与责任链借助LSP的API实现对英语词伙的自动补全、汉语翻译以及计时、计数等功能.
+          
+          项目上线后使用人数不断增加,目前 **15000+** 下载量。
+
+      -
+        name: 其他
+        date:
+        source_code:
+        des: !!md |          
+          - 为Jvm-book提过[issue](https://github.com/fenixsoft/jvm_book/issues/38#issue-647177396)被接收,以及给[ng-devui](https://github.com/DevCloudFE/ng-devui)提过[PR](https://github.com/DevCloudFE/ng-devui/commit/9cde6c49061fdfbeb9a071303db9558bc93c8213)被接收
+
+          - 本人写作的[VSCode插件DevUIHelper设计开发全攻略](https://juejin.im/post/5efaf7f1f265da22c966f445)目前被阅读10000+次,获得点赞90+.
+
+
+  -
+    section: 工作项目
+    expert:
+      -
+        company: 蚂蚁集团 · 蚂蚁保保险科技
+        date: 2024.06 - 至今
+        desc: 负责支付宝保险查查 Agent 应用，这是全中国首个拥有全险种 Agent 解读能力的保险产品，MAU **800万**。同时负责通用智能体系统建设与 MCP 相关工作。
+        project:
+          -
+            name: 保险查查 · 通用智能体系统
+            img:
+            website:
+            source_code:
+            des: !!md |
+              负责支付宝保险查查的核心 Agent 应用，服务 **800 万 MAU**，为全中国首个覆盖全险种的 AI Agent 解读服务。
+
+              主导通用智能体系统架构设计，支撑**页面 AIGC**（实时个性化可视交互）与多业务场景的 Agent 能力复用；推进 **Harness Engineering** 实现 100% AI 交付需求的质量保障体系。
+          -
+            name: MCP 相关工作
+            img:
+            website:
+            source_code:
+            des: !!md |
+              基于 **OneAgent + MCPs** 范式，建设快速创建领域 Agent 的工程体系，将新业务 Agent 接入周期大幅缩短。主导蚂蚁保 MCP Server 的设计与落地，推动 Agent 能力模块化复用。
+          -
+            name: 风控 · 案件分析 AI Agent
+            img:
+            website:
+            source_code:
+            des: !!md |
+              负责蚂蚁保风控侧 AI Agent 驱动的案件分析系统（2024.06 - 2024.11）。Agent 自动化完成案件信息抽取、多维度风险研判与结论生成，显著提升风控审核效率。
+      - company: 淘天集团淘工厂
+        date: 2022.10 - 2024.06
+        desc: 在淘工厂用户服务&客户基础团队负责"钱账票一体化"与业财一体建设；后与 mentor 从 0 建设淘工厂售前模块，包括知识库、问答、推荐、体验、数据分析。
+        project:
+          -
+            name: 知识库链路建设
+            img: https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png
+            website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
+            source_code:
+            des: !!md |
+              知识库是AI升级客服问答的底层能力的基础。我负责了知识库的主要链路，融合了商家、小二、算法推荐、未命中知识来源，打通了有效答案的规模化生产链路，支撑了整个淘工厂的售前售后问答。
+          -
+            name: 钱账票一体化
+            img:
+            website: https://mp.weixin.qq.com/s/vCRhU_jjh1AM7AYy9Zdr8w
+            source_code:
+            des: !!md |
+              本人主牵淘工厂内部"结算"、"账单"与"供应商开票"三个业务的自动化与一体化。项目涉及十多个计费业务，数据量达百亿。本人深度使用了MaxCompute、PostgreSQL、BigTable等数据库。为"接得快"，开发了**DSL**。项目上线后将原本烟囱式开发的效率缩短到一周，并在《阿里技术》上系统介绍了这个项目。
+          -
+            name: 业财一体
+            img:
+            website:
+            source_code:
+            des: !!md |
+              本人负责业财一体的同步与多业务销账。业财一体承担了淘工厂大部分计费业务，仿照 DDD 构建业财领域能力，灵活运用 **SPI** 和**责任树**方便各种业务扩展，充分防御式编程。项目保证了其上的双端赔付、营销链路每笔资金可追溯、没有资损。
+      -
+        company: 阿里巴巴淘特事业部
+        date: 2021.06 - 2022.10
+        desc: 本人淘特供应链负责补货&库存计划业务，保证货物以正确的数量在正确的时间与地点上架恰好满足订单需求。
+        project:
+          - name: 补货计划链路重构与迭代
+            img:
+            website:
+            source_code:
+            des: !!md |
+              随着补货计划源头的150万货品池越发庞大,从数据集成开始的整条链路几乎每周出现一次故障,必须重构:1. 品池削减;2. 链路优化; 3. 主动故障监控
+
+              重建整个商家仓链路,选型搜索引擎HA3，结合SARO、Swift、Flink;自己**从0开始基于http实现client以及ORM**,并综合使用了异步、并发、切片等手段优化代码,特别地还从业务逻辑上分策略和冗余优化。
+
+              项目立竿见影地减少了工单和故障,并将计算链路重算时间缩短了**93%**,获得部门内表彰"让用户爽"。
+
+skill:
+  -
+    des: !!md |
+      AI Agent 系统一线实战经验：负责 800 万 MAU 产品的 Agent 应用，主导通用智能体系统架构，熟悉 RAG、Tool Use、MCP、多模态 Agent 等核心技术
+  -
+    des: !!md |
+      掌握Java，熟悉JVM特性原理；熟练运用 SpringBoot+Mybatis与中间件HSF、MetaQ，大数据工具 MaxCompute、Flink等
+  - des: !!md |
+      熟悉MySQL；了解Redis、Lucene、Hologres(PostgreSQL)、BigTable等 OLAP、TP各种数据库
+  - des: !!md |
+      可以使用React做全栈开发，独立开发了淘工厂账单域前端框架；掌握 Python 用于 AI 工程开发
+  -
+    des: !!md |
+      不断追求高质量工程实践：DDD、**Harness Engineering**（100% AI 交付的质量保障）、TDD、Code Review、日志治理等
+
+tech:
+  -
+    name: AI Agent/LLM
+    percentage: 85%
+  -
+    name: Java/Junit5
+    percentage: 80%
+  -
+    name: MCP/RAG
+    percentage: 75%
+  -
+    name: Mysql/OTS
+    percentage: 70%
+  - name: SQL/Flink
+    percentage: 55%
+  -
+    name: React/Python
+    percentage: 40%
