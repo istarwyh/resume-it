@@ -68,7 +68,7 @@ honor:
   -
     icon: fa-trophy
     date: 2025
-    name: 蚂蚁集团 | 年度优秀创作者 &  财保 ACE AI 先锋
+    name: 蚂蚁集团 | 年度优秀创作者 & 财保技术部 AI 年度之星
   -
     icon: fa-trophy
     date: 2025
@@ -84,7 +84,7 @@ experience:
     project:
       -
         name: MCPAdvisor
-        date: 2025.05
+        date: 2025.02
         img:
         website: https://github.com/istarwyh/mcpadvisor
         source_code: https://github.com/istarwyh/mcpadvisor
@@ -108,7 +108,7 @@ experience:
       -
         company: 蚂蚁集团 · 蚂蚁保保险科技
         date: 2024.06 - 至今
-        desc: 负责支付宝保险查查 AI Agent 应用 —— 全中国首个全险种 Agent 解读产品，MAU **800万** 。主导通用智能体系统架构、**AI Coding** 工程体系及 MCP 工具链建设。
+        desc: 负责支付宝保险查查 AI Agent 应用 —— 全中国首个全险种 Agent 解读产品，MAU **800万**。主导通用智能体系统架构、**AI Coding** 工程体系及 MCP 工具链建设。
         project:
           -
             name: 保险查查 · 通用智能体系统
