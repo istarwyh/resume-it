@@ -6,14 +6,14 @@
         <div class="title">
             {% include 'head.html' %}
             <h1>{{ name }}</h1>
-            <h2>{{ des }}</h2>
+            <h2>{{ description | safe }}</h2>
         </div>
         <ul class="side-info">
             <li class="someRight">
                 <dt><em class="fa fa-bookmark"></em>Basic info. 基本信息</dt>
                 <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ born }} </dd>
                 <dd><span>工作经验：</span>{{work_life}} / {{grade}}</dd>
-                <dd><span>教育背景：</span>{{education_backgroud | safe}}</dd>
+                <dd><span>教育背景：</span>{{education_background | safe}}</dd>
                 <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
                 <dd><span>英语水平:</span> {{ english_level }}</dd>
@@ -22,7 +22,7 @@
                 <dd><span>常用ID:</span> {{ nickname }}</dd>
                 {% endif %}
                 {% if blog %}
-                <dd><span>{{blog.name}}:</span> <a href="{{ blog }}" target="_blank">{{ blog.url }}</a></dd>
+                <dd><span>{{blog.name}}:</span> <a href="https://{{ blog.url }}" target="_blank">{{ blog.url }}</a></dd>
                 {% endif %}
                 {% if github %}
                 <dd><span>GitHub:</span> <a href="{{ github }}" target="_blank">{{ github }}</a></dd>

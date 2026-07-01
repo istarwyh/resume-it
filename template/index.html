@@ -5,7 +5,7 @@
         <div class="title">
             {% include 'head.html' %}
             <h1>{{ name }}</h1>
-            <h2>{{ des }}</h2>
+            <h2>{{ description | safe }}</h2>
         </div>
         <ul class="side-info">
             <li class="someRight">
