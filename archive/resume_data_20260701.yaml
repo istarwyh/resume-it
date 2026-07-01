@@ -2,8 +2,8 @@
 update_time: '2026.07.01'
 name: 王艺辉
 nickname: 晓灰
-meta_content: 北京大学,蚂蚁集团,P7,Agent Harness,LLM Agent,MCP,RAG,Workflow Orchestration
-keywords: xiaohui,晓灰,AXQ,安贤投资,Agent Harness,量化研究智能体,Tool Calling,Memory,RAG,Workflow Orchestration,Evaluation,MCP,AI Coding
+meta_content: 北京大学,蚂蚁集团,P7,Agent Harness,LLM Agent,MCP,DeepResearch,Workflow Orchestration
+keywords: xiaohui,晓灰,AXQ,安贤投资,Agent Harness,量化研究智能体,Tool Calling,Memory,DeepResearch,Workflow Orchestration,Evaluation,MCP,AI Coding
 born: 1997
 gender: 男
 school: 北京大学
@@ -46,7 +46,7 @@ github: github.com/istarwyh
 online: istarwyh.github.io/resume-it
 # other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: AXQ Capital Agent Harness 研究工程师
-description: Agent Harness / LLM 应用 / 量化研究工作流智能体基础设施
+description: Agent Harness / MCP / DeepResearch
 contact:
   -
     icon: fa-envelope
@@ -87,14 +87,12 @@ experience:
           -
             name: 保险查查 · Agent Harness / Runtime
             img:
-            website: https://xiaohui.cool/program/llm/%E3%80%90%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%E3%80%91%E4%BB%8EClaude-Code%E5%88%B0-OneAgent%EF%BC%9A%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B
+            website: https://xiaohui.cool/program/llm/%E7%9B%B8%E6%AF%94%E5%B1%82%E5%87%BA%E4%B8%8D%E7%A9%B7%E7%9A%84-Agent-%E6%A1%86%E6%9E%B6%EF%BC%8C%E4%B8%8D%E5%8F%98%E7%9A%84-Agent-Protocol-%E6%98%AF%E4%BB%80%E4%B9%88
             source_code:
             des: !!md |
               <img src="assets/images/cc.png" alt="保险查查架构" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">主导 800 万 MAU 支付宝保险查查的通用 Agent Harness，将保险产品解读、评测、质量校验和页面 AIGC 统一到 **Runtime-Executor-SessionPool** 执行模型。
 
-              - 抽象 Thread / Run / Step / Event / Artifact / Checkpoint，支持流式输出、状态恢复、工具调用追踪、执行审计与问题复盘。
-              - 通过 Strategy-Experiment-Verify 闭环管理 Prompt、工具和 Workflow 迭代，把 Agent 输出从一次性生成推进到可观察、可回放、可评测的工程系统。
-              - 沉淀类 Claude Code 的上下文工程策略（Plan / Offload / Isolate / Reduce / Retrieve / Cache），通过 host agent / subagent 降低复杂任务上下文污染。
+              抽象 Thread / Run / Step / Event / Artifact / Checkpoint，支持流式输出、状态恢复、工具调用追踪、执行审计与问题复盘；通过 Strategy-Experiment-Verify 闭环管理 Prompt、工具和 Workflow 迭代。
           -
             name: MCP / Tool Calling 工具链
             img:
@@ -103,9 +101,7 @@ experience:
             des: !!md |
               存量百余 HTTP / HSF 服务无法被 Agent 稳定消费——主导 **MCPBridge** 与蚂蚁保领域 MCP Server 建设，将业务数据、规则、检索和分析能力服务化为可复用 Tool。
 
-              - 设计统一 Tool Schema、工具发现、工具选择、参数构造、错误回传和上下文补全流程，支撑 OneAgent + MCPs 领域 Agent 范式。
-              - 将 Error-as-Data 引入工具调用链路，让模型基于可理解错误自主决定重试、换工具、补充参数或反馈用户。
-              - 该平台化经验可迁移到量化研究中的行情 / 因子 / 回测 / PnL 分析等内部系统接入。
+              设计统一 Tool Schema、工具发现、参数构造、错误回传和上下文补全流程，支撑 OneAgent + MCPs 领域 Agent 范式；平台化经验可迁移到量化研究中的行情 / 因子 / 回测 / PnL 分析等内部系统接入。
           -
             name: 风控案件分析 AI Agent
             img:
@@ -114,9 +110,7 @@ experience:
             des: !!md |
               面向保险核赔与反欺诈案件，设计多 Agent 案件分析工作流，将资料收集、线索抽取、风险推理、报告生成和结论复核沉淀为可复用研究链路。
 
-              - 采用 PEER（Plan-Execute-Expressing-Review）组织 Facade / NER / Planner / Executing / Review Agent，拆解复杂案件分析路径。
-              - 结合 RAG、向量库、结构化规则和证据链生成可追溯分析报告，提升复杂案件的检索、归因与复核效率。
-              - 建立事实一致性、证据覆盖率、阳性发现率等评估视角，通过 Review Agent 降低 LLM 判断的概率性风险。
+              采用 PEER 组织 Facade / NER / Planner / Executing / Review Agent，结合 RAG、向量库、结构化规则和证据链生成可追溯分析报告，并以事实一致性、证据覆盖率、阳性发现率等指标评估输出质量。
           -
             name: AI Coding / Research Automation 方法论
             img:
@@ -125,8 +119,7 @@ experience:
             des: !!md |
               在阿里集团奇点学堂分享 Claude Code 实战，沉淀 Issue → 探索 / 计划 → TDD → 实现 → Review → 修复 → Slash Command 的 AI Coding 闭环。
 
-              - 使用 CLAUDE.md、Hooks、MCP、Subagents、Headless CI/CD 和 Git Worktree，将重复工程流程转化为可组合、可审计的自动化能力。
-              - 关注 Agent 参与研究与工程任务的可控性：权限、上下文、测试、回归、人工审查和失败案例沉淀。
+              使用 CLAUDE.md、Hooks、MCP、Subagents、Headless CI/CD 和 Git Worktree，将重复工程流程转化为可组合、可审计的自动化能力，并沉淀权限、上下文、测试、回归与人工审查机制。
       -
         company: 淘天集团淘工厂
         date: 2021.06 - 2024.06
@@ -140,8 +133,7 @@ experience:
             des: !!md |
               <img src="https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png" alt="知识库架构" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">建设多源融合 RAG 知识库全链路，整合商家、小二、算法推荐、未命中四类知识源，支撑淘工厂全品类售前售后智能问答。
 
-              - 设计多路召回、LLM 重排、答案生成与未命中反馈闭环，提升分散业务知识向可消费问答能力的转化效率。
-              - 与算法、业务和工程团队协作，将检索、推荐、问答与运营反馈连接为可持续迭代的数据产品链路。
+              设计多路召回、LLM 重排、答案生成与未命中反馈闭环，将检索、推荐、问答与运营反馈连接为可持续迭代的数据产品链路。
           -
             name: 钱账票一体化数据平台
             img:
@@ -150,8 +142,7 @@ experience:
             des: !!md |
               主牵“结算、账单、供应商开票”三业务自动化与一体化，覆盖十余计费场景、百亿量级数据（MaxCompute / PostgreSQL / BigTable）。
 
-              - 自研领域 DSL 抽象计费与账务规则，将烟囱式开发周期压缩至一周；项目作为最佳实践发表于《阿里技术》。
-              - 积累复杂数据链路建模、问题排查、稳定性治理和跨团队交付经验，可支撑研究平台 / 数据平台类系统建设。
+              自研领域 DSL 抽象计费与账务规则，将烟囱式开发周期压缩至一周；项目作为最佳实践发表于《阿里技术》，沉淀复杂数据链路建模、问题排查和跨团队交付经验。
   -
     section: 开源贡献
     project:
@@ -178,29 +169,29 @@ experience:
 skill:
   -
     des: !!md |
-      **Agent Harness / Runtime**：主导 800 万 MAU 生产级 Agent 系统，掌握 Runtime、Executor、Session Pool、Thread / Run / Step / Event / Artifact / Checkpoint、流式执行、状态恢复与执行审计
+      **Agent Harness / Runtime**：主导 800 万 MAU 生产级 Agent 系统，掌握 Runtime、Executor、Session Pool、Checkpoint、流式执行与状态恢复
   -
     des: !!md |
-      **Tool Calling / MCP**：负责 MCPBridge 与领域 MCP Server，熟悉 Tool Schema、工具发现、参数构造、错误回传、上下文补全和内部平台能力接入
+      **Tool Calling / MCP**：负责 MCPBridge 与领域 MCP Server，熟悉 Tool Schema、工具发现、参数构造、错误回传和内部平台接入
   -
     des: !!md |
-      **Memory / RAG / Research Workflow**：具备 RAG、多路召回、LLM 重排、向量库、证据链、Deep Research、Plan / Search / Read / Report / Critique 等复杂研究链路经验
+      **Memory / DeepResearch**：具备 RAG、多路召回、LLM 重排、向量库、证据链与 DeepResearch 工作流经验
   -
     des: !!md |
-      **Evaluation / Reliability**：实践 Strategy-Experiment-Verify、PEER、Review Agent、事实一致性、证据覆盖率、Locust 压测、连接池背压、异步流式接口等评测与可靠性方法
+      **Evaluation / Reliability**：实践 Strategy-Experiment-Verify、PEER、Review Agent、事实一致性、证据覆盖率、压测和异步流式接口
   -
     des: !!md |
-      **工程与数据平台**：熟练 Python / Java / React，掌握 MaxCompute、Flink、MySQL、Hologres(PostgreSQL)、BigTable 等数据与存储系统，具备复杂业务系统排障和跨团队落地能力
+      **工程与数据平台**：熟练 Python / Java / React，掌握 MaxCompute、Flink、MySQL、Hologres(PostgreSQL)、BigTable，具备复杂系统排障和跨团队落地能力
 
 tech:
   -
-    name: Agent Harness
+    name: Harness
     percentage: 90%
   -
-    name: Tool Calling/MCP
+    name: Tool/MCP
     percentage: 85%
   -
-    name: RAG/Memory
+    name: DeepResearch
     percentage: 80%
   -
     name: Workflow/Eval
