@@ -1,0 +1,204 @@
+---
+update_time: '2026.07.01'
+name: 王艺辉
+nickname: 晓灰
+meta_content: 北京大学,蚂蚁集团,P7,Agent Harness,LLM Agent,MCP,DeepResearch,Workflow Orchestration
+keywords: xiaohui,晓灰,Agent 架构师,资深开发工程师,Agent Harness,Tool Calling,Memory,DeepResearch,Workflow Orchestration,Evaluation,MCP,AI Coding
+born: 1997
+gender: 男
+school: 北京大学
+education_background: '<div class="w-full overflow-auto rounded-lg border border-gray-200 dark:border-gray-800">
+    <table class="w-full table-fixed text-sm border-t border-gray-200 dark:border-gray-800">
+        <thead>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <th class="px-4 py-3 text-left font-bold w-[200px]">时间段</th>
+                <th class="px-4 py-3 text-left font-bold">大学</th>
+                <th class="px-4 py-3 text-left font-bold w-[100px]">GPA&emsp;&emsp;排名</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2019-2021</td>
+                <td class="px-4 py-3">北京大学(全日制第二学士)</td>
+                <td class="px-4 py-3">15/139</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2015-2017 &amp; 2018-2019</td>
+                <td class="px-4 py-3">石河子大学</td>
+                <td class="px-4 py-3">1/69</td>
+            </tr>
+            <tr class="border-b border-gray-200 dark:border-gray-800">
+                <td class="px-4 py-3 font-medium">2017-2018</td>
+                <td class="px-4 py-3">重庆大学&emsp;&emsp;(交流)</td>
+                <td class="px-4 py-3">24/100</td>
+            </tr>
+        </tbody>
+    </table>
+</div>'
+profession: 软件工程
+work_life: 5年
+grade: P7
+english_level: 'CET-6, <a href="https://xiaohui.cool/program/database/How-to-Choose-the-Suitable-Database" target="_blank">my essay</a>'
+blog:
+  name: Blog
+  url: xiaohui.cool
+github: github.com/istarwyh
+online: istarwyh.github.io/resume-it
+# other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
+apply_to_position: Agent 架构师 / 资深开发工程师
+description: Agent Harness / MCP / DeepResearch
+contact:
+  -
+    icon: fa-envelope
+    name: Email
+    value: yihui.wang@pku.edu.cn
+  -
+    icon: fa-phone-square
+    name: Phone
+    value: '15955311246'
+  -
+    icon: fa-weixin
+    name: WeChat
+    value: istarwyh
+
+honor:
+  -
+    icon: fa-trophy
+    date: 2025
+    name: 'OceanBase AI 黑客松 | 二等奖 / 队长 | MCPAdvisor：自然语言驱动 MCP 工具发现、评估与安装'
+  -
+    icon: fa-trophy
+    date: 2025
+    name: '首届阿里&蚂蚁 ATA | 个人 Agent 最佳实践奖：Agent Harness 与 AI Coding 工程实践'
+  -
+    icon: fa-trophy
+    date: 2025
+    name: '蚂蚁集团 | 年度优秀创作者 & 财保技术部 AI 年度之星'
+
+experience:
+  -
+    section: 工作项目
+    expert:
+      -
+        company: 蚂蚁集团 · 蚂蚁保保险科技
+        date: 2024.06 - 至今
+        desc: 面向支付宝保险查查 / 保险快查 AI Agent 与蚂蚁保 MCP 工具链，负责 800 万 MAU 复杂金融保险场景下的 Agent Harness、工具调用、上下文工程、评测与可靠性体系建设。
+        project:
+          -
+            name: 保险查查 · Agent Harness / Runtime
+            img:
+            website: https://xiaohui.cool/program/llm/%E7%9B%B8%E6%AF%94%E5%B1%82%E5%87%BA%E4%B8%8D%E7%A9%B7%E7%9A%84-Agent-%E6%A1%86%E6%9E%B6%EF%BC%8C%E4%B8%8D%E5%8F%98%E7%9A%84-Agent-Protocol-%E6%98%AF%E4%BB%80%E4%B9%88
+            source_code:
+            des: !!md |
+              <img src="assets/images/cc.png" alt="保险查查架构" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">主导 800 万 MAU 支付宝保险查查的通用 Agent Harness，将保险产品解读、评测、质量校验和页面 AIGC 统一到 **Runtime-Executor-SessionPool** 执行模型。
+
+              抽象 Thread / Run / Step / Event / Artifact / Checkpoint，支持流式输出、状态恢复、工具调用追踪、执行审计与问题复盘；通过 Strategy-Experiment-Verify 闭环管理 Prompt、工具和 Workflow 迭代。
+          -
+            name: MCP / Tool Calling 工具链
+            img:
+            website: https://xiaohui.cool/program/llm/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9FAgent---OneAgent-+-MCPs-%E8%8C%83%E5%BC%8F
+            source_code:
+            des: !!md |
+              存量百余 HTTP / HSF 服务无法被 Agent 稳定消费——主导 **MCPBridge** 与蚂蚁保领域 MCP Server 建设，将业务数据、规则、检索和分析能力服务化为可复用 Tool。
+
+              设计统一 Tool Schema、工具发现、参数构造、错误回传和上下文补全流程，支撑 OneAgent + MCPs 领域 Agent 范式；平台化经验可迁移到量化研究中的行情 / 因子 / 回测 / PnL 分析等内部系统接入。
+          -
+            name: 风控案件分析 AI Agent
+            img:
+            website: https://xiaohui.cool/program/llm/Case-Analysis-AI-Agent
+            source_code:
+            des: !!md |
+              面向保险核赔与反欺诈案件，设计多 Agent 案件分析工作流，将资料收集、线索抽取、风险推理、报告生成和结论复核沉淀为可复用研究链路。
+
+              采用 PEER 组织 Facade / NER / Planner / Executing / Review Agent，结合 RAG、向量库、结构化规则和证据链生成可追溯分析报告，并以事实一致性、证据覆盖率、阳性发现率等指标评估输出质量。
+          -
+            name: AI Coding / Research Automation 方法论
+            img:
+            website: https://xiaohui.cool/program/bot/%E3%80%90%E4%B8%87%E5%AD%97%E9%95%BF%E6%96%87%E3%80%91-%E6%9C%80%E5%BC%BA-AI-Coding%EF%BC%9AClaude-Code-%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5
+            source_code:
+            des: !!md |
+              在阿里集团奇点学堂分享 Claude Code 实战，沉淀 Issue → 探索 / 计划 → TDD → 实现 → Review → 修复 → Slash Command 的 AI Coding 闭环。
+
+              使用 CLAUDE.md、Hooks、MCP、Subagents、Headless CI/CD 和 Git Worktree，将重复工程流程转化为可组合、可审计的自动化能力，并沉淀权限、上下文、测试、回归与人工审查机制。
+      -
+        company: 淘天集团淘工厂
+        date: 2021.06 - 2024.06
+        desc: 参与业财一体化与售前 AI 模块建设，覆盖复杂数据平台、RAG 知识库、智能问答、推荐和业务自动化链路。
+        project:
+          -
+            name: RAG 知识库与智能问答链路
+            img:
+            website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
+            source_code:
+            des: !!md |
+              <img src="https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png" alt="知识库架构" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">建设多源融合 RAG 知识库全链路，整合商家、小二、算法推荐、未命中四类知识源，支撑淘工厂全品类售前售后智能问答。
+
+              设计多路召回、LLM 重排、答案生成与未命中反馈闭环，将检索、推荐、问答与运营反馈连接为可持续迭代的数据产品链路。
+          -
+            name: 钱账票一体化数据平台
+            img:
+            website: https://mp.weixin.qq.com/s/vCRhU_jjh1AM7AYy9Zdr8w
+            source_code:
+            des: !!md |
+              主牵“结算、账单、供应商开票”三业务自动化与一体化，覆盖十余计费场景、百亿量级数据（MaxCompute / PostgreSQL / BigTable）。
+
+              自研领域 DSL 抽象计费与账务规则，将烟囱式开发周期压缩至一周；项目作为最佳实践发表于《阿里技术》，沉淀复杂数据链路建模、问题排查和跨团队交付经验。
+  -
+    section: 开源贡献
+    project:
+      -
+        name: MCPAdvisor
+        date: 2025.05
+        img:
+        website: https://github.com/istarwyh/mcpadvisor
+        source_code: https://github.com/istarwyh/mcpadvisor
+        des: !!md |
+          <img src="assets/images/mcpadvisor-show.jpg" alt="MCPAdvisor 黑客松现场" style="float:right;width:130px;margin:0 0 4px 10px;border-radius:4px;">MCP 生态快速膨胀但安装方式碎片化、工具发现成本高——开发 MCPAdvisor，以 MCP 管理 MCP：自然语言意图驱动，自动检索、评估并安装合适的 MCP Server。
+
+          项目聚焦 Agent Tool Discovery / Tool Selection / Tool Installation，获 **2025 OceanBase AI 黑客松二等奖**（队长）。
+      -
+        name: WritingHelper
+        date: 2021.02
+        website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
+        source_code: https://github.com/istarwyh/writingHelper
+        des: !!md |
+          从 0 独立开发 VS Code 写作辅助插件，基于 LSP 协议、Trie 与责任链实现英语词伙自动补全、中文互译等能力，累计 **15000+** 下载量。
+
+          这是本人较早的 IDE / Coding Tool 工程化实践。
+
+skill:
+  -
+    des: !!md |
+      **Agent Harness / Runtime**：主导 800 万 MAU 生产级 Agent 系统，掌握 Runtime、Executor、Session Pool、Checkpoint、流式执行与状态恢复
+  -
+    des: !!md |
+      **Tool Calling / MCP**：负责 MCPBridge 与领域 MCP Server，熟悉 Tool Schema、工具发现、参数构造、错误回传和内部平台接入
+  -
+    des: !!md |
+      **Memory / DeepResearch**：具备 RAG、多路召回、LLM 重排、向量库、证据链与 DeepResearch 工作流经验
+  -
+    des: !!md |
+      **Evaluation / Reliability**：实践 Strategy-Experiment-Verify、PEER、Review Agent、事实一致性、证据覆盖率、压测和异步流式接口
+  -
+    des: !!md |
+      **工程与数据平台**：熟练 Python / Java / React，掌握 MaxCompute、Flink、MySQL、Hologres(PostgreSQL)、BigTable，具备复杂系统排障和跨团队落地能力
+
+tech:
+  -
+    name: Harness
+    percentage: 90%
+  -
+    name: Tool/MCP
+    percentage: 85%
+  -
+    name: DeepResearch
+    percentage: 80%
+  -
+    name: Workflow/Eval
+    percentage: 80%
+  -
+    name: Python/Data
+    percentage: 75%
+  -
+    name: Java/React
+    percentage: 70%
