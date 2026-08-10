@@ -16,7 +16,7 @@
                 <dd><span>教育背景：</span>{{education_background | safe}}</dd>
                 <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
-                <dd><span>英语水平:</span> {{ english_level }}</dd>
+                <dd><span>英语水平:</span> {{ english_level | safe}}</dd>
                 {% endif %}
                 {% if nickname %}
                 <dd><span>常用ID:</span> {{ nickname }}</dd>
