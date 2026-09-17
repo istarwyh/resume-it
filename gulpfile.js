@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const path = require('path')
 const fs = require('fs')
+const crypto = require('crypto')
 const matter = require('gray-matter')
 const yaml = require('js-yaml')
 const MarkdownIt = require('markdown-it')
@@ -111,7 +112,17 @@ gulp.task('html', () => {
     .pipe($.size())
 
   function getData(dataPath) {
-    return matter(fs.readFileSync(dataPath, 'utf8'), { schema: YAML_SCHEMA }).data
+    const data = matter(fs.readFileSync(dataPath, 'utf8'), { schema: YAML_SCHEMA }).data
+    const assetContents = [
+      fs.readFileSync('dist/assets/styles.css'),
+      fs.readFileSync('dist/assets/scripts.js')
+    ]
+    data.asset_version = crypto
+      .createHash('sha256')
+      .update(Buffer.concat(assetContents))
+      .digest('hex')
+      .slice(0, 12)
+    return data
   }
 })
 
