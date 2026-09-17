@@ -1,59 +1,44 @@
 ---
-update_time: '2026.03.21'
-name: Halley
+update_time: '2026.09.17'
+name: Yihui Wang (Halley)
 nickname: 晓灰
-meta_content: Peking University,Ant Group
-keywords: xiaohui,halley,agent,resume
+meta_content: Peking University,Ant Group,P7,Agent Harness,Agent Runtime,RAG,MCP,Generative UI
+keywords: xiaohui,halley,agent architect,agent application lead,agent harness,agent runtime,RAG,embedding,MCP,evaluation,resume
 born: 1997
 gender: Male
 school: Peking University
-education_background: '<div class="w-full overflow-auto rounded-lg border border-gray-200 dark:border-gray-800">
-    <table class="w-full table-fixed text-sm border-t border-gray-200 dark:border-gray-800">
-        <thead>
-            <tr class="border-b border-gray-200 dark:border-gray-800">
-                <th class="px-4 py-3 text-left font-bold w-[200px]">Period</th>
-                <th class="px-4 py-3 text-left font-bold">University</th>
-                <th class="px-4 py-3 text-left font-bold w-[100px]">Ranking</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="border-b border-gray-200 dark:border-gray-800">
-                <td class="px-4 py-3 font-medium">2019-2021</td>
-                <td class="px-4 py-3">Peking (Bachelor)</td>
-                <td class="px-4 py-3">15/139</td>
-            </tr>
-            <tr class="border-b border-gray-200 dark:border-gray-800">
-                <td class="px-4 py-3 font-medium">2015-2017 &amp; 2018-2019</td>
-                <td class="px-4 py-3">Shihezi (Bachelor)</td>
-                <td class="px-4 py-3">1/69</td>
-            </tr>
-            <tr class="border-b border-gray-200 dark:border-gray-800">
-                <td class="px-4 py-3 font-medium">2017-2018</td>
-                <td class="px-4 py-3">Chongqing (Exchange)</td>
-                <td class="px-4 py-3">24/100</td>
-            </tr>
-        </tbody>
-    </table>
+education_background: '<div class="education-list">
+    <div class="education-item">
+        <div class="education-heading"><strong>Peking University</strong><span>2019–2021</span></div>
+        <div class="education-detail">Software Engineering · Second Bachelor Degree · Rank 15/139</div>
+    </div>
+    <div class="education-item">
+        <div class="education-heading"><strong>Shihezi University</strong><span>2015–2019</span></div>
+        <div class="education-detail">Rank 1/69</div>
+    </div>
+    <div class="education-item">
+        <div class="education-heading"><strong>Chongqing University</strong><span>2017–2018</span></div>
+        <div class="education-detail">Exchange · Rank 24/100</div>
+    </div>
 </div>'
 profession: Software Engineering
 work_life: 5 Years
 grade: P7
-english_level: 'CET-6, <a href="https://xiaohui.cool/program/database/how-to-choose-the-suitable-database" target="_blank">my essay</a>'
+english_level: 'CET-6 · <a href="https://xiaohui.cool/program/database/how-to-choose-the-suitable-database" target="_blank">Technical essay</a>'
 blog:
   name: Blog
   url: xiaohui.cool
 github: github.com/istarwyh
 online: istarwyh.github.io/resume-it
-apply_to_position: AI Agent Expert / Intelligent System Architect
-description: !!md |
-  I act quickly once I understand my role.
-  
-  *One week, my token spending exceeded my salary. 🤖💸*
+pdf_export_text: Export One-Page A4 PDF
+print_page: print-en.html
+apply_to_position: Agent Architect / Agent Application Lead
+description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now serving as project owner for the unified “Da Bao” Agent platform
 contact:
   -
     icon: fa-envelope
     name: Email
-    value: yihui-wang@qq.com
+    value: yihui.wang@pku.edu.cn
   -
     icon: fa-phone-square
     name: Phone
@@ -62,158 +47,142 @@ contact:
     icon: fa-weixin
     name: WeChat
     value: istarwyh
-  -
-    icon: fa-telegram
-    name: Telegram
-    value: xiaohui
 
 honor:
   -
-    icon: fa-trophy
-    date: 2025
-    name: Ant Group | Annual Outstanding Creator & AI Star of the Year (FinTech Dept.)
+    icon: fa-star
+    date: 2026
+    name: 'Insurance ACE | AI Pioneer'
   -
     icon: fa-trophy
     date: 2025
-    name: Alibaba & Ant ATA | Best Individual Agent Practice Award (1st Session)
-  -
-    icon: fa-trophy
-    date: 2025
-    name: OceanBase AI Hackathon | 2nd Place | Team Leader | MCPAdvisor
-  -
-    icon: fa-trophy
-    date: 2025
-    name: Ant Group Hackathon | 3rd Place | Team Leader
+    name: 'OceanBase AI Hackathon | 2nd Place / Team Leader | MCPAdvisor'
   -
     icon: fa-star
-    date: 2023.3
-    name: Alibaba | Code Hero | 8/222 | Excellent Code Quality
+    date: 2025
+    name: 'Alibaba & Ant Technical Honors | ATA Best Individual Agent Practice, Ant Outstanding Creator, and Insurance FinTech AI Star'
   -
-    icon: fa-star
-    date: 2020.10
-    name: Peking University | Learning Excellence Award | 15/139 | GPA3.789
+    icon: fa-code-fork
+    date: 2025
+    name: 'Ant Open Source Training Camp | Best Contribution Award: AgentUniverse PR #202'
+
+influence:
   -
-    icon: fa-trophy
-    date: 2017.11
-    name: ShiHezi University | National Scholarship | 1/69 | GPA3.89
+    icon: fa-microphone
+    name: Technical Talks
+    value: 'CCF TF #179 and AI Maker Shanghai; invited to share Agent Native, Harness Engineering, and AI Coding with Gaode, Ping An Health Insurance, and multiple Alibaba / Ant technology teams'
+    url: https://aispeeds.me/shares/agent-native-product-ai-maker-shanghai
+  -
+    icon: fa-pencil-square-o
+    name: Technical Writing
+    value: 'Republished by Alibaba Cloud Developer: 10,000 views and 1,300+ shares; business-finance integration practice published by Alibaba Technology'
+    url: https://mp.weixin.qq.com/s/1klXy2fr1pspqRshUjg2dQ
 
 experience:
   -
-    section: OpenSource
-    project:
-      -
-        name: MCPAdvisor
-        date: 2025.02
-        img:
-        website: https://github.com/istarwyh/mcpadvisor
-        source_code: https://github.com/istarwyh/mcpadvisor
-        des: !!md |
-          <img src="assets/images/mcpadvisor-show.jpg" alt="MCPAdvisor hackathon demo" style="float:right;width:130px;margin:0 0 4px 10px;border-radius:4px;">MCP ecosystem expanding rapidly but with fragmented installation and high discovery costs — developed MCPAdvisor to manage MCPs via natural language: automatically retrieve, evaluate, and install the most suitable MCP Servers, solving **AI Coding** toolchain fragmentation pain points.
-
-          Won **2nd Place at 2025 OceanBase AI Hackathon** (Team Leader).
-      -
-        name: WritingHelper
-        date: 2021.02
-        img:
-        website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
-        source_code: https://github.com/istarwyh/writingHelper
-        des: !!md |
-          I realized that there was a lack of tools for writing authentic IELTS phrases on the market, so I developed WritingHelper.
-          Built on `Node.js` using a trie tree and `responsibility chain` pattern with `LSP` APIs for phrase autocompletion, Chinese translation, timing and counting.
-
-          **15,000+** downloads since launch.
-
-  -
-    section: Work Project
+    section: Work Projects
     expert:
       -
         company: Ant Group · Ant Insurance FinTech
-        date: 2024.06 - present
-        desc: Responsible for the AI Agent application of "Insurance Chaxha" on Alipay — China's first insurance product with full-category Agent interpretation capability, serving **8 million MAU**. Also leading the general intelligent agent system and MCP-related work.
+        date: 2024.06 - Present
+        desc: Served as project owner for MCP and Insurance Quick Check. Since 2026.09, project owner for the Unified Agent Harness Platform (“Da Bao”), coordinating three engineers to build evaluation, experimentation, and release capabilities.
         project:
           -
-            name: Insurance Chaxha · General Agent System
-            img:
-            website: https://xiaohui.cool/program/llm/%E3%80%90%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93%E3%80%91%E4%BB%8EClaude-Code%E5%88%B0-OneAgent%EF%BC%9A%E5%A6%82%E4%BD%95%E5%81%9A%E5%A5%BD%E4%B8%8A%E4%B8%8B%E6%96%87%E5%B7%A5%E7%A8%8B
-            source_code:
-            des: !!md |
-              <img src="assets/images/cc.png" alt="Insurance Chaxha architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Addressing siloed Agent development and lack of reusable infrastructure — designed Agent Runtime-Executor-SessionPool three-layer general intelligent agent architecture, specifically implementing Claude Code-like general Agent Loop based on LangGraph, supporting Alipay Insurance Chaxha (**8 million MAU**) and innovative **page AIGC** real-time visual interaction.
-
-              Implemented **Harness Engineering** (Prompt-Test-Verify loop) to achieve **100% AI-delivered** requirements; drove full-process efficiency from design specs to frontend components via **AI Coding** workflow, establishing a replicable AI quality system. Project published as best practice in Alibaba Cloud Developer.
-          -
-            name: MCP Integration & Domain Agent Framework
-            img:
-            website: https://xiaohui.cool/program/llm/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9FAgent---OneAgent-+-MCPs-%E8%8C%83%E5%BC%8F
-            source_code:
-            des: !!md |
-              Over 100 existing HTTP/HSF services could not be directly consumed by Agents — led **MCPBridge** construction to MCP-ize them, designed Ant Insurance domain MCP Server, built cross-business reusable toolchain based on **OneAgent + MCPs** paradigm, significantly reducing new business Agent onboarding cycles.
-      -
-        company: Taotian Group · Tao Factory
-        date: 2021.06 - 2024.06
-        desc: Participated in industry-finance integration and led "Money-Bill-Invoice Integration" engineering; later co-led the pre-sales AI module from scratch with mentor, covering RAG knowledge base, Q&A, recommendation and other intelligent chains.
-        project:
-          -
-            name: Knowledge Base Pipeline
-            img:
-            website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
-            source_code:
-            des: !!md |
-              <img src="https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png" alt="Knowledge base architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Low answer hit rate and fragmented knowledge sources — built multi-source fusion RAG knowledge base pipeline (multi-path retrieval + LLM reranking + generation), integrating merchant, operator, algorithm recommendation, and missed-hit knowledge sources, establishing scalable effective answer production loop, supporting Tao Factory full-category pre-sales and after-sales intelligent Q&A.
-          -
-            name: Money-Bill-Invoice Integration
-            img:
-            website: https://mp.weixin.qq.com/s/vCRhU_jjh1AM7AYy9Zdr8w
-            source_code:
-            des: !!md |
-              Led the automation and integration of "settlement", "billing" and "supplier invoicing" across 10+ billing services with data volume reaching tens of billions. Built a `DSL` for faster onboarding, applied `DDD`, `SPI` and responsibility-tree patterns. Reduced chimney-style development cycles to one week. Featured in "Alibaba Technology" publication.
-      -
-        company: Alibaba · Taote Business Department
-        date: 2021.06 - 2022.10
-        desc: Responsible for replenishment & inventory planning in supply chain, ensuring goods reach shelves at the right quantity, time and place to meet order demand.
-        project:
-          -
-            name: Replenishment Pipeline Reconstruction
+            name: Unified Agent Harness Platform (Da Bao)
+            date: 2026.09 - Present
             img:
             website:
             source_code:
             des: !!md |
-              As the 1.5M-item product pool grew, the entire pipeline from data integration failed nearly every week. Rebuilt from scratch: pool reduction, pipeline optimization, and proactive failure monitoring.
+              Project owner coordinating three engineers to extend an existing early prototype into a unified Agent evaluation, experimentation, and release platform. Now integrated with **Ant Xiaobao and Insurance Quick Check**, the first end-to-end loop covers **monitoring → Bad Case alerting → root-cause analysis → responsibility-domain routing → sandbox validation → release → monitoring**; current work continues on Harness architecture, evaluation assets, and release gates.
+          -
+            name: Insurance Quick Check · Architecture / Context / Page AIGC
+            date: 2025.06 - 2026.08
+            img:
+            website: https://xiaohui.cool/program/llm/%E7%9B%B8%E6%AF%94%E5%B1%82%E5%87%BA%E4%B8%8D%E7%A9%B7%E7%9A%84-Agent-%E6%A1%86%E6%9E%B6%EF%BC%8C%E4%B8%8D%E5%8F%98%E7%9A%84-Agent-Protocol-%E6%98%AF%E4%BB%80%E4%B9%88
+            source_code:
+            des: !!md |
+              <img src="assets/images/cc.png" alt="Insurance Quick Check architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Project owner for the Ant Insurance homepage vertical-search entry. Coordinated two application, one algorithm, two search/recommendation, and three frontend engineers across teams; led the architecture and production pipeline across **context assets, page AIGC, and Chatbot**. A Runtime-Executor-SessionPool Harness supports multiple production workflows and is partly reused by risk-control and post-sales teams. Serves 8M Agent MAU with peak online traffic around **2,000 RPM**.
 
-              Selected search engine HA3 with SARO, Swift, and Flink. **Implemented HTTP client and ORM from scratch**; applied async, concurrency, and slicing optimizations along with strategy/redundancy business-level tuning.
+              Produced structured context from policy documents, OCR materials, and product facts for page AIGC and Chatbot use. Across about **20,000 products and 100,000+ tasks**, long-running scheduling, automatic retries, and quality validation achieved **100% final delivery success**. Over a rolling 200+ sample set, the evaluator measures completeness, faithfulness, logical expression, and compliance at about **98% accuracy**. Meta-evaluation uses RCR (Repeat-Consistency Rate) to measure stability, currently about **90%**; established ESF (Expert-Score Reproducibility) from scratch, aligning expert judgments by Checkpoint and reaching about **70%**.
+          -
+            name: Chatbot · Product-Pool RAG / Embedding / A2UI
+            date: 2025.06 - 2026.08
+            img:
+            website: https://xiaohui.cool/program/llm/RAG-%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%9AQQ-%E4%BA%A7%E5%93%81%E5%8F%AC%E5%9B%9E%E4%B8%8E-QA-%E6%96%87%E6%A1%A3%E5%AF%BC%E8%88%AA
+            source_code:
+            des: !!md |
+              The Chatbot separates product selection from product presentation. Algorithm / search teams own Agentic Search selection on top of my Harness; I owned the product-pool RAG / Embedding pipeline, including query embedding, Elasticsearch retrieval, concurrent fallback, and source navigation over product materials.
 
-              Reduced work orders and failures immediately; shortened recalculation time by **93%**. Awarded "Making Users Happy" commendation.
+              Led the **A2UI backend protocol and event stream**, validating and finalizing the contract through a full-stack demo. The event stream drives the frontend team’s implementation of interactive cards and shelves; I owned the protocol and backend path, while frontend engineers owned production rendering, enabling more complex and flexible generative UI than fixed interfaces.
+          -
+            name: MCP / Tool Calling Toolchain
+            date: 2024.12 - 2025.06
+            img:
+            website: https://xiaohui.cool/program/llm/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9FAgent---OneAgent-+-MCPs-%E8%8C%83%E5%BC%8F
+            source_code:
+            des: !!md |
+              Led **MCPBridge** and the Ant Insurance domain MCP Server, exposing 100+ existing HTTP / HSF services—business data, rules, retrieval, and analytics—as reusable Agent tools.
+
+              Designed unified Tool Schemas, discovery, argument construction, error feedback, and context enrichment to support the OneAgent + MCPs domain-Agent pattern.
+      -
+        company: Taotian Group · Tao Factory
+        date: 2021.06 - 2024.06
+        desc: Worked on business-finance integration and pre-sales AI, spanning complex data platforms, RAG knowledge bases, intelligent Q&A, recommendation, and business automation.
+        project:
+          -
+            name: RAG Knowledge Base and Intelligent Q&A
+            date: 2023.10 - 2024.06
+            img:
+            website: https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C.html
+            source_code:
+            des: !!md |
+              <img src="https://xiaohui-zhangjiakou.oss-cn-zhangjiakou.aliyuncs.com/image/202403091651207.png" alt="Knowledge base architecture" style="float:right;width:125px;margin:0 0 4px 10px;border-radius:4px;">Built a multi-source RAG pipeline integrating merchant, operator, algorithmic recommendation, and missed-query knowledge for full-category pre-sales and after-sales Q&A.
+
+              Designed multi-path retrieval, LLM reranking, answer generation, and missed-query feedback as a continuously improving data-product loop.
+          -
+            name: Money-Bill-Invoice Integrated Data Platform
+            date: 2022.10 - 2023.10
+            img:
+            website: https://mp.weixin.qq.com/s/vCRhU_jjh1AM7AYy9Zdr8w
+            source_code:
+            des: !!md |
+              Led automation and integration for settlement, billing, and supplier invoicing across 10+ billing scenarios and tens of billions of records using MaxCompute, PostgreSQL, and BigTable.
+
+              Built a domain DSL for billing and accounting rules, reducing siloed development cycles to one week; published as a best practice by Alibaba Technology.
+  -
+    section: Open Source
+    project:
+      -
+        name: MCPAdvisor
+        date: 2025.05
+        img:
+        website: https://github.com/istarwyh/mcpadvisor
+        source_code: https://github.com/istarwyh/mcpadvisor
+        des: !!md |
+          <img src="assets/images/mcpadvisor-show.jpg" alt="MCPAdvisor hackathon demo" style="float:right;width:130px;margin:0 0 4px 10px;border-radius:4px;">Developed MCPAdvisor to manage MCPs with MCP: natural-language intent drives MCP Server retrieval, evaluation, and installation.
+
+          Focused on Agent Tool Discovery / Selection / Installation; won **2nd Place at the 2025 OceanBase AI Hackathon** as team leader.
+      -
+        name: WritingHelper
+        date: 2021.02
+        website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
+        source_code: https://github.com/istarwyh/writingHelper
+        des: !!md |
+          Independently developed a VS Code writing assistant using LSP, Trie, and Chain of Responsibility for English phrase completion and Chinese translation, accumulating **16,000+** downloads.
+
+          An early IDE / coding-tool engineering project.
 
 skill:
   -
     des: !!md |
-      **AI Agent** production experience: led **8M MAU** general intelligent agent system architecture; proficient in RAG, Tool Use, MCP, multimodal Agent; drive full-process R&D efficiency with **AI Coding**
+      **Agent Harness / Runtime**: Runtime, Executor, Session Pool, event streams, tool scheduling, long-running task governance, session state, and incident analysis
   -
     des: !!md |
-      Master Java, familiar with JVM principles; proficient with SpringBoot + Mybatis, MetaQ, big data tools MaxCompute, Flink, etc.
-  - des: !!md |
-      Familiar with MySQL; experienced with Redis, Lucene, Hologres (PostgreSQL), BigTable and other OLAP/TP databases
-  - des: !!md |
-      React + Python full-stack capability: independently developed Tao Factory billing domain frontend framework; Python for Agent engineering and data processing
+      **Agent Applications / AIGC**: structured context production, offline / online hybrid generation, A2UI protocols, and financial-domain delivery
   -
     des: !!md |
-      **Harness Engineering** deep practice: build Prompt-Test-Verify quality loop, achieve 100% AI delivery and verification; continuously promote AI Coding integration with DDD, TDD
-
-tech:
+      **Evaluation / RAG / MCP**: generation and meta-evaluation loops, vector retrieval and source navigation, Tool Schemas, and domain MCP Servers
   -
-    name: AI Agent
-    percentage: 85%
-  -
-    name: Python
-    percentage: 80%
-  -
-    name: Java/Junit5
-    percentage: 80%
-  -
-    name: MCP/RAG
-    percentage: 75%
-  -
-    name: Mysql/OTS
-    percentage: 70%
-  -
-    name: LLM/React
-    percentage: 40%
+    des: !!md |
+      **Engineering / Data**: Python, Java, React, PostgreSQL, Elasticsearch, MaxCompute, Flink, MySQL, and BigTable

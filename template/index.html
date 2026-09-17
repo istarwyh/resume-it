@@ -13,9 +13,8 @@
                 <dd><span>个人信息:</span> {{ name }} / {{ gender }} / {{ born }} </dd>
                 <dd><span>工作经验：</span>{{work_life}} / {{grade}}</dd>
                 <dd><span>教育背景：</span>{{education_background | safe}}</dd>
-                <dd><span>专业：</span>{{profession}}</dd>
                 {% if english_level %}
-                <dd><span>英语水平:</span> {{ english_level | safe}}</dd>
+                <dd class="profile-row"><span class="profile-label">英语</span><span class="profile-value">{{ english_level | safe}}</span></dd>
                 {% endif %}
                 <!-- {% if nickname %}
                 <dd><span>花名:</span> {{ nickname }}</dd>
@@ -60,17 +59,18 @@
 
             </li>
             {% endif %}
-            <li class="skill">
-                <dt><em class="fa fa-bookmark"></em>Tech. 主要技能点</dt>
-                {% for item in tech %}
+            {% if influence %}
+            <li class="someRight">
+                <dt><em class="fa fa-bookmark"></em>Influence. 技术影响力</dt>
+                {% for item in influence %}
                 <dd>
-                    <div class="skill-name">{{ item.name }}</div>
-                    <div class="skill-bar-wrap">
-                        <div class="skill-bar" style="width: {{ item.percentage }}"></div>
-                    </div>
+                    <em class="fa {{ item.icon }}"></em>
+                    <a href="{{ item.url }}" target="_blank">{{ item.name }}</a><br>
+                    {{ item.value | safe }}
                 </dd>
                 {% endfor %}
             </li>
+            {% endif %}
         </ul>
         {% if intro %}
         <div class="note">
@@ -80,14 +80,6 @@
     </div>
     <div class="main">
         <ul class="main-info">
-            <li class="skill">
-                <dt><em class="fa fa-bookmark"></em>Skill. 技能清单</dt>
-                {% for item in skill %}
-                <ul class="exp">
-                  <li>{{ item.des |safe }}</li>
-                </ul>
-                {% endfor %}
-            </li>
             <li class="experience">
                 <dt><em class="fa fa-bookmark"></em>Experience. 项目经验</dt>
                 {% for exp in experience %}
@@ -144,6 +136,14 @@
                         </ul>
                     {% endif %}
                 
+                {% endfor %}
+            </li>
+            <li class="skill">
+                <dt><em class="fa fa-bookmark"></em>Skill. 技能清单</dt>
+                {% for item in skill %}
+                <ul class="exp">
+                  <li>{{ item.des |safe }}</li>
+                </ul>
                 {% endfor %}
             </li>
         </ul>

@@ -30,25 +30,15 @@
     {% block main %}{% endblock %}
 </div>
 <footer>
+    <div class="footer-actions">
+        <a class="pdf-export-button" href="./{{ print_page }}?autoprint=1" target="_blank" rel="noopener">
+            <em class="fa fa-file-pdf-o"></em>{{ pdf_export_text }}
+        </a>
+    </div>
     <p>
-        <!-- Knowledge is ubiquitous, much like sunshine and air. -->
-        <!-- <a {% if website %}
-                href="{{ website }}"
-           {% else %}
-                {% if github %} href="{{ github }}" {% endif %}
-           {% endif %}
-           target="_blank">
-            {{ nickname }}
-        </a> -->
-        Last updated on: {{ update_time }}. Made by <em class="fa fa-heart throb" style="color: #d43f57;"><a href="https://github.com/istarwyh/resume-it" target="_blank">resume-it</a></em>
-        .
-        
-        <!-- <a href="./print.html">打印版</a>  -->
+        Last updated on: {{ update_time }}.
         <a href="./index.html">中文</a>
         <a href="./index-en.html">English</a>
-        <a href="./print-en.html">print</a> 
-
-        
     </p>
 </footer>
 <script src="assets/scripts.js"></script>

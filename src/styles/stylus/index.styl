@@ -76,6 +76,58 @@ h3, h4
   font-size 14px
   line-height 25px
 
+.education-list
+  margin-top 6px
+
+.education-item
+  padding 6px 0
+  border-bottom 1px solid rgba(255, 255, 255, .22)
+  &:last-child
+    border-bottom 0
+
+.education-heading
+  display flex
+  align-items baseline
+  justify-content space-between
+  gap 8px
+  strong
+    font-size 14px
+  span
+    flex none
+    font-size 12px
+    opacity .88
+
+.education-detail
+  margin-top 2px
+  font-size 12px
+  line-height 17px
+  opacity .9
+
+.profile-row
+  display flex
+  align-items center
+  gap 8px
+  margin-top 8px
+
+.someRight dd.profile-row
+  line-height 20px
+
+.profile-label
+  flex none
+  padding 1px 7px
+  border 1px solid rgba(255, 255, 255, .45)
+  border-radius 10px
+  font-size 11px
+  line-height 16px
+  opacity .9
+
+.profile-value
+  min-width 0
+  font-size 13px
+  line-height 19px
+
+
+
 
 .skill
   position relative
@@ -264,6 +316,29 @@ footer p
 
 footer a
   color #616161
+
+
+.footer-actions
+  margin-bottom 12px
+  text-align center
+
+.pdf-export-button
+  display inline-block
+  padding 11px 20px
+  border-radius 6px
+  background #00796b
+  color #fff !important
+  font-size 15px
+  font-weight bold
+  text-decoration none
+  box-shadow 0 2px 5px rgba(0, 0, 0, .2)
+  transition background .2s ease, transform .2s ease
+  &:hover
+    background #00695c
+    transform translateY(-1px)
+  .fa
+    margin-right 8px
+
 
 
 .throb

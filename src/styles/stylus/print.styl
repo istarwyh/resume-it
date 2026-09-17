@@ -1,6 +1,9 @@
-@page
-  size A4
-  margin 0
+@css {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+}
 
 body.print
   min-width 0
@@ -122,3 +125,26 @@ body.print
     height 65px
   footer
     display none
+
+
+@media print
+  html,
+  body
+    width 210mm
+    height 297mm
+    margin 0
+    overflow hidden
+  body.print
+    background #fff
+    -webkit-print-color-adjust exact
+    print-color-adjust exact
+    &.fit-a4
+      .site
+        position absolute
+        top 0
+        left 0
+        width 1080px
+        zoom var(--a4-scale)
+      .container
+        margin 0
+        box-shadow none
