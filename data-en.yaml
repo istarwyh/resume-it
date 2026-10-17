@@ -33,7 +33,7 @@ online: istarwyh.github.io/resume-it
 pdf_export_text: Export One-Page A4 PDF
 print_page: print-en.html
 apply_to_position: Agent Architect / Agent Application Lead
-description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now leading “Da Bao”, an Agent business enablement platform
+description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now leading “Da Bao”, a business amplifier for existing Agents
 contact:
   -
     icon: fa-envelope
@@ -85,20 +85,18 @@ experience:
       -
         company: Ant Group · Ant Insurance FinTech
         date: 2024.06 - Present
-        desc: Served as project owner for MCP and Insurance Quick Check. Since 2026.09, leading Da Bao, incubated by Ant Xiaobao, coordinating three engineers on Agent business capabilities and continuous improvement loops.
+        desc: Project owner for MCP and Insurance Quick Check; since 2026.09, leading Da Bao, incubated by Ant Xiaobao, coordinating three engineers on Agent-driven business improvement.
         project:
           -
-            name: Da Bao · Agent Business Enablement / Business Harness
+            name: Da Bao · Business Amplifier for Agents
             date: 2026.09 - Present
             img:
             website:
             source_code:
             des: !!md |
-              Project owner coordinating three engineers to develop Da Bao from an existing prototype, incubated by Ant Xiaobao. Positioned as a **business amplifier for Codex, Claude Code, and other existing Agents**, wrapping reusable execution cores in a business Harness rather than rebuilding a general-purpose Agent.
+              Lead the design of a **business amplifier for existing Agents**, building a business Harness on **Codex App Server** with **capability discovery, execution traces, sandbox experiments, and evaluation gates**, to turn generated code into verifiable business improvements.
 
-              Leading the layered design of **business improvement loop → Codex App Server → business capabilities → business infrastructure**. Codex Core handles reasoning, planning, and tool use; **MCP / Skills / APIs** expose **discovery, observability, experimentation, and evaluation** capabilities under development. The outer layer manages task state, business assets, approvals, and release gates, connecting tools, execution traces, experiment environments, and release systems.
-
-              Integrated **Ant Xiaobao and Insurance Quick Check**; phase one supports code changes, tests, PRs, and releases, with an initial **monitoring → Bad Case alerting → root-cause analysis → responsibility-domain routing → sandbox validation → release → monitoring** loop. Building on this, designing a goal-, metric-, and constraint-driven **opportunity / issue discovery → attribution → strategy → validation → release → outcome feedback** loop, with **business-growth strategy optimization planned as an extension**.
+              Integrated **Ant Xiaobao and Insurance Quick Check**, establishing an initial **Bad Case → diagnosis and repair → sandbox validation → PR / controlled release → production feedback** loop. **Business-growth strategy optimization** is the planned next extension.
           -
             name: Insurance Quick Check · Architecture / Context / Page AIGC
             date: 2025.06 - 2026.08
