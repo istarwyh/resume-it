@@ -34,7 +34,7 @@ pdf_export_text: 导出一页 A4 PDF
 print_page: print.html
 # other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: Agent 架构师 / Agent 应用负责人
-description: 5 年后端与 AI Agent 工程经验；曾从 0 到 1 负责 800 万 MAU 保险快查 Agent 与 Harness，现负责“大保”Agent 业务放大器
+description: 5 年后端与 AI Agent 工程经验；曾从 0 到 1 负责 800 万 MAU 保险快查 Agent 与 Harness，现负责创新业务“大保 · Business Harness”
 contact:
   -
     icon: fa-envelope
@@ -86,18 +86,18 @@ experience:
       -
         company: 蚂蚁集团 · 蚂蚁保保险科技
         date: 2024.06 - 至今
-        desc: 先后负责 MCP、保险快查；2026.09 起负责蚁小保孵化的“大保”，项目制协同 3 名同学推进 Agent 驱动的业务迭代。
+        desc: 先后负责 MCP、保险快查；2026.09 起负责蚁小保孵化的“大保 · Business Harness”，项目制协同 3 名同学推进 Agent 驱动的业务迭代。
         project:
           -
-            name: 大保 · Agent 业务放大器
+            name: 大保 · Business Harness（创新业务）
             date: 2026.09 - 至今
             img:
             website:
             source_code:
             des: !!md |
-              主导 **Agent 业务放大器** 架构设计，基于 **Codex App Server** 封装业务 Harness，建设 **能力发现、轨迹观测、沙箱实验与评测门禁**，推动 Agent 从“生成代码”走向“交付可验证的业务改进”。
+              主导基于 **Codex App Server** 的业务 Harness 建设，提供 **能力发现、轨迹观测、沙箱实验与评测门禁**，推动 Agent 从“生成代码”走向“交付可验证的业务改进”。
 
-              已接入 **蚁小保、保险快查**，初步跑通 **Bad Case → 归因修复 → 沙箱验证 → PR / 受控发布 → 线上反馈** 闭环；规划复用同一机制，拓展至 **业务增长策略优化**。
+              已接入 **蚁小保、保险快查**，运行 **Bad Case → 归因修复 → 沙箱验证 → PR / 受控发布 → 线上反馈** Loop；周均发现 **200 个 Issue**，**AI 参与解决率 70%**，**低级问题率 4%**。目前正拓展至 **业务增长策略优化**。
           -
             name: 保险快查 · 应用架构 / 上下文 / 页面 AIGC
             date: 2025.06 - 2026.08
