@@ -2,6 +2,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
+const { execFileSync } = require('node:child_process');
+const { createHash } = require('node:crypto');
 const matter = require('gray-matter');
 const yaml = require('js-yaml');
 const MarkdownIt = require('markdown-it');
@@ -13,6 +15,28 @@ const schema = yaml.Schema.create([new yaml.Type('tag:yaml.org,2002:md', {
 })]);
 const env = nunjucks.configure('template', { autoescape: true });
 const pages = ['index.html', 'print.html', 'index-en.html', 'print-en.html'];
+function archiveSnapshot() {
+  return fs.readdirSync('archive').sort().map(name => {
+    const file = path.join('archive', name);
+    return {
+      name,
+      sha256: createHash('sha256').update(fs.readFileSync(file)).digest('hex'),
+      mtimeNs: fs.statSync(file, { bigint: true }).mtimeNs
+    };
+  });
+}
+let archiveBeforeBuild;
+let archiveAfterBuild;
+test.before(() => {
+  archiveBeforeBuild = archiveSnapshot();
+  execFileSync(process.execPath, [require.resolve('gulp/bin/gulp.js'), 'build'], {
+    env: { ...process.env, NODE_ENV: 'production' }, stdio: 'inherit'
+  });
+  archiveAfterBuild = archiveSnapshot();
+});
+test('test build does not create or overwrite resume archives', () => {
+  assert.deepEqual(archiveAfterBuild, archiveBeforeBuild);
+});
 function load(page) {
   return matter(fs.readFileSync(page.includes('-en') ? 'data-en.yaml' : 'data.yaml', 'utf8'), { schema }).data;
 }

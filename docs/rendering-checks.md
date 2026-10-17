@@ -24,8 +24,11 @@ sudo apt-get install poppler-utils fonts-noto-cjk
 npm run test:browser
 ```
 
-`npm test` runs the production Gulp build before checking every project on all four
-pages, label-independent sections, profile links, page language, and print safeguards.
+`npm test` runs the production asset/HTML build before checking every project on all
+four pages, label-independent sections, profile links, page language, and print
+safeguards. It also checks that archive filenames, contents, and modification times
+are unchanged. The default development/production commands retain their existing
+archival behavior; the test build does not run archival or watch tasks.
 The browser check exports Chinese and English PDFs, verifies all project headings and
 the final skill in their extracted text, checks font size and horizontal overflow,
 tests a deliberately extended resume, and verifies the automatic print action.

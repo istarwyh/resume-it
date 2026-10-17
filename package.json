@@ -7,7 +7,7 @@
     "start": "gulp",
     "build": "NODE_ENV=production gulp",
     "publish": "rimraf dist && npm run build && node publish.ts",
-    "test": "npm run build && node --test tests/resume.test.cjs",
+    "test": "node --test tests/resume.test.cjs",
     "test:browser": "node tests/print-browser.cjs"
   },
   "repository": {
