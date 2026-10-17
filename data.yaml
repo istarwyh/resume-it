@@ -1,5 +1,5 @@
 ---
-update_time: '2026.09.17'
+update_time: '2026.10.17'
 name: 王艺辉
 nickname: 晓灰
 meta_content: 北京大学,蚂蚁集团,P7,Agent Harness,Agent Runtime,RAG,MCP,Generative UI
@@ -34,7 +34,7 @@ pdf_export_text: 导出一页 A4 PDF
 print_page: print.html
 # other: NCRE三级(网络)<br> &emsp;&emsp;&ensp;国家羽毛球二级裁判员
 apply_to_position: Agent 架构师 / Agent 应用负责人
-description: 5 年后端与 AI Agent 工程经验；曾从 0 到 1 负责 800 万 MAU 保险快查 Agent 与 Harness，现负责“大保”统一 Agent 平台
+description: 5 年后端与 AI Agent 工程经验；曾从 0 到 1 负责 800 万 MAU 保险快查 Agent 与 Harness，现负责“大保”Agent 业务赋能平台
 contact:
   -
     icon: fa-envelope
@@ -86,16 +86,20 @@ experience:
       -
         company: 蚂蚁集团 · 蚂蚁保保险科技
         date: 2024.06 - 至今
-        desc: 先后以项目负责人身份推进 MCP 与保险快查；2026.09 起负责统一 Agent Harness 平台（大保），项目制协同 3 名同学建设评测、实验与发布能力。
+        desc: 先后以项目负责人身份推进 MCP 与保险快查；2026.09 起负责由蚁小保孵化的“大保”，项目制协同 3 名同学建设 Agent 业务能力与持续改进闭环。
         project:
           -
-            name: 统一 Agent Harness 平台（大保）
+            name: 大保 · Agent 业务放大器 / Business Harness
             date: 2026.09 - 至今
             img:
             website:
             source_code:
             des: !!md |
-              以项目负责人身份协同 3 名同学，在已有初版雏形基础上持续建设统一的 Agent 评测、实验与发布平台；已接入 **蚁小保、保险快查**，初步跑通 **监控 → Bad Case 预警 → 根因分析 → 责任域定位 → 沙箱验证 → 发布 → 监控**闭环，持续完善 Harness 架构、评测资产与发布门禁。
+              以项目负责人身份协同 3 名同学，在已有雏形上推进由蚁小保孵化的“大保”，定位为 **Codex、Claude Code 等现有 Agent 的业务放大器**，复用通用内核并封装业务 Harness。
+
+              主导 **业务自迭代层 → Codex App Server → 业务能力层 → 业务基础设施** 分层设计：复用 Codex Core 的推理、规划与 Tool Use，通过 **MCP / Skills / API** 持续建设 **可发现、可观测、可实验、可评测** 能力；外层管理任务状态、业务资产及审批门禁，连接业务工具、运行轨迹、实验环境与发布系统。
+
+              已接入 **蚁小保、保险快查**，一期支持代码修改、测试、PR 与发布，初步跑通 **监控 → Bad Case 预警 → 根因分析 → 责任域定位 → 沙箱验证 → 发布 → 监控** 闭环。在此基础上设计目标、指标与约束驱动的 **机会 / Issue 发现 → 归因 → 策略 → 验证 → 发布 → 效果反馈** Loop，**规划拓展至业务增长策略优化与迭代**。
           -
             name: 保险快查 · 应用架构 / 上下文 / 页面 AIGC
             date: 2025.06 - 2026.08
