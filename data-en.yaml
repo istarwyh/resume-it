@@ -1,5 +1,5 @@
 ---
-update_time: '2026.09.17'
+update_time: '2026.10.17'
 name: Yihui Wang (Halley)
 nickname: 晓灰
 meta_content: Peking University,Ant Group,P7,Agent Harness,Agent Runtime,RAG,MCP,Generative UI
@@ -33,7 +33,7 @@ online: istarwyh.github.io/resume-it
 pdf_export_text: Export One-Page A4 PDF
 print_page: print-en.html
 apply_to_position: Agent Architect / Agent Application Lead
-description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now serving as project owner for the unified “Da Bao” Agent platform
+description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now leading “Da Bao · Business Harness”, a new business initiative
 contact:
   -
     icon: fa-envelope
@@ -85,16 +85,18 @@ experience:
       -
         company: Ant Group · Ant Insurance FinTech
         date: 2024.06 - Present
-        desc: Served as project owner for MCP and Insurance Quick Check. Since 2026.09, project owner for the Unified Agent Harness Platform (“Da Bao”), coordinating three engineers to build evaluation, experimentation, and release capabilities.
+        desc: Project owner for MCP and Insurance Quick Check; since 2026.09, leading Da Bao · Business Harness, incubated by Ant Xiaobao, coordinating three engineers on Agent-driven business improvement.
         project:
           -
-            name: Unified Agent Harness Platform (Da Bao)
+            name: Da Bao · Business Harness (New Initiative)
             date: 2026.09 - Present
             img:
             website:
             source_code:
             des: !!md |
-              Project owner coordinating three engineers to extend an existing early prototype into a unified Agent evaluation, experimentation, and release platform. Now integrated with **Ant Xiaobao and Insurance Quick Check**, the first end-to-end loop covers **monitoring → Bad Case alerting → root-cause analysis → responsibility-domain routing → sandbox validation → release → monitoring**; current work continues on Harness architecture, evaluation assets, and release gates.
+              Lead the design and development of a business Harness on **Codex App Server**, providing **capability discovery, execution traces, sandbox experiments, and evaluation gates** to move Agents from generating code to delivering verifiable business improvements.
+
+              Integrated **Ant Xiaobao and Insurance Quick Check**, operating a **Bad Case → diagnosis and repair → sandbox validation → PR / controlled release → production feedback** loop. Current metrics: **200 issues identified per week on average**, **70% AI participation in issue resolution**, and a **4% basic-issue rate**. Now expanding into **business-growth strategy optimization**.
           -
             name: Insurance Quick Check · Architecture / Context / Page AIGC
             date: 2025.06 - 2026.08
