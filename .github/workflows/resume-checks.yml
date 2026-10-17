@@ -26,4 +26,6 @@ jobs:
           path: |
             test-results/
             dist/*.html
+            dist/assets/styles.css
+            dist/assets/scripts.js
           if-no-files-found: ignore

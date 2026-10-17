@@ -39,7 +39,7 @@
     color: #222;
     box-sizing: border-box;
   }
-  body.print .sidebar { margin-bottom: 5mm; }
+  body.print .sidebar { margin-bottom: 3mm; }
   body.print .title { margin: 0 0 4mm; text-align: left; }
   body.print .title img,
   body.print .exp img,
@@ -60,6 +60,10 @@
   body.print .profile-role,
   body.print .profile-honors { grid-column: 2; }
   body.print .profile-influence { grid-column: 1 / -1; }
+  body.print .profile-honors br,
+  body.print .profile-influence br { display: none; }
+  body.print .profile-influence a::after { content: ": "; }
+  body.print .profile-honors dd { margin-bottom: 1mm; }
   body.print .side-info dt {
     font-size: 11pt;
     line-height: 1.4;
@@ -95,9 +99,10 @@
   body.print h4 { position: static; font-size: 11pt; line-height: 1.45; margin-bottom: 1mm; }
   body.print .main-info span { font-size: 10.5pt; }
   body.print .exp { margin-left: 0; border-left: 0; }
-  body.print .exp > li { position: static; margin: 0 0 3mm; }
-  body.print .exp ul > li { margin: 0 0 3mm; }
-  body.print .exp p { margin: 0 0 1.5mm; font-size: 10.5pt; line-height: 1.45; color: #222; }
+  body.print .exp > li { position: static; margin: 0 0 2mm; }
+  body.print .exp ul > li { margin: 0 0 2mm; }
+  body.print .project-item { break-inside: avoid; page-break-inside: avoid; }
+  body.print .exp p { margin: 0 0 1mm; font-size: 10.5pt; line-height: 1.45; color: #222; }
   body.print .experience p { text-indent: 0; }
   body.print .skill .exp > li { list-style: none; margin: 0 0 1mm; }
   body.print a { color: #222; overflow-wrap: anywhere; }

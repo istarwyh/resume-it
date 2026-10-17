@@ -43,6 +43,10 @@ const compact = value => value.normalize('NFKC').replace(/\s+/g, '');
         const headings = await page.locator('.project-item h4').allTextContents();
         // Check full leaf headings, not mentions in awards or the profile summary.
         for (const heading of headings) assert.ok(compact(pdfText).includes(compact(heading)), heading.trim());
+        const pdfPages = pdfText.split('\f').map(compact);
+        for (const item of await page.locator('.project-item').allTextContents()) {
+          assert.ok(pdfPages.some(content => content.includes(compact(item))), 'A short project was split across pages');
+        }
         assert.ok(pdfText.includes('BigTable'), 'The final skill must not be clipped');
         const count = Number(info.match(/Pages:\s*(\d+)/)[1]);
         assert.ok(count >= 2, 'Full resume should paginate rather than shrink');
