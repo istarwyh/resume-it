@@ -178,6 +178,7 @@ gulp.task('watch', () => {
 });
 
 
-gulp.task(
-  'default',
-  gulp.series('scripts', 'styles', 'fonts', 'images', 'html','archive', 'watch'))
+// Tests need production assets, but must not create or overwrite source archives.
+gulp.task('build', gulp.series('scripts', 'styles', 'fonts', 'images', 'html'))
+
+gulp.task('default', gulp.series('build', 'archive', 'watch'))

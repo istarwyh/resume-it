@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% block language %}zh-CN{% endblock %}">
 
 <head>
     <meta charset="utf-8">
@@ -13,13 +13,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ ga_id }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', '{{ ga_id }}');
     </script>
     {% endif %}
@@ -32,7 +27,7 @@
 <footer>
     <div class="footer-actions">
         <a class="pdf-export-button" href="./{{ print_page }}?autoprint=1" target="_blank" rel="noopener">
-            <em class="fa fa-file-pdf-o"></em>{{ pdf_export_text }}
+            <em class="fa fa-file-pdf-o"></em>{% block pdf_label %}{{ pdf_export_text }}{% endblock %}
         </a>
     </div>
     <p>
@@ -43,5 +38,4 @@
 </footer>
 <script src="assets/scripts.js?v={{ asset_version }}"></script>
 </body>
-
 </html>
