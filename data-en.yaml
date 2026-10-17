@@ -33,7 +33,7 @@ online: istarwyh.github.io/resume-it
 pdf_export_text: Export One-Page A4 PDF
 print_page: print-en.html
 apply_to_position: Agent Architect / Agent Application Lead
-description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now leading “Da Bao”, a business amplifier for existing Agents
+description: 5 years in backend and AI Agent engineering; built the 8M-MAU Insurance Quick Check Agent and Harness from 0 to 1, now leading “Da Bao · Business Harness”, a new business initiative
 contact:
   -
     icon: fa-envelope
@@ -85,18 +85,18 @@ experience:
       -
         company: Ant Group · Ant Insurance FinTech
         date: 2024.06 - Present
-        desc: Project owner for MCP and Insurance Quick Check; since 2026.09, leading Da Bao, incubated by Ant Xiaobao, coordinating three engineers on Agent-driven business improvement.
+        desc: Project owner for MCP and Insurance Quick Check; since 2026.09, leading Da Bao · Business Harness, incubated by Ant Xiaobao, coordinating three engineers on Agent-driven business improvement.
         project:
           -
-            name: Da Bao · Business Amplifier for Agents
+            name: Da Bao · Business Harness (New Initiative)
             date: 2026.09 - Present
             img:
             website:
             source_code:
             des: !!md |
-              Lead the design of a **business amplifier for existing Agents**, building a business Harness on **Codex App Server** with **capability discovery, execution traces, sandbox experiments, and evaluation gates**, to turn generated code into verifiable business improvements.
+              Lead the design and development of a business Harness on **Codex App Server**, providing **capability discovery, execution traces, sandbox experiments, and evaluation gates** to move Agents from generating code to delivering verifiable business improvements.
 
-              Integrated **Ant Xiaobao and Insurance Quick Check**, establishing an initial **Bad Case → diagnosis and repair → sandbox validation → PR / controlled release → production feedback** loop. **Business-growth strategy optimization** is the planned next extension.
+              Integrated **Ant Xiaobao and Insurance Quick Check**, operating a **Bad Case → diagnosis and repair → sandbox validation → PR / controlled release → production feedback** loop. Current metrics: **200 issues identified per week on average**, **70% AI participation in issue resolution**, and a **4% basic-issue rate**. Now expanding into **business-growth strategy optimization**.
           -
             name: Insurance Quick Check · Architecture / Context / Page AIGC
             date: 2025.06 - 2026.08
