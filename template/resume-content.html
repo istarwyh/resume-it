@@ -76,7 +76,7 @@
             {% if honor %}
             <li class="someRight profile-honors">
                 <dt><em class="fa fa-bookmark"></em>{{ labels.honor }}</dt>
-                {% for item in honor %}<dd><em class="fa {{ item.icon }}"></em>{{ item.date | safe }}<br>{{ item.name | safe }}</dd>{% endfor %}
+                {% for item in honor %}<dd><em class="fa {{ item.icon }}"></em><span class="honor-date">{{ item.date | safe }}</span><br>{{ item.name | safe }}</dd>{% endfor %}
             </li>
             {% endif %}
             {% if influence %}

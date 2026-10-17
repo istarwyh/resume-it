@@ -39,20 +39,22 @@ const compact = value => value.normalize('NFKC').replace(/\s+/g, '');
         const pdf = path.join(out, name.replace('.html', '.pdf'));
         await page.pdf({ path: pdf, preferCSSPageSize: true, printBackground: true });
         const info = execFileSync('pdfinfo', [pdf], { encoding: 'utf8' });
-        const pdfText = execFileSync('pdftotext', [pdf, '-'], { encoding: 'utf8' });
+        // Preserve visual reading order: default block detection can move a heading
+        // prefix to the end of a page containing mixed Chinese/Latin fonts.
+        const pdfText = execFileSync('pdftotext', ['-layout', pdf, '-'], { encoding: 'utf8' });
         const headings = await page.locator('.project-item h4').allTextContents();
         // Check full leaf headings, not mentions in awards or the profile summary.
         for (const heading of headings) assert.ok(compact(pdfText).includes(compact(heading)), heading.trim());
         const pdfPages = pdfText.split('\f').map(compact);
         for (const item of await page.locator('.project-item').allTextContents()) {
-          assert.ok(pdfPages.some(content => content.includes(compact(item))), 'A short project was split across pages');
+          assert.ok(pdfPages.some(content => content.includes(compact(item))), 'Project text missing or split across pages: ' + item.trim().slice(0, 90));
         }
         assert.ok(pdfText.includes('BigTable'), 'The final skill must not be clipped');
         const count = Number(info.match(/Pages:\s*(\d+)/)[1]);
         assert.ok(count >= 2, 'Full resume should paginate rather than shrink');
         await page.screenshot({ path: path.join(out, name + '.png'), fullPage: true });
         console.log(name + ': ' + count + ' A4 pages; all ' + projectCount + ' projects and final skill retained; 10.5pt body');
-        // A long future project must remain printable beyond the original page count.
+        // A longer resume must remain printable beyond the original page count.
         if (name === 'print.html') {
           await page.locator('.main').evaluate(el => {
             for (let i = 0; i < 70; i++) {
