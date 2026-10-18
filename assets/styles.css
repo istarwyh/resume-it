@@ -36,8 +36,7 @@ body.print .container {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-body.print .sidebar,
-body.print .main {
+body.print .sidebar,body.print .main {
   position: static;
   float: none;
   width: auto;
@@ -49,11 +48,7 @@ body.print .main {
 }
 body.print .sidebar { margin-bottom: 3mm; }
 body.print .title { margin: 0 0 4mm; text-align: left; }
-body.print .title img,
-body.print .exp img,
-body.print .circle,
-body.print .fa,
-body.print footer { display: none !important; }
+body.print .title img,body.print .exp img,body.print .circle,body.print .fa,body.print footer { display: none !important; }
 body.print .title h1 { font-size: 21pt; line-height: 1.2; font-weight: 700; }
 body.print .title h2 { font-size: 10.5pt; line-height: 1.45; color: #222; }
 body.print .side-info {
@@ -66,12 +61,9 @@ body.print .side-info {
 }
 body.print .side-info > li { padding-top: 0; -webkit-column-break-inside: avoid; page-break-inside: avoid; break-inside: avoid; }
 body.print .profile-basic { grid-column: 1; grid-row: 1 / 4; }
-body.print .profile-contact,
-body.print .profile-role,
-body.print .profile-honors { grid-column: 2; }
+body.print .profile-contact,body.print .profile-role,body.print .profile-honors { grid-column: 2; }
 body.print .profile-influence { grid-column: 1 / -1; }
-body.print .profile-honors br,
-body.print .profile-influence br { display: none; }
+body.print .profile-honors br,body.print .profile-influence br { display: none; }
 body.print .profile-influence a::after { content: ": "; }
 body.print .profile-honors dd { margin-bottom: 1mm; }
 body.print .honor-date { margin-right: 1.5mm; }
@@ -82,12 +74,7 @@ body.print .side-info dt {
   color: #222;
   margin-bottom: 1mm;
 }
-body.print .side-info dd,
-body.print .someRight dd,
-body.print .profile-value,
-body.print .education-detail,
-body.print .education-heading strong,
-body.print .education-heading span {
+body.print .side-info dd,body.print .someRight dd,body.print .profile-value,body.print .education-detail,body.print .education-heading strong,body.print .education-heading span {
   margin-left: 0;
   font-size: 10.5pt;
   line-height: 1.4;
@@ -118,9 +105,7 @@ body.print .experience p { text-indent: 0; }
 body.print .skill .exp > li { list-style: none; margin: 0 0 1mm; }
 body.print a { color: #222; overflow-wrap: anywhere; }
 body.print h4 a { font-size: 9.5pt; padding: 0; border: 0; text-decoration: underline; }
-body.print dt,
-body.print h2,
-body.print h4 { -webkit-column-break-after: avoid; break-after: avoid; page-break-after: avoid; }
+body.print dt,body.print h2,body.print h4 { -webkit-column-break-after: avoid; break-after: avoid; page-break-after: avoid; }
 body.print p { orphans: 3; widows: 3; }
 
 @media screen {
