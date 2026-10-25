@@ -142,3 +142,49 @@ test('failed export leaves no partial deliverable and malformed overrides cannot
   await assert.rejects(api.build(w, v.id), /evidence IDs/);
   assert.deepEqual(fs.readdirSync(path.join(w, 'exports')), []);
 });
+
+test('feedback rejects incomplete or unknown target mappings before durable acceptance', () => {
+  const t = api.read(api.file(w, 'targets', 'agent'));
+  t.requirements = [{ id: 'isolation', text: 'Isolation', hard: true }]; save('targets', t.id, t);
+  let v = api.read(api.file(w, 'variants', 'agent-zh'));
+  v.requirementMapping = [{ requirementId: 'isolation', status: 'unknown', evidenceIds: [], note: 'Unverified' }];
+  save('variants', v.id, v); api.refresh(w, v.id, 'Added JD requirement');
+  syntheticExport();
+  const { submissionId } = api.snapshot(w, 'export-fixture', 'synthetic', '2026-10-26T10:00:00Z');
+  const input = { round: 'Test', observation: 'Test', category: 'expression', confidence: 'low', proposal: { reason: 'Test', patch: { reason: 'A valid change' } } };
+  const before = fs.readFileSync(api.file(w, 'variants', v.id), 'utf8');
+  for (const mapping of [[], [{ requirementId: 'invented', status: 'unknown', evidenceIds: [], note: 'Unknown' }]]) {
+    assert.throws(() => api.feedback(w, submissionId, { ...input, proposal: { reason: 'Invalid', patch: { requirementMapping: mapping } } }), /Map every|unknown JD/);
+    const f = api.feedback(w, submissionId, structuredClone(input));
+    f.proposal.patch.requirementMapping = mapping; save('feedback', f.id, f);
+    assert.throws(() => api.decide(w, f.id, 'accept', 'Reviewer', 'Test'), /Map every|unknown JD/);
+    assert.equal(fs.existsSync(api.file(w, 'decisions', f.id)), false);
+    assert.equal(fs.readFileSync(api.file(w, 'variants', v.id), 'utf8'), before);
+  }
+});
+
+test('stale proposals can be rejected without changing the variant or snapshots', () => {
+  syntheticExport();
+  const { submissionId } = api.snapshot(w, 'export-fixture', 'synthetic', '2026-10-26T10:00:00Z');
+  const input = { round: 'Test', observation: 'Test', category: 'expression', confidence: 'low', proposal: { reason: 'Test', patch: { reason: 'Changed selection reason' } } };
+  const accepted = api.feedback(w, submissionId, input);
+  const stale = api.feedback(w, submissionId, input);
+  const sourceStale = api.feedback(w, submissionId, input);
+  const jdStale = api.feedback(w, submissionId, input);
+  api.decide(w, accepted.id, 'accept', 'Reviewer', 'Valid');
+  const snapshot = api.verify(path.join(w, 'submissions', submissionId));
+  for (const [f, mutate] of [
+    [stale, () => {}],
+    [sourceStale, () => { const v = api.read(api.file(w, 'variants', 'agent-zh')); v.baseHash = 'stale'; save('variants', v.id, v); }],
+    [jdStale, () => { const t = api.read(api.file(w, 'targets', 'agent')); t.jd += ' changed'; save('targets', t.id, t); }]
+  ]) {
+    mutate();
+    const before = fs.readFileSync(api.file(w, 'variants', 'agent-zh'), 'utf8');
+    assert.deepEqual(api.decide(w, f.id, 'reject', 'Reviewer', 'Obsolete'), { feedbackId: f.id, decision: 'reject', requiresReview: false });
+    assert.equal(api.read(api.file(w, 'decisions', f.id)).decision, 'reject');
+    assert.equal(fs.readFileSync(api.file(w, 'variants', 'agent-zh'), 'utf8'), before);
+    assert.deepEqual(api.verify(path.join(w, 'submissions', submissionId)), snapshot);
+    assert.throws(() => api.recoverDecision(w, f.id), /Only accepted/);
+    assert.throws(() => api.decide(w, f.id, 'reject', 'Reviewer', 'Again'), /already decided/);
+  }
+});
