@@ -45,7 +45,10 @@ const compact = value => value.normalize('NFKC').replace(/\s+/g, '');
         const headings = await page.locator('.project-item h4').allTextContents();
         // Check full leaf headings, not mentions in awards or the profile summary.
         for (const heading of headings) assert.ok(compact(pdfText).includes(compact(heading)), heading.trim());
-        const pdfPages = pdfText.split('\f').map(compact);
+        // Poppler can reorder a Latin prefix next to a CJK run even with -layout.
+        // Accept either extraction order, but still require the entire project on one page.
+        const rawText = execFileSync('pdftotext', ['-raw', pdf, '-'], { encoding: 'utf8' });
+        const pdfPages = [...pdfText.split('\f'), ...rawText.split('\f')].map(compact);
         for (const item of await page.locator('.project-item').allTextContents()) {
           assert.ok(pdfPages.some(content => content.includes(compact(item))), 'Project text missing or split across pages: ' + item.trim().slice(0, 90));
         }

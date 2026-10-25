@@ -5,10 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "NODE_ENV=production gulp",
+    "build": "NODE_ENV=production gulp build",
     "publish": "rimraf dist && npm run build && node publish.ts",
-    "test": "node --test tests/resume.test.cjs",
-    "test:browser": "node tests/print-browser.cjs"
+    "test": "node --test --test-concurrency=1 tests/*.test.cjs",
+    "test:browser": "node tests/print-browser.cjs",
+    "resume": "node scripts/resume.cjs",
+    "demo": "node scripts/demo.cjs",
+    "test:workspace-browser": "node tests/workspace-browser.cjs"
   },
   "repository": {
     "type": "git",
@@ -41,11 +44,11 @@
     "markdown-it": "14.0.0",
     "markdown-it-attrs": "^0.8.0",
     "nib": "^1.1.2",
-    "path": "^0.12.7",
-    "rimraf": "^2.6.1",
-    "simple-git": "^3.14.1",
     "nunjucks": "^3.2.4",
-    "playwright": "^1.56.1"
+    "path": "^0.12.7",
+    "playwright": "1.56.1",
+    "rimraf": "^2.6.1",
+    "simple-git": "^3.14.1"
   },
   "author": "xiaohui",
   "license": "MIT"

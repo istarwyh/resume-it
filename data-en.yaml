@@ -88,6 +88,7 @@ experience:
         desc: Project owner for MCP and Insurance Quick Check; since 2026.09, leading Da Bao · Business Harness, incubated by Ant Xiaobao, coordinating three engineers on Agent-driven business improvement.
         project:
           -
+            id: dabao
             name: Da Bao · Business Harness (New Initiative)
             date: 2026.09 - Present
             img:
@@ -98,6 +99,7 @@ experience:
 
               Integrated **Ant Xiaobao and Insurance Quick Check**, operating a **Bad Case → diagnosis and repair → sandbox validation → PR / controlled release → production feedback** loop. Current metrics: **200 issues identified per week on average**, **70% AI participation in issue resolution**, and a **4% basic-issue rate**. Now expanding into **business-growth strategy optimization**.
           -
+            id: insurance-quick-check
             name: Insurance Quick Check · Architecture / Context / Page AIGC
             date: 2025.06 - 2026.08
             img:
@@ -108,6 +110,7 @@ experience:
 
               Produced structured context from policy documents, OCR materials, and product facts for page AIGC and Chatbot use. Across about **20,000 products and 100,000+ tasks**, long-running scheduling, automatic retries, and quality validation achieved **100% final delivery success**. Over a rolling 200+ sample set, the evaluator measures completeness, faithfulness, logical expression, and compliance at about **98% accuracy**. Meta-evaluation uses RCR (Repeat-Consistency Rate) to measure stability, currently about **90%**; established ESF (Expert-Score Reproducibility) from scratch, aligning expert judgments by Checkpoint and reaching about **70%**.
           -
+            id: chatbot
             name: Chatbot · Product-Pool RAG / Embedding / A2UI
             date: 2025.06 - 2026.08
             img:
@@ -118,6 +121,7 @@ experience:
 
               Led the **A2UI backend protocol and event stream**, validating and finalizing the contract through a full-stack demo. The event stream drives the frontend team’s implementation of interactive cards and shelves; I owned the protocol and backend path, while frontend engineers owned production rendering, enabling more complex and flexible generative UI than fixed interfaces.
           -
+            id: mcp-toolchain
             name: MCP / Tool Calling Toolchain
             date: 2024.12 - 2025.06
             img:
@@ -133,6 +137,7 @@ experience:
         desc: Worked on business-finance integration and pre-sales AI, spanning complex data platforms, RAG knowledge bases, intelligent Q&A, recommendation, and business automation.
         project:
           -
+            id: rag-knowledge
             name: RAG Knowledge Base and Intelligent Q&A
             date: 2023.10 - 2024.06
             img:
@@ -143,6 +148,7 @@ experience:
 
               Designed multi-path retrieval, LLM reranking, answer generation, and missed-query feedback as a continuously improving data-product loop.
           -
+            id: finance-data
             name: Money-Bill-Invoice Integrated Data Platform
             date: 2022.10 - 2023.10
             img:
@@ -156,6 +162,7 @@ experience:
     section: Open Source
     project:
       -
+        id: mcpadvisor
         name: MCPAdvisor
         date: 2025.05
         img:
@@ -166,6 +173,7 @@ experience:
 
           Focused on Agent Tool Discovery / Selection / Installation; won **2nd Place at the 2025 OceanBase AI Hackathon** as team leader.
       -
+        id: writinghelper
         name: WritingHelper
         date: 2021.02
         website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper
