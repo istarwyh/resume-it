@@ -1,26 +1,14 @@
-const { log } = require('console-log-colors');
+const { validate } = require('./lib/public-output.cjs');
 const simpleGit = require('simple-git');
-
-const path = 'dist';
-const repo = 'https://github.com/istarwyh/resume-it.git';
-
-log.green(`Start publishing to your git repo: ${repo}\nPlease wait...`);
-
-try {
-    const git = simpleGit(path).init().addRemote('origin', repo);
-
-    git.add('./*')
-        .commit('automatically publish')
-        .checkoutLocalBranch('gh-pages', () => {
-            console.log('Checked out to branch gh-pages');
-        })
-        .push(['-f', 'origin', 'gh-pages'])
-        .checkoutLocalBranch('master', () => {
-            log.green('Finished publishing, back to branch master.');
-        })
-        .catch((error) => {
-            log.red(error);
-        });
-} catch (error) {
-    log.red(error);
-}
+(async () => {
+    // Fail closed before initializing a deployment repository or making a network request.
+    validate();
+    const git = simpleGit('dist');
+    await git.init();
+    await git.addRemote('origin', 'https://github.com/istarwyh/resume-it.git');
+    await git.add('.');
+    await git.commit('Publish public default resume');
+    await git.checkoutLocalBranch('gh-pages');
+    await git.push(['-f', 'origin', 'gh-pages']);
+    console.log('Published public default resume.');
+})().catch(error => { console.error(error.message); process.exitCode = 1; });

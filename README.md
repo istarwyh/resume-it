@@ -3,6 +3,16 @@ resume-it
 
 一个灵活的数据模板分离的在线简历生成器,效果：https://istarwyh.github.io/resume-it/
 
+## 岗位简历与面试反馈
+
+支持一个公开默认简历，以及每个岗位独立的私有简历版本。共用项目事实 ID，记录 JD 要求、选材和改写理由；导出 HTML/PDF，冻结每次实际投递的文件，并把面试反馈转为可审阅的修改提案。
+
+详见 [简历工作台使用与设计](docs/resume-workspace.md)。`npm run resume -- help` 查看命令，`npm run demo` 在仓库外的 `RESUME_WORKSPACE` 创建两个虚构岗位示例。需要 Node.js 22+。
+
+默认页面仍从 `data.yaml` / `data-en.yaml` 构建；真实岗位、投递和反馈记录必须放在仓库外。构建不再自动生成日期档案，公开发布会校验产物清单。
+
+原始经历资料以本人博客 [xiaohui.cool](https://xiaohui.cool) 为起点，双语 YAML 是人工整理的事实视图。`data-sources.json` 保存各项目的博文出处、已阅读版本和未核实范围；`catalog` / `inspect` 可查看。博客更新不会自动覆盖履历，详见工作台文档的来源更新流程。
+
 ## 风格参考
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it?ref=badge_shield)
 
@@ -61,7 +71,7 @@ npm start
 ```javascript
 npm run publish
 ```
-这样会将`dist` 目录下的文件都**强制**提交到`gh-pages`分支
+这样会重新构建默认简历、验证公开文件清单，然后**强制**提交到 `gh-pages` 分支。私有工作台不参与发布。
 
 3. 使用github的Pages 功能发布GitHub Pages静态页面
 (借助`Deploy to GitHub Pages` extension 可直接发布静态页面)

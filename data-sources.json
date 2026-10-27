@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "primarySource": "https://xiaohui.cool",
+  "checkedAt": "2026-10-27",
+  "blogCommit": "a043a12602eb5dbb1df3aa9cf53f505bf2ee2263",
+  "projects": {
+    "dabao": {
+      "status": "unmapped",
+      "note": "在已检查的博客快照中尚未定位到与大保 / Business Harness 明确关联的原始记录。自迭代、业务反馈与 Harness 相关文章存在，但不能据主题相似推定为该项目；本记录不证明博客不存在其他别名资料。保留既有审定简历，Codex App Server、接入范围及 200/70%/4% 等指标仍需逐项来源复核。",
+      "references": []
+    },
+    "insurance-quick-check": {
+      "status": "partial",
+      "note": "博客经历入口支持 2025 年 6 月起通用 Agent 建设、百万 MAU 保险快查及报告/质量评分/评测链路；Protocol 文章支持运行时对象与职责边界。不能据此证明简历的 800 万 MAU、2000 RPM、产品/任务数量、准确率、交付率或协作人数；不自动覆盖既有审定值。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/Farming-in-the-cyber-world",
+          "path": "content/Farming in the cyber world.md",
+          "blobSha": "dc22b80e0b138cdf6a46fba20c8f5af066321042"
+        },
+        {
+          "url": "https://xiaohui.cool/program/llm/%E7%9B%B8%E6%AF%94%E5%B1%82%E5%87%BA%E4%B8%8D%E7%A9%B7%E7%9A%84-Agent-%E6%A1%86%E6%9E%B6%EF%BC%8C%E4%B8%8D%E5%8F%98%E7%9A%84-Agent-Protocol-%E6%98%AF%E4%BB%80%E4%B9%88",
+          "path": "content/program/llm/相比层出不穷的 Agent 框架，不变的 Agent Protocol 是什么.md",
+          "blobSha": "4238194f89e66eb4b0b910d4036b01fccecc8a21"
+        }
+      ]
+    },
+    "chatbot": {
+      "status": "partial",
+      "note": "QQ/QA 原文支持保险快查的产品池召回、Query 向量化、Elasticsearch、Gate/HA3/QQ 三路并发降级和文档坐标导航。文章是技术实践来源，不独立证明 A2UI 个人主导权、全部组织分工或简历全部数值。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/program/llm/RAG-%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%9AQQ-%E4%BA%A7%E5%93%81%E5%8F%AC%E5%9B%9E%E4%B8%8E-QA-%E6%96%87%E6%A1%A3%E5%AF%BC%E8%88%AA",
+          "path": "content/program/llm/RAG 工程实践：QQ 产品召回与 QA 文档导航.md",
+          "blobSha": "eb015de889d50fca17189631515873a564d079e0"
+        }
+      ]
+    },
+    "mcp-toolchain": {
+      "status": "partial",
+      "note": "经历入口支持 2024.12–2025.06 负责 MCP；OneAgent 文章明确 MCPBridge 桥接存量 HTTP/TR/HSF 及领域 MCP 接入。不据此核实百余服务数量或全部个人贡献范围。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/Farming-in-the-cyber-world",
+          "path": "content/Farming in the cyber world.md",
+          "blobSha": "dc22b80e0b138cdf6a46fba20c8f5af066321042"
+        },
+        {
+          "url": "https://xiaohui.cool/program/llm/%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%9B%E5%BB%BA%E9%A2%86%E5%9F%9FAgent---OneAgent-+-MCPs-%E8%8C%83%E5%BC%8F",
+          "path": "content/program/llm/如何快速创建领域Agent - OneAgent + MCPs 范式.md",
+          "blobSha": "c2a95f97d40537767de3ca7524bfda9a39d7e8f3"
+        }
+      ]
+    },
+    "rag-knowledge": {
+      "status": "partial",
+      "note": "原工作记录支持淘工厂知识管理与问答链路；QQ/QA 回顾明确 2023.10–2024.06 本人负责，描述向量化、多源知识融合、粗排/重排/精排和知识增删改。来源不是对简历所有成效和范围的独立认证。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/store/history-program/%E6%B7%98%E5%B7%A5%E5%8E%82%E5%AE%A2%E6%9C%8D%E7%9F%A5%E8%AF%86%E5%BA%93%E5%92%8C%E9%97%AE%E7%AD%94%E7%9B%B8%E5%85%B3%E7%9A%84%E5%B7%A5%E4%BD%9C",
+          "path": "content/store/history-program/淘工厂客服知识库和问答相关的工作.md",
+          "blobSha": "7c8aac79aa4af9a944d60d9b3ee3b3c1b7db67f1"
+        },
+        {
+          "url": "https://xiaohui.cool/program/llm/RAG-%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%EF%BC%9AQQ-%E4%BA%A7%E5%93%81%E5%8F%AC%E5%9B%9E%E4%B8%8E-QA-%E6%96%87%E6%A1%A3%E5%AF%BC%E8%88%AA",
+          "path": "content/program/llm/RAG 工程实践：QQ 产品召回与 QA 文档导航.md",
+          "blobSha": "eb015de889d50fca17189631515873a564d079e0"
+        }
+      ]
+    },
+    "finance-data": {
+      "status": "partial",
+      "note": "经历入口支持 2022.10–2023.10 负责钱账票并参与业财一体；技术记录支持百亿账单、PostgreSQL/BigTable、DSL 与统一数据服务。尚不据此核实十余计费场景、缩短至一周等具体结果。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/Farming-in-the-cyber-world",
+          "path": "content/Farming in the cyber world.md",
+          "blobSha": "dc22b80e0b138cdf6a46fba20c8f5af066321042"
+        },
+        {
+          "url": "https://xiaohui.cool/program/practices/Practices-for-Processing-l0-Billion-Bill-data",
+          "path": "content/program/practices/Practices-for-Processing-l0-Billion-Bill-data.md",
+          "blobSha": "5d5459300acb32b57be33d626b8cfb590c148eba"
+        }
+      ]
+    },
+    "mcpadvisor": {
+      "status": "partial",
+      "note": "经历入口明确 2025 年开发 MCPAdvisor 用于 MCP 安装，获得 OceanBase AI 黑客松二等奖及队长身份。具体检索/评测/安装功能仍需对应源码或项目资料，不把获奖当作当前质量认证。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/Farming-in-the-cyber-world",
+          "path": "content/Farming in the cyber world.md",
+          "blobSha": "dc22b80e0b138cdf6a46fba20c8f5af066321042"
+        }
+      ]
+    },
+    "writinghelper": {
+      "status": "partial",
+      "note": "经历入口明确 2021 年毕业时开发 WritingHelper；博客快照写 15000+ 下载，而既有简历写 16000+，可能是时点差异但尚未核实，不能自动覆盖或宣称一致。LSP/Trie/责任链等技术细节仍需项目来源。",
+      "references": [
+        {
+          "url": "https://xiaohui.cool/Farming-in-the-cyber-world",
+          "path": "content/Farming in the cyber world.md",
+          "blobSha": "dc22b80e0b138cdf6a46fba20c8f5af066321042"
+        }
+      ]
+    }
+  }
+}

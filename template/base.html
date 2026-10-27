@@ -3,6 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    {% if private_preview %}
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+    {% endif %}
     <title>{{ name }}'s Resume</title>
     <meta name="description" content="{{ meta_content }}">
     <meta name="keywords" content="{{ keywords }}">
@@ -32,8 +36,8 @@
     </div>
     <p>
         Last updated on: {{ update_time }}.
-        <a href="./index.html">中文</a>
-        <a href="./index-en.html">English</a>
+        {% if not private_preview %}<a href="./index.html">中文</a>
+        <a href="./index-en.html">English</a>{% endif %}
     </p>
 </footer>
 <script src="assets/scripts.js?v={{ asset_version }}"></script>

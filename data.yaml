@@ -89,6 +89,7 @@ experience:
         desc: 先后负责 MCP、保险快查；2026.09 起负责蚁小保孵化的“大保 · Business Harness”，项目制协同 3 名同学推进 Agent 驱动的业务迭代。
         project:
           -
+            id: dabao
             name: 大保 · Business Harness（创新业务）
             date: 2026.09 - 至今
             img:
@@ -99,6 +100,7 @@ experience:
 
               已接入 **蚁小保、保险快查**，运行 **Bad Case → 归因修复 → 沙箱验证 → PR / 受控发布 → 线上反馈** Loop；周均发现 **200 个 Issue**，**AI 参与解决率 70%**，**低级问题率 4%**。目前正拓展至 **业务增长策略优化**。
           -
+            id: insurance-quick-check
             name: 保险快查 · 应用架构 / 上下文 / 页面 AIGC
             date: 2025.06 - 2026.08
             img:
@@ -109,6 +111,7 @@ experience:
 
               将原始条款、OCR 材料和产品事实生产为结构化上下文，供页面 AIGC 与 Chatbot 调度；在约 **2 万产品、十万级任务**规模下，通过长程调度、自动重试和质量校验实现离线任务最终交付成功率 **100%**。页面采用离线 / 在线混合生产；评估器从完整度、忠实度、逻辑表达与合规四方面对 200+ 样本滚动评测，准确率约 **98%**。元评测以 RCR（重复评测一致率）衡量稳定性，当前约 **90%**；从零建立 ESF（专家判分复现率）机制，按 Checkpoint 对齐专家判分，当前约 **70%**。
           -
+            id: chatbot
             name: Chatbot · 品池 RAG / Embedding / A2UI
             date: 2025.06 - 2026.08
             img:
@@ -119,6 +122,7 @@ experience:
 
               主导 **A2UI 后端协议与事件流**，通过全栈 Demo 验证并确定协议，以事件驱动前端团队实现交互式卡片与货架；本人负责协议和后端链路，前端团队负责具体渲染，实现比固定 UI 更复杂、灵活的生成式交互。
           -
+            id: mcp-toolchain
             name: MCP / Tool Calling 工具链
             date: 2024.12 - 2025.06
             img:
@@ -134,6 +138,7 @@ experience:
         desc: 参与业财一体化与售前 AI 模块建设，覆盖复杂数据平台、RAG 知识库、智能问答、推荐和业务自动化链路。
         project:
           -
+            id: rag-knowledge
             name: RAG 知识库与智能问答链路
             date: 2023.10 - 2024.06
             img:
@@ -144,6 +149,7 @@ experience:
 
               设计多路召回、LLM 重排、答案生成与未命中反馈闭环，将检索、推荐、问答与运营反馈连接为可持续迭代的数据产品链路。
           -
+            id: finance-data
             name: 钱账票一体化数据平台
             date: 2022.10 - 2023.10
             img:
@@ -157,6 +163,7 @@ experience:
     section: 开源贡献
     project:
       -
+        id: mcpadvisor
         name: MCPAdvisor
         date: 2025.05
         img:
@@ -167,6 +174,7 @@ experience:
 
           项目聚焦 Agent Tool Discovery / Tool Selection / Tool Installation，获 **2025 OceanBase AI 黑客松二等奖**（队长）。
       -
+        id: writinghelper
         name: WritingHelper
         date: 2021.02
         website: https://marketplace.visualstudio.com/items?itemName=istarwyh.writinghelper

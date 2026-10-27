@@ -1,0 +1,11 @@
+{
+  "company": "Example company (synthetic)",
+  "role": "Senior Agent Infrastructure Engineer (synthetic)",
+  "location": "Shanghai; exact office and employment terms unverified",
+  "sourceUrl": "https://example.com/jobs/agent-demo",
+  "jd": "SYNTHETIC FIXTURE: build Agent runtime, tool orchestration, evaluation and production recovery. This is not a real vacancy or an application record.",
+  "requirements": [
+    { "id": "runtime", "text": "Production Agent runtime and recovery", "hard": true },
+    { "id": "isolation", "text": "Multi-tenant sandbox isolation", "hard": false }
+  ]
+}

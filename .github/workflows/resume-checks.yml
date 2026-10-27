@@ -7,7 +7,8 @@ permissions:
   contents: read
 jobs:
   rendering:
-    runs-on: ubuntu-latest
+    # Playwright 1.56.1 supports Ubuntu 24.04, not the moving latest image.
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -19,6 +20,7 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: sudo apt-get update && sudo apt-get install -y poppler-utils fonts-noto-cjk
       - run: npm run test:browser
+      - run: npm run test:workspace-browser
       - uses: actions/upload-artifact@v4
         if: always()
         with:

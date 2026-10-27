@@ -2,42 +2,13 @@ const gulp = require('gulp')
 const path = require('path')
 const fs = require('fs')
 const crypto = require('crypto')
-const matter = require('gray-matter')
-const yaml = require('js-yaml')
-const MarkdownIt = require('markdown-it')
-const markdownItAttrs = require('markdown-it-attrs')
 const nib = require('nib')
 const $ = require('gulp-load-plugins')()
 const browserSync = require('browser-sync').create()
-const _ = require('lodash');
 
 const isProd = process.env.NODE_ENV === 'production'
 const chineseDataPath = 'data.yaml'
 const englighDataPath = 'data-en.yaml'
-const archivePath = `archive/${getResumeDataName()}`
-
-
-function getResumeDataName() {
-  const currentDate = new Date();
-  const formattedDate = _.chain(currentDate)
-      .thru((date) => [
-        date.getFullYear().toString(),
-        _.padStart((date.getMonth() + 1).toString(), 2, '0'),
-        _.padStart(date.getDate().toString(), 2, '0')
-      ])
-      .join('')
-      .value();
-
-  return `resume_data_${formattedDate}.yaml`;
-}
-
-const md = new MarkdownIt({
-  html: true,
-  breaks: true,
-  typographer: true
-})
-md.use(markdownItAttrs)
-
 const paths = {
   root: path.join(__dirname, '../'),
   src: path.join(__dirname, '../src/'),
@@ -86,43 +57,19 @@ gulp.task('styles', () => {
     .pipe($.size())
 })
 
-gulp.task('html', () => {
-  console.log('----------Starting html-----------');
-
-  const MarkdownType = new yaml.Type('tag:yaml.org,2002:md', {
-    kind: 'scalar',
-    construct: function (text) {
-      return md.render(text)
-    },
-  })
-  const YAML_SCHEMA = yaml.Schema.create([ MarkdownType ])
-  const chData = getData(chineseDataPath)
-  const enData = getData(englighDataPath)
-  const compliedChineseHtml = gulp.src(['template/index.html', 'template/print.html'])
-    .pipe($.nunjucks.compile(chData))
-    const compliedEnglishHtml = gulp.src(['template/index-en.html','template/print-en.html'])
-    .pipe($.nunjucks.compile(enData))
-  const res = compliedChineseHtml
-    .pipe($.htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'))
-    .pipe($.size())
-  return compliedEnglishHtml
-    .pipe($.htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('dist'))
-    .pipe($.size())
-
-  function getData(dataPath) {
-    const data = matter(fs.readFileSync(dataPath, 'utf8'), { schema: YAML_SCHEMA }).data
-    const assetContents = [
-      fs.readFileSync('dist/assets/styles.css'),
-      fs.readFileSync('dist/assets/scripts.js')
-    ]
-    data.asset_version = crypto
-      .createHash('sha256')
-      .update(Buffer.concat(assetContents))
-      .digest('hex')
-      .slice(0, 12)
-    return data
+gulp.task('html', async () => {
+  const nunjucks = require('nunjucks');
+  const { catalog } = require('./lib/resume.cjs');
+  const env = nunjucks.configure('template', { autoescape: true });
+  const assetVersion = crypto.createHash('sha256').update(Buffer.concat([
+    fs.readFileSync('dist/assets/styles.css'), fs.readFileSync('dist/assets/scripts.js')
+  ])).digest('hex').slice(0, 12);
+  for (const locale of ['zh', 'en']) {
+    const data = catalog(locale).data;
+    data.asset_version = assetVersion;
+    for (const page of locale === 'zh' ? ['index.html', 'print.html'] : ['index-en.html', 'print-en.html']) {
+      fs.writeFileSync(path.join('dist', page), env.render(page, data));
+    }
   }
 })
 
@@ -132,18 +79,6 @@ gulp.task('images', () => {
   return gulp.src('src/assets/images/**/*')
     .pipe(gulp.dest('dist/assets/images/'))
     .pipe($.size())
-})
-
-gulp.task('archive', () => {
-  console.log('----------Starting archive process-----------');
-  fs.readFile(chineseDataPath, (err, data) => {
-    if (err) throw err;
-    fs.writeFile(archivePath, data, (err) => {
-      if (err) throw err;
-      console.log(`${archivePath} was copied successfully!`);
-    });
-  });
-  return Promise.resolve();
 })
 
 gulp.task('watch', () => {
@@ -179,6 +114,10 @@ gulp.task('watch', () => {
 
 
 // Tests need production assets, but must not create or overwrite source archives.
-gulp.task('build', gulp.series('scripts', 'styles', 'fonts', 'images', 'html'))
+gulp.task('clean', async () => {
+  fs.rmSync(path.join(__dirname, 'dist'), { recursive: true, force: true });
+})
+gulp.task('seal', async () => require('./lib/public-output.cjs').seal())
+gulp.task('build', gulp.series('clean', 'scripts', 'styles', 'fonts', 'images', 'html', 'seal'))
 
-gulp.task('default', gulp.series('build', 'archive', 'watch'))
+gulp.task('default', gulp.series('build', 'watch'))
