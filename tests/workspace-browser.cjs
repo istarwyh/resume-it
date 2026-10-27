@@ -5,10 +5,11 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const { pathToFileURL } = require('node:url');
 const api = require('../lib/workspace.cjs');
-const { projects } = require('../lib/resume.cjs');
+const { projects, catalog, digest } = require('../lib/resume.cjs');
 const { chromium } = require('playwright');
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'resume-pdf-test-'));
 const w = api.workspace(path.join(temp, 'workspace'), true);
+const defaultBefore = digest(catalog().data);
 const compact = value => value.normalize('NFKC').replace(/\s+/g, '');
 (async () => {
   const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined, args: ['--no-sandbox'] });
@@ -46,7 +47,18 @@ const compact = value => value.normalize('NFKC').replace(/\s+/g, '');
       api.decide(w, feedback.id, 'accept', 'Test reviewer', 'Synthetic expression improvement');
       assert.throws(() => api.current(w, key, true), /unreviewed/);
       assert.deepEqual(api.verify(snapshotDir), original);
-      console.log(locale + ': actual PDF, isolated preview, frozen submission and reviewed feedback workflow passed');
+      // A recorded decision must change the next deliverable, not just a JSON record.
+      api.review(w, key, 'Test reviewer after feedback');
+      const revised = await api.build(w, key, true);
+      assert.notEqual(revised.exportId, exportResult.exportId);
+      const revisedText = execFileSync('pdftotext', ['-layout', path.join(revised.directory, 'resume.pdf'), '-'], { encoding: 'utf8' });
+      const restored = projects(api.current(w, key, true).data).find(p => p.id === 'insurance-quick-check');
+      assert.ok(compact(revisedText).includes(compact(restored.name)), 'Accepted feedback adds the selected project to the next PDF');
+      assert.ok(!compact(text).includes(compact(restored.name)), 'Original PDF remains the earlier selection');
+      assert.deepEqual(api.verify(snapshotDir), original, 'New PDF must not change the submitted snapshot');
+      assert.equal(digest(catalog().data), defaultBefore, 'Feedback must not change shared default facts');
+      fs.copyFileSync(path.join(revised.directory, 'resume.pdf'), path.join(output, 'resume-after-feedback.pdf'));
+      console.log(locale + ': actual PDF, isolated preview, frozen submission and feedback-to-second-PDF workflow passed');
     }
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; }).finally(() => fs.rmSync(temp, { recursive: true, force: true }));

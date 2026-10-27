@@ -31,7 +31,10 @@ No command sends a resume or publishes a private variant.`;
     decision: { type: 'string' }, pdf: { type: 'boolean' }, help: { type: 'boolean' }
   } });
   if (!command || command === 'help' || o.help) return console.log(help);
-  if (command === 'catalog') return console.log(JSON.stringify(projects(catalog(o.locale).data).map(p => ({ id: p.id, name: p.name, date: p.date, source: p.website || p.source_code || null, evidenceStatus: 'existing-resume-claim; human verification required' })), null, 2));
+  if (command === 'catalog') {
+    const c = catalog(o.locale);
+    return console.log(JSON.stringify(projects(c.data).map(p => ({ id: p.id, name: p.name, date: p.date, source: p.website || p.source_code || null, provenance: c.provenance.projects[p.id], evidenceStatus: 'curated-resume-claim; blog provenance is not independent verification' })), null, 2));
+  }
   const w = api.workspace(process.env.RESUME_WORKSPACE, command === 'init');
   const input = () => { if (!o.input) throw new Error('--input JSON file required'); return JSON.parse(fs.readFileSync(o.input, 'utf8')); };
   let result;
@@ -45,7 +48,7 @@ No command sends a resume or publishes a private variant.`;
       const target = api.read(api.file(w, 'targets', v.targetId));
       const all = projects(c.data);
       const changes = Object.entries(v.overrides).map(([field, change]) => ({ field, before: field.startsWith('project:') ? all.find(p => p.id === field.slice(8))?.des : c.data[field], after: change.text, reason: change.reason, evidenceIds: change.evidenceIds }));
-      result = { variant: v, targetChanged: digest(target) !== v.targetHash, reviewed: v.review?.digest === variantDigest(v), changes, currentBaseHash: c.hash, sourceChanged: c.hash !== v.baseHash, projects: projects(c.data).map(p => ({ id: p.id, name: p.name, selected: v.projectIds.includes(p.id) })) };
+      result = { variant: v, targetChanged: digest(target) !== v.targetHash, reviewed: v.review?.digest === variantDigest(v), changes, currentBaseHash: c.hash, sourceChanged: c.hash !== v.baseHash, projects: projects(c.data).map(p => ({ id: p.id, name: p.name, selected: v.projectIds.includes(p.id), provenance: c.provenance.projects[p.id] })) };
       break;
     }
     case 'review': result = api.review(w, key, o.reviewer); break;

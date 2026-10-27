@@ -103,6 +103,7 @@ test('private export is isolated, publish fails closed and no build writes archi
   api.review(w, 'agent-zh', 'Reviewer');
   const result = await api.build(w, 'agent-zh');
   assert.equal(result.hasPdf, false);
+  assert.deepEqual(api.read(path.join(result.directory, 'sources', 'data-sources.json')), catalog().provenance);
   const html = fs.readFileSync(path.join(result.directory, 'index.html'), 'utf8');
   assert.match(html, /Content-Security-Policy/);
   assert.doesNotMatch(html, /googletagmanager/);
@@ -187,4 +188,30 @@ test('stale proposals can be rejected without changing the variant or snapshots'
     assert.throws(() => api.recoverDecision(w, f.id), /Only accepted/);
     assert.throws(() => api.decide(w, f.id, 'reject', 'Reviewer', 'Again'), /already decided/);
   }
+});
+
+test('blog provenance is exposed, frozen in exports and changes invalidate prior review', () => {
+  const sourceFile = path.join(root, 'data-sources.json');
+  const original = fs.readFileSync(sourceFile, 'utf8');
+  const before = catalog();
+  assert.equal(before.provenance.primarySource, 'https://xiaohui.cool');
+  assert.deepEqual(Object.keys(before.provenance.projects).sort(), projects(before.data).map(p => p.id).sort());
+  assert.equal(before.provenance.projects.dabao.status, 'unmapped');
+  assert.deepEqual(before.provenance.projects.dabao.references, []);
+  api.review(w, 'agent-zh', 'Reviewer');
+  try {
+    const updated = JSON.parse(original);
+    updated.projects.dabao.note += ' Test-only new source review.';
+    fs.writeFileSync(sourceFile, JSON.stringify(updated));
+    assert.notEqual(catalog().hash, before.hash);
+    assert.throws(() => api.current(w, 'agent-zh', true), /Stale/);
+    assert.deepEqual(catalog().data, before.data, 'Provenance must not rewrite the curated resume');
+    api.refresh(w, 'agent-zh', 'Compared source review note');
+    assert.throws(() => api.current(w, 'agent-zh', true), /unreviewed/);
+    api.review(w, 'agent-zh', 'Reviewer');
+    assert.ok(api.current(w, 'agent-zh', true));
+    delete updated.projects.dabao;
+    fs.writeFileSync(sourceFile, JSON.stringify(updated));
+    assert.throws(() => catalog(), /cover exactly/);
+  } finally { fs.writeFileSync(sourceFile, original); }
 });

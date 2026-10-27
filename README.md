@@ -11,6 +11,8 @@ resume-it
 
 默认页面仍从 `data.yaml` / `data-en.yaml` 构建；真实岗位、投递和反馈记录必须放在仓库外。构建不再自动生成日期档案，公开发布会校验产物清单。
 
+原始经历资料以本人博客 [xiaohui.cool](https://xiaohui.cool) 为起点，双语 YAML 是人工整理的事实视图。`data-sources.json` 保存各项目的博文出处、已阅读版本和未核实范围；`catalog` / `inspect` 可查看。博客更新不会自动覆盖履历，详见工作台文档的来源更新流程。
+
 ## 风格参考
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxiao555%2Fresume-it?ref=badge_shield)
 
