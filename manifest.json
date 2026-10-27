@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "audience": "public-default-only",
+  "files": {
+    "assets/images/cc.png": "a0e91e7d0b08374927db0ff0cbb63b538612eaedbc2c574e8cca60beb9dd0c9b",
+    "assets/images/mcpadvisor-show.jpg": "504f582934a6e03e7de236ba8387cf51ce098329136227e6d00f10d883318d0a",
+    "assets/images/xiaohui.jpg": "380b08bedab3705c8ba802a657728ee31451eeebe2e9861c92eeb8827f6e036c",
+    "assets/scripts.js": "a8885006ee0e235007a0a57d24bf1652b5743ba0d65d1318f8a2a4d5e18a975d",
+    "assets/styles.css": "93122f25791f786fedd16b17aab7915a89ac2f1b5dcf2e26caf1e1be04fe3cbe",
+    "fonts/fontawesome-webfont.eot": "7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979",
+    "fonts/fontawesome-webfont.svg": "ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4",
+    "fonts/fontawesome-webfont.ttf": "aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8",
+    "fonts/fontawesome-webfont.woff": "ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07",
+    "fonts/fontawesome-webfont.woff2": "2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe",
+    "index-en.html": "48a423b4dece8026e0160bbd93602ff2d9b3d8c59f6fdabe18d6095ce4457f3e",
+    "index.html": "35ec6e592f9087eb826c0829c2642404f8712c106bfb4a724489e5d819e19e7b",
+    "print-en.html": "509509ff1f4ba1c8db2962d221242d9a89bc643f93e15dfdb776d2cfe215c52d",
+    "print.html": "df476da0c912fd6e4b0fdf6d34763845c642e2bc8c614af94d8645e48534c025"
+  }
+}
