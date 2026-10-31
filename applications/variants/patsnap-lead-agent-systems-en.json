@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "id": "patsnap-lead-agent-systems-en",
+  "targetId": "patsnap-lead-agent-systems",
+  "targetHash": "ec49c258cc3c4070f5e07e1e0b8b03704ab772489986206ec619b8ae6a6fdc68",
+  "locale": "en",
+  "baseHash": "016101cf3913d3fd50d9b5215c14e2d307e7956ec5172dd4eca1788296c4acef",
+  "projectIds": [
+    "insurance-quick-check",
+    "dabao",
+    "mcp-toolchain",
+    "chatbot",
+    "finance-data",
+    "mcpadvisor"
+  ],
+  "requirementMapping": [
+    {
+      "requirementId": "experience",
+      "status": "supported",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "finance-data"
+      ],
+      "note": "2021.06 起全职工作；现 P7，担任项目负责人并主导复杂架构。"
+    },
+    {
+      "requirementId": "team",
+      "status": "partial",
+      "evidenceIds": [
+        "dabao",
+        "insurance-quick-check"
+      ],
+      "note": "源简历明确项目制协同 3 人及多职能交付。JD 的 leading team 是否接受项目制技术带队待雇主确认；不等同直属管理。"
+    },
+    {
+      "requirementId": "python",
+      "status": "partial",
+      "evidenceIds": [
+        "insurance-quick-check"
+      ],
+      "note": "技能列有 Python；本人上下文工程博文明确 OneAgent 为 Python / LangGraph。尚需本人补充独立负责的具体生产模块及代码责任。"
+    },
+    {
+      "requirementId": "concurrency",
+      "status": "partial",
+      "evidenceIds": [
+        "chatbot",
+        "insurance-quick-check"
+      ],
+      "note": "并发降级、事件流、长程调度有事实支持；多模型路由与 provider 接入个人实现范围尚未核实。"
+    },
+    {
+      "requirementId": "distributed",
+      "status": "supported",
+      "evidenceIds": [
+        "finance-data",
+        "insurance-quick-check"
+      ],
+      "note": "百亿数据平台、在线 Agent 架构、故障复盘与跨团队交付有履历支持。"
+    },
+    {
+      "requirementId": "depth",
+      "status": "partial",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "mcp-toolchain",
+        "chatbot",
+        "dabao"
+      ],
+      "note": "执行、上下文和 MCP / 检索有实战素材；需面试以个人实现细节证明两层以上深度。"
+    },
+    {
+      "requirementId": "execution",
+      "status": "partial",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "dabao"
+      ],
+      "note": "Runtime / Executor / SessionPool、调度重试及业务闭环有证据；检查点、中断恢复及 subagent 的本人独立实现范围待补充。"
+    },
+    {
+      "requirementId": "context",
+      "status": "partial",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "chatbot"
+      ],
+      "note": "结构化上下文及原文导航有生产证据；博文支持规划、卸载、隔离与压缩方法。分级 token budget 生产指标未确认。"
+    },
+    {
+      "requirementId": "foundation",
+      "status": "partial",
+      "evidenceIds": [
+        "mcp-toolchain",
+        "chatbot",
+        "dabao"
+      ],
+      "note": "MCP、检索、轨迹与沙箱验证有素材；不据此推定 Docker / Kubernetes / AST、多层 memory 或多租户安全已生产化。"
+    },
+    {
+      "requirementId": "evaluation",
+      "status": "supported",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "dabao"
+      ],
+      "note": "滚动评测、元评测、Bad Case 到验证发布闭环明确；代码评审制度与亲自编码模块细节需补充。"
+    }
+  ],
+  "overrides": {
+    "apply_to_position": {
+      "text": "Lead Engineer, AI Agent Systems",
+      "reason": "Exact official target role; not a current job title.",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "dabao"
+      ]
+    },
+    "description": {
+      "text": "5+ years in backend and AI agent engineering. Ant Group P7; project owner for Insurance Quick Check and Da Bao Business Harness. Focused on **agent runtime, context engineering, MCP, evaluation and reliable production delivery**.",
+      "reason": "Lead with established engineering responsibilities; do not claim a from-scratch agent loop or Python expertise.",
+      "evidenceIds": [
+        "insurance-quick-check",
+        "dabao",
+        "mcp-toolchain"
+      ]
+    },
+    "project:insurance-quick-check": {
+      "text": "Led a million-MAU insurance agent architecture using **Runtime-Executor-SessionPool** across context production, page generation and chatbot workflows; peak traffic approximately **2,000 requests/minute**. Coordinated application, algorithm, search and frontend teams.\n\nStructured policy documents, OCR and product facts into reusable context. Supported **20,000 products and 100,000+ tasks** with long-running scheduling, retries and quality checks.\n\nBuilt evaluation across completeness, faithfulness, reasoning quality and compliance on **200+ rolling samples**, plus meta-evaluation of repeatability and agreement with expert scoring.",
+      "reason": "Million-MAU wording avoids conflicting exact MAU claims. Retain scale from existing resume, omit absolute delivery and ambiguous accuracy metrics. Runtime architecture does not imply independent implementation of every engine component.",
+      "evidenceIds": [
+        "insurance-quick-check"
+      ]
+    },
+    "project:dabao": {
+      "text": "Lead a business harness built on **Codex App Server**, providing capability discovery, execution-trace observability, sandbox experiments and evaluation gates. Coordinate **three engineers on a project basis**; integrated Ant Xiaobao and Insurance Quick Check.\n\nConnect production bad cases to diagnosis and repair, sandbox validation, PRs / controlled releases and production feedback. Extend this verified-delivery workflow toward business-growth experiments.",
+      "reason": "Explicitly attribute execution foundation to Codex App Server; describe project coordination, not direct-report management. Omit unverified improvement metrics and security claims.",
+      "evidenceIds": [
+        "dabao"
+      ]
+    },
+    "project:mcp-toolchain": {
+      "text": "Led **MCPBridge and domain MCP servers**, adapting existing HTTP / HSF services into reusable tools for business data, rules, retrieval and analytics. Designed **tool schemas, discovery, argument construction, error feedback and context enrichment** to reuse domain capabilities across agents.",
+      "reason": "Show tooling infrastructure and reuse without asserting a complete MCP Hub, skill engine or unsupported service count.",
+      "evidenceIds": [
+        "mcp-toolchain"
+      ]
+    },
+    "project:chatbot": {
+      "text": "Owned the product-pool RAG / embedding pipeline: query vectorization, Elasticsearch retrieval, three-path concurrent fallback and source-document navigation.\n\nLed the **A2UI backend protocol and event stream**, validating the contract with a full-stack demo. Partnered with frontend engineers on interactive cards and shelves; algorithm / search teams owned product selection.",
+      "reason": "Preserve personal ownership of protocol/backend while crediting other teams for ranking and production UI.",
+      "evidenceIds": [
+        "chatbot"
+      ]
+    },
+    "project:finance-data": {
+      "text": "Led settlement, billing and supplier-invoice integration across **10+ billing scenarios and tens of billions of records**, using MaxCompute, PostgreSQL and BigTable. Built a **domain-specific language** for billing and accounting rules, reducing development cycles to one week. Published the practice through Alibaba Technology.",
+      "reason": "Retain established complex backend architecture and delivery evidence from the curated resume.",
+      "evidenceIds": [
+        "finance-data"
+      ]
+    },
+    "project:mcpadvisor": {
+      "text": "Built MCPAdvisor for natural-language-driven **MCP server discovery, selection and installation**. Team leader; **2nd Place, 2025 OceanBase AI Hackathon**.",
+      "reason": "Concrete open-source evidence for tool discovery and technical leadership.",
+      "evidenceIds": [
+        "mcpadvisor"
+      ]
+    }
+  },
+  "reason": "Prioritize production runtime and context engineering, then business harness, MCP, retrieval, evaluation and complex backend delivery. Preserve employer history and distinguish technical coordination from line management. Reuse the existing Patsnap target; English sibling of the Chinese variant.",
+  "review": null,
+  "refreshHistory": [
+    {
+      "at": "2026-10-31T11:23:45.601Z",
+      "previousBaseHash": "e74576f12fa5430fc66f345b9e0d5b7dbee3207b731866c7232c5f1f2a8e6654",
+      "previousTargetHash": "ec49c258cc3c4070f5e07e1e0b8b03704ab772489986206ec619b8ae6a6fdc68",
+      "reason": "Rebased source hash on unchanged canonical repository files; published independent English variant with owner authorization, preserving review status."
+    }
+  ]
+}

@@ -4,17 +4,17 @@
 
 默认简历是一种展示视图，不能代表所有投递。一个岗位版本需要回答：为什么选择这些经历，哪些 JD 要求有证据，哪些仍待确认，以及面试官实际看到了哪份文件。
 
-本阶段保持现有 Gulp / Nunjucks / Stylus 模板，增加无需数据库、无需 AI 的本地 CLI。公开默认页面与私有工作台有明确的存储和发布边界。不会自动投递、联系招聘方、自动更新默认简历或把反馈上传给模型。
+本阶段保持现有 Gulp / Nunjucks / Stylus 模板，增加无需数据库、无需 AI 的本地 CLI。默认页面与岗位工作台分别构建；工作台可以在仓库内版本管理，也可以保存在仓库外。不会自动投递、联系招聘方、自动更新默认简历或把反馈上传给模型。
 
 | 对象 | 数据来源 / 存储 | 约束 |
 | --- | --- | --- |
 | 默认事实素材 | `data.yaml`、`data-en.yaml` | 现有内容原样保留；项目增加跨语言共用的稳定 `id`，不因标题修改或排序而变化 |
-| 岗位 | 私有 `targets/<id>.json` | JD 原文、来源 URL、采集时间、地点、硬要求；内容摘要关联岗位版本 |
-| 岗位简历 | 私有 `variants/<id>.json` | 事实 ID 选材、项目组内排序、表达改写、改写理由及证据 ID；保留公司/时期结构 |
-| 导出 | 私有 `exports/<uuid>/` | 当次解析内容、JD、版本、HTML、静态资源、可选 PDF、源文件与哈希清单 |
-| 投递快照 | 私有 `submissions/<uuid>/` | 复制当次导出、渠道及实际投递时间；不会随事实或岗位版本变化 |
-| 面试反馈 | 私有 `feedback/<uuid>.json` | 关联投递及轮次；原话、观察、推断分开；表达/证据/技能/岗位匹配/未知分类 |
-| 修改决定 | 私有 `decisions/<feedback-id>.json` | 明确采纳/拒绝、操作者和理由；采纳只改目标版本，且重新进入待审阅状态 |
+| 岗位 | 工作台 `targets/<id>.json` | JD 原文、来源 URL、采集时间、地点、硬要求；内容摘要关联岗位版本 |
+| 岗位简历 | 工作台 `variants/<id>.json` | 事实 ID 选材、项目组内排序、表达改写、改写理由及证据 ID；保留公司/时期结构 |
+| 导出 | 工作台 `exports/<uuid>/` | 当次解析内容、JD、版本、HTML、静态资源、可选 PDF、源文件与哈希清单 |
+| 投递快照 | 工作台 `submissions/<uuid>/` | 复制当次导出、渠道及实际投递时间；不会随事实或岗位版本变化 |
+| 面试反馈 | 工作台 `feedback/<uuid>.json` | 关联投递及轮次；原话、观察、推断分开；表达/证据/技能/岗位匹配/未知分类 |
+| 修改决定 | 工作台 `decisions/<feedback-id>.json` | 明确采纳/拒绝、操作者和理由；采纳只改目标版本，且重新进入待审阅状态 |
 
 事实素材目前复用现有双语 YAML，避免一次迁移拆碎所有字段造成内容回归。项目 URL 可作为佐证入口，但现有简历中的描述不等于已独立验证的事实。`catalog` 明确标为待人工核实。数字口径、管理范围和“借助已有 Runtime”与“自研 Runtime”的区别，仍需本人审阅；程序只验证引用存在，不能证明文字真实。中英文共用项目 ID，但翻译依然人工维护；任一语言源文件修改都会使已有岗位版本过期。
 
@@ -24,17 +24,17 @@
 
 ```bash
 npm install
-# 使用仓库之外的目录；不要放在公共云盘或公开 Web 根目录。
-export RESUME_WORKSPACE="$HOME/.local/share/resume-it"
+# 可使用仓库内目录；提交其中的文件会遵循仓库可见性。
+export RESUME_WORKSPACE="$PWD/applications"
 npm run resume -- init
 npm run resume -- catalog --locale zh
 ```
 
-工作台必须在仓库外，且不能是仓库祖先。会解析路径中的符号链接，避免别名绕过检查。记录默认以 `0600` 创建，目录 `0700`；这不是加密，不替代磁盘权限与加密备份。
+工作台允许位于仓库内的独立子目录，或仓库外；不能使用仓库根目录、仓库祖先或 `dist` 内的目录，以免构建清理工作台或递归包含源码。路径检查会解析符号链接。记录默认以 `0600` 创建，目录 `0700`；这不是加密，不替代磁盘权限与加密备份。
 
 ### 1. 录入岗位及要求
 
-复制 `examples/target.json` 到私有目录，替换为真实 JD（示例是虚构岗位，不代表招聘仍开放）。要求列表里的 `hard` 只根据 JD 明确措辞填写，不把偏好当硬门槛。
+复制 `examples/target.json` 到工作台目录，替换为真实 JD（示例是虚构岗位，不代表招聘仍开放）。要求列表里的 `hard` 只根据 JD 明确措辞填写，不把偏好当硬门槛。
 
 ```bash
 npm run resume -- target company-agent --input /absolute/private/target.json
@@ -127,7 +127,7 @@ npm run resume -- inspect demo-backend-en
 
 `npm run build` 仅从仓库默认 YAML 生成 `dist/index.html`、`print.html`、`index-en.html`、`print-en.html`，不读取 `RESUME_WORKSPACE`。构建会清理旧 dist，并生成公开资产清单。`publish.ts` 在联网前验证清单哈希、必需页面和路径白名单；出现额外文件或篡改会失败。
 
-`npm run publish` 会重新构建并强制推送 gh-pages，仍须由你主动执行。本次工作台功能不会发布岗位版本。`noindex` 不是权限控制；私有文件始终不进入公开部署。`npm start` 热更新会使发布清单过期，直接运行 publish.ts 会拒绝；通过正式 publish 命令重新构建即可。
+`npm run publish` 会重新构建并强制推送 gh-pages，仍须由你主动执行。岗位版本可直接提交到仓库，但本命令不会自动将其加入 Pages。`noindex` 不是权限控制；工作台不会自动进入 Pages 部署；提交到公开仓库的文件仍可通过 GitHub 访问。`npm start` 热更新会使发布清单过期，直接运行 publish.ts 会拒绝；通过正式 publish 命令重新构建即可。
 
 ## 迁移、备份与回退
 
@@ -164,3 +164,7 @@ npm run test:workspace-browser
 4. `inspect` → `refresh --reason` 记录比较结果 → `review` → `build --pdf`，生成新的独立导出。不会改写旧投递快照。
 
 双语 YAML 与来源索引一起参与事实摘要，任一变化都会使原岗位版本失效，要求显式刷新和审阅。每次私有导出的 `sources/` 保存当时的来源索引，后续博文变化不改变已投递文件。它是可追溯记录，不是抓取器、自动 JD 匹配器或自动事实认证。保持原始资料、审定事实、岗位表达三层分离；公共默认发布依然不包含私人 JD、反馈或岗位版本。
+
+## 仓库内岗位记录
+
+`applications/` 收录已选择公开的岗位与版本。先运行 `RESUME_WORKSPACE="$PWD/applications" npm run resume -- init` 补齐运行目录，再执行 `inspect`。PDF 位于 `applications/documents/`，便于直接下载。默认 `data.yaml` / `data-en.yaml` 不因此改变。生成的 exports、投递、反馈和审阅决定在此目录默认被 Git 忽略；可根据实际需要单独选择提交。公开 PDF 不意味着本人已经执行 `review` 或完成投递。

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "requirements": [
+    {
+      "id": "experience",
+      "text": "5 年以上工程经验；领导复杂系统设计交付，达到 Tech Lead / Staff 同等职责。",
+      "hard": true
+    },
+    {
+      "id": "team",
+      "text": "带领过至少 3 人工程团队。",
+      "hard": true
+    },
+    {
+      "id": "python",
+      "text": "Python 工程能力强，能够独立负责关键平台模块。",
+      "hard": true
+    },
+    {
+      "id": "concurrency",
+      "text": "具有流式、异步并发、多模型路由和供应商接入经验。",
+      "hard": true
+    },
+    {
+      "id": "distributed",
+      "text": "理解分布式系统、生产架构、诊断与可靠性权衡。",
+      "hard": true
+    },
+    {
+      "id": "depth",
+      "text": "Agent 执行、上下文编排、基础能力三层中至少两层有深入实战。",
+      "hard": true
+    },
+    {
+      "id": "execution",
+      "text": "规划及子任务调度、检查点、中断恢复和故障处理。",
+      "hard": false
+    },
+    {
+      "id": "context",
+      "text": "输入规范化、上下文预算与压缩、工具输出整理和证据追溯。",
+      "hard": false
+    },
+    {
+      "id": "foundation",
+      "text": "沙箱、记忆、检索、MCP、文件、多租户安全与可观测性。",
+      "hard": false
+    },
+    {
+      "id": "evaluation",
+      "text": "亲自编码，通过技术拆解、评审和自动评测推动反馈闭环。",
+      "hard": false
+    }
+  ],
+  "id": "patsnap-lead-agent-systems",
+  "company": "智慧芽 Patsnap",
+  "role": "Lead Engineer, AI Agent Systems",
+  "location": "Shanghai, China · On-site",
+  "sourceUrl": "https://careers.patsnap.com/o/lead-engineer-ai-agent-systems",
+  "jd": "2026-10-27 阅读官方在招页。面向专利与研发知识工作，负责 Agent 执行、上下文编排和基础能力架构，亲自交付核心模块。关注复杂任务可靠性、可复用平台能力与工程团队技术领导。以下为职责和要求摘要，原文以官方链接为准。",
+  "capturedAt": "2026-10-27T07:28:53.118Z"
+}
