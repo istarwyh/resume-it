@@ -3,9 +3,9 @@ const { parseArgs } = require('node:util');
 const fs = require('node:fs');
 const api = require('../lib/workspace.cjs');
 const { projects, catalog, digest, variantDigest } = require('../lib/resume.cjs');
-const help = `Resume workspace (private records must be outside this repository)
+const help = `Resume workspace (repository-local or external records)
 
-Set RESUME_WORKSPACE=/absolute/private/directory, then:
+Set RESUME_WORKSPACE=/absolute/dedicated/directory, then:
   npm run resume -- init
   npm run resume -- catalog [--locale zh|en]
   npm run resume -- target TARGET --input target.json

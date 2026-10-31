@@ -50,11 +50,13 @@ test('edits invalidate review and source or JD changes require explicit refresh'
   api.refresh(w, v.id, 'Compared updated JD');
   assert.throws(() => api.current(w, v.id, true), /unreviewed/);
 });
-test('path traversal, in-repository and symlink workspaces are rejected', () => {
+test('repository root, ancestors, build output and record symlinks are rejected', () => {
   assert.throws(() => api.target(w, '../oops', target), /Invalid ID/);
-  assert.throws(() => api.workspace(path.join(root, 'private'), true), /separate/);
+  assert.throws(() => api.workspace(root, true), /root or its ancestor/);
+  assert.throws(() => api.workspace(path.dirname(root), true), /root or its ancestor/);
+  assert.throws(() => api.workspace(path.join(root, 'dist', 'workspace'), true), /build output/);
   const link = path.join(temp, 'repo-link'); fs.symlinkSync(root, link);
-  assert.throws(() => api.workspace(path.join(link, 'private'), true), /separate/);
+  assert.throws(() => api.workspace(path.join(link, 'dist', 'workspace'), true), /build output/);
   const record = api.file(w, 'variants', 'alias'); fs.symlinkSync(api.file(w, 'variants', 'agent-zh'), record);
   assert.throws(() => api.review(w, 'alias', 'Reviewer'), /symlink/);
 });
@@ -214,4 +216,18 @@ test('blog provenance is exposed, frozen in exports and changes invalidate prior
     fs.writeFileSync(sourceFile, JSON.stringify(updated));
     assert.throws(() => catalog(), /cover exactly/);
   } finally { fs.writeFileSync(sourceFile, original); }
+});
+
+test('repository-local workspaces support variants and survive default builds', async () => {
+  const dir = fs.mkdtempSync(path.join(root, '.workspace-test-'));
+  try {
+    const local = api.workspace(dir, true);
+    api.target(local, 'local-role', target);
+    api.variant(local, 'local-en', 'local-role', 'en');
+    api.review(local, 'local-en', 'Synthetic reviewer');
+    const result = await api.build(local, 'local-en');
+    assert.ok(api.verify(result.directory));
+    assert.equal(api.current(local, 'local-en').v.targetId, 'local-role');
+    assert.doesNotMatch(fs.readFileSync(path.join(root, 'dist/index-en.html'), 'utf8'), /PRIVATE_JD_SENTINEL/);
+  } finally { fs.rmSync(dir, { recursive: true, force: true }); }
 });
